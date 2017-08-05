@@ -1,0 +1,21 @@
+User what you learned about TextView, EditText and Button to create a calculator. 
+
+Here are the requirements:
+
+´  Create vertical LinearLayout in xml
+
+´  Add EditText
+
+´  Add TextView and display text: "Radians"
+
+´  Add TableLayout
+
+´  Add rows of buttons
+
+´  Add button click handler which appends each digits to the display text
+
+´  Implement a clear method for button ‘C’  - when click, dislay text in the EditText box will be cleared
+
+[Check point] submit your java code and xml file, screen capture of the application running on your emulator displaying various number inputs
+
+Here's the User Interface:

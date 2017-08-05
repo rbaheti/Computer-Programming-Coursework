@@ -1,0 +1,3 @@
+Follow the class 9 slides and create a project MyAsyncTask which uses AsyncTask to populate a long list of letters (lower case a to z, and upper case A to Z) to the UI. 
+
+Submit your screen capture (with toast message indicating update percentage, and when all items are loaded) and code here (java and xml code)

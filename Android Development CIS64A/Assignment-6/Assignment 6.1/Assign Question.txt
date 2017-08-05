@@ -1,0 +1,13 @@
+Follow the slides and tutorial this week to apply style and theme to your application:
+
+First, create an application which has three activities: MainActivity.java, secondActivity.java, and ThirdActivity.java. On the UI of MainACtivity, there are two buttons: one has text "Open Second", which when clicked, will launch the SecondActivity. Another button has text "Open third", which when cliked, will launch ThirdActivity. 
+
+Add your own widgets to the SecondActivity and ThirdActivity UI. It is required that each activity has a different theme. Each activity should have a "Quit" button which will stop the current activity.
+
+Add a title string which contains your name, for example "Hello, [your name]" to each activity using TextView 
+
+Create separate style xml file custom_style.xml and create your own styles for textViews, buttons, and background of activity 
+
+Apply styles and theme to view components, each individual activity and application
+
+A sample UI is:

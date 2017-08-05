@@ -1,0 +1,3 @@
+Create an android app, the MainActivity UI contains a textView that says “Hello world”, and a “Start” button. When the “Start” button is clicked, it launched another activity called ListUI, which displays a simple text list of colors (“Red”, “Green”, “Blue”, “Yellow”, “Purple”, “White”, “Black”). When you click on list items, a toast message pops up shows the position and value of the clicked list item.
+
+There’s also a “Return” button, when you click it, the ListUI finishes itself and return to the caller

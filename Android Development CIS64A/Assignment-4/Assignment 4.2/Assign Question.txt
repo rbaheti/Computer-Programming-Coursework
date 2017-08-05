@@ -1,0 +1,17 @@
+Here's the instruction for IntentActivity:
+
+In your application, create two activities MainActivity.java and secondActivity.java with separate UI. The UI of MainActivity.java shows a text message saying "Hello " and your first and last name, and two buttons vertically. 
+
+One button has text “OPEN Second”. When you click the button, it will start the secondActivity, which is a simple UI with a text message saying "Hello " and your first and last name, and a "back" button which stops the activity and goes back to the calling activity. One button with text “OPEN SEARCH”, when you click this button, it will open webpage http:// (Links to an external site.)www.google.com (Links to an external site.). 
+
+Here's the code you can use to open a webpage with intent:
+Intent myIntent = new Intent();
+myIntent.setAction(Intent.ACTION_VIEW);
+myIntent.setData(Uri.parse("http://www.google.com"));
+startActivity(myIntent);
+[Checkpoint]
+- Submit screen shots of your MainActivity UI on your android emulator/device; 
+- Submit the screen shot of the UI screens resulted from clicking of the buttons
+- Submit following code in text file:
+  MainActivity.java and secondActivity.java and their xml layout files
+   AndroidManifest.xml  from your application 

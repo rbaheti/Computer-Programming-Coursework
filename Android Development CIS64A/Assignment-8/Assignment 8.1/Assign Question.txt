@@ -1,0 +1,1 @@
+Create UI using nested View group. The top level container is a vertical Linear layout, which contains a button  "Show View", a checkBox and a nested horizontal Linear Layout. Clicking the "Show View" button and it will show the nested Linear layout and change the text on the button to "Hide view". Check the CheckBox will decide whether to show components for admin or user. 

@@ -1,0 +1,38 @@
+In this lab, we are going to create thread by implementing the Runnable interface
+
+Step 1: Create a JAVA project ThreadPrint
+
+Step 2: implement the Runnable Interface and create a class called PrintMessage. Here are some description of the Message class:
+
+It has a data field of type String called name
+
+It has another data field of type String called message
+
+It has a constructor which takes two String parameters and assign them to field  name and field message.
+
+It overrides the run() method. Inside the run() method, it will repeatedly print out String “[name] says [message]”  5 times. (see the sample output below)
+
+Step 3:
+
+Create a ThreadTest class which contains a main() method. In the main() method, create three different threads. Name them separately as “one”, “two”, and “Three”. For thread “one”, pass your first name as message; for thread “two”, pass your last name as message; for thread “three”, pass your ID as message.
+
+Start the three threads.
+
+Step 4: run the Java program and look at the output. Run the program multiple times and see if the output are different.
+
+[Sample output]
+one says John
+three says 1234567
+two says Smith
+three says 1234567
+one says John
+three says 1234567
+two says Smith
+two says Smith
+two says Smith
+two says Smith
+three says 1234567
+one says John
+one says John
+one says John
+three says 1234567

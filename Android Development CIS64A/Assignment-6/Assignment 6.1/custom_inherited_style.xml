@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="monolarge" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="monolarge.Green">
+        <item name="android:textColor">#00FF00</item>
+    </style>
+
+    <style name="monolarge.Green.Center">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <color name="MyBGColor">#FFFADA</color>
+    <style name="MyTheme" parent="android:Theme.Light">
+        <item name="android:windowBackground">@color/MyBGColor</item>
+    </style>
+
+    <color name="MyBGColorBlue">#0000FF</color>
+    <style name="MyThemeBlue" parent="android:Theme.Light">
+        <item name="android:windowBackground">@color/MyBGColorBlue</item>
+    </style>
+
+    <color name="MyBGColorPink">#FF0AAA</color>
+    <style name="MyThemePink" parent="android:Theme.Light">
+        <item name="android:windowBackground">@color/MyBGColorPink</item>
+    </style>
+</resources>

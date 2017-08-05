@@ -1,0 +1,35 @@
+
+
+Create a new project in Android Studio called "ActivityDemo"
+
+Create an empty activity called MyActivity 
+
+Override the lifecycle methods and add Log.i(“applicationName”, “method name))
+
+onCreate
+
+onStart
+
+onRestart
+
+onResume
+
+onPause
+
+onStop
+
+onDestroy
+
+Monitor the output by logcat
+
+Visit activity documentation website: http://developer.android.com/reference/android/app/Activity.html (Links to an external site.)
+
+[Checkpoint] Please submit following documents. Please refer to module 2A for more assignment requirement instructions
+
+1. your code for MyActivity.java,
+
+2. the android application UI screen on your emulator/device,
+
+3. and the logcat output
+
+2 and 3 can be in one screen shot

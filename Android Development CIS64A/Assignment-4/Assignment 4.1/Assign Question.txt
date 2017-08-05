@@ -1,0 +1,18 @@
+User what you learned about layout and widgets (EditText, TextView and Button) to create a dice roling game app, which enables 3 players to play. 
+
+Here are the requirements:
+- Use chained LinearLayouts (both horizontal and vertial) in xml to achieve the UI design
+- Add TextView as title and set the text as "Welcome to dice rolling game ". Set the text color to purple.
+- Add three sets of EditText, button, and TextView. One set for each player. Each set of widgets is positioned vertically. But the three sets of widgets are positioned horizontally with player1 to the left most, and player3 to the right most.
+- Add button click handler for each button. When it's clicked, it will simulates dice rolling and generate random number for that particuler player and display the number in the textview below (click the first button, it rolls dice for player1; click the second button, it rolls dice for player2 , etc)
+- Add a button named "btnWinner" on the bottom of the UI. After three players roll their dices. Click btnWinner will result in message displayed on the button showing the winner player and his/her name
+Hint: type conversion for TextView
+1. To convert text on Textview to integer, use 
+int num = Integer.parseInt(tvResult.getText().toString());
+
+2. To display number on Textview, use 
+tvResult.setText(String.valueOf(number));
+
+[Check point] Submit the xml file. Submit your java code in readable text format,  at least three screen captures of the application running on your emulator displaying beginning of the game, during the game, and the winning results of the game
+
+Here's the User Interface when application is first loaded:

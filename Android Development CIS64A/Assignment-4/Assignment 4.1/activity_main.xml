@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.dicerollinggame.MainActivity">
+
+    <!-- start row 1 -->
+    <TextView
+        style="@style/title"
+        android:id="@+id/tvTitle" />
+    <!-- End row 1 -->
+
+    <!-- start row 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <!-- start col 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:text="Enter Name1"
+                android:id="@+id/etName1"
+                style="@style/editText"/>
+
+            <Button
+                style="@style/playerRollButton"
+                android:text="Player1 Roll"
+                android:id="@+id/btnRoll1" />
+
+            <TextView
+                style="@style/resultTextView"
+                android:id="@+id/tvResult1"/>
+
+        </LinearLayout>
+        <!-- end col 1 -->
+
+        <!-- start col 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:text="Enter Name2"
+                android:id="@+id/etName2"
+                style="@style/editText"/>
+
+            <Button
+                style="@style/playerRollButton"
+                android:text="Player2 Roll"
+                android:id="@+id/btnRoll2" />
+
+            <TextView
+                style="@style/resultTextView"
+                android:id="@+id/tvResult2" />
+
+        </LinearLayout>
+        <!-- end col 2 -->
+
+        <!-- start col 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:text="Enter Name3"
+                android:id="@+id/etName3"
+                style="@style/editText"/>
+
+            <Button
+                style="@style/playerRollButton"
+                android:text="Player3 Roll"
+                android:id="@+id/btnRoll3" />
+
+            <TextView
+                style="@style/resultTextView"
+                android:id="@+id/tvResult3" />
+
+        </LinearLayout>
+        <!-- end col 3 -->
+
+    </LinearLayout>
+    <!-- End row 2 -->
+
+    <!-- Start row 3 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/winnerButton"
+            android:id="@+id/btnWinner"/>
+
+    </RelativeLayout>
+    <!-- End row 3 -->
+
+</LinearLayout>
+

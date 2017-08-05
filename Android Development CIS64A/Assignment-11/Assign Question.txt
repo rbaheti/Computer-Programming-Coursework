@@ -1,0 +1,8 @@
+Create and use database.
+Implement the application, Database and button functions to update, query and clear Database. 
+
+1. When button "Update DB" is clicked, the user input of name and major will be saved to database, each new record will have a unique row id in the database. If user does not enter text for name or major, "null" will be inserted to the database column
+
+2. When button "Clear DB" is clicked, all data records of the database will be deleted
+
+3. When button "Query DB" is clicked, the data records will be retrieved from the database, and displayed in a textview below the button. 

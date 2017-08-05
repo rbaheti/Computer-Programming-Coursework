@@ -1,0 +1,216 @@
+
+public class Foothill {
+
+    public static void main(String[] args) {
+        // Create RegisteredStudent object
+        RegisteredStudent John = new RegisteredStudent();
+        // Set RegisteredStudent's object to required values
+        John.setName("John Smith");
+        John.setId("0001");
+        John.setUnits(12);
+        float[] grades = { 75, 95, 86, 91, 67, 100 };
+        John.setGrades(grades);
+        // Print John's details
+        John.printInfo();
+
+        // calculate and print John's average grade:
+        float gradesTotal = 0;
+        for (int i = 0; i < grades.length; ++i) {
+            gradesTotal += grades[i];
+        }
+        float averageGrade = gradesTotal / grades.length;
+        System.out.println(
+                "Name: " + John.getName() + ", Average grade: " + averageGrade);
+        System.out.println("");
+
+        // add and drop John's course
+        John.addCourse();
+        John.addCourse();
+        John.addCourse();
+
+        John.dropCourse();
+
+        // print new values of John
+        John.printInfo();
+
+        // Create CSMajorStudent's object
+        CSMajorStudent Mary = new CSMajorStudent();
+        // set CSMajorStudent's object to required values
+        Mary.setName("Mary Lee");
+        Mary.setId("0002");
+        Mary.setUnits(16);
+        float[] maryGrades = { 81, 93, 79, 90 };
+        Mary.setGrades(maryGrades);
+
+        // add and drop Mary's course
+        Mary.addCourse();
+        Mary.addCourse();
+        Mary.addCourse();
+
+        Mary.dropCourse();
+
+        // Print Mary's name and number of units
+        System.out.println(
+                "Name: " + Mary.getName() + ", Units: " + Mary.getUnits());
+    }
+
+}
+/*************************************************************************/
+
+public interface CourseManager {
+    // interface methods:
+    public void addCourse();
+
+    public void dropCourse();
+}
+
+/*************************************************************************/
+
+public class Student {
+    // Student class's private data:
+    private String  id;
+    private String  name;
+    private int     units;
+    private float[] grades;
+
+    // Student class's getters and setters:
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getUnits() {
+        return units;
+    }
+
+    public void setUnits(int units) {
+        this.units = units;
+    }
+
+    public float[] getGrades() {
+        return grades;
+    }
+
+    public void setGrades(float[] grades) {
+        this.grades = grades;
+    }
+
+    // printInfo() prints all the information of a student
+    public void printInfo() {
+        System.out.println("Student Information: ");
+        System.out
+                .println("Name: " + name + "\nID: " + id + "\nUnits: " + units);
+        System.out.print("Grades:");
+        for (int i = 0; i < grades.length; ++i) {
+            System.out.print(" " + grades[i]);
+        }
+        System.out.println("\n");
+    }
+
+}
+
+/*************************************************************************/
+
+public class RegisteredStudent extends Student implements CourseManager {
+    // constant variables
+    private final int MIN_NUM_UNITS = 0;
+    private final int MAX_NUM_UNITS = 200;
+
+    // defining interface's methods:
+    // addCourse() increases units by 2
+    public void addCourse() {
+        int units = getUnits();
+        if (units >= MIN_NUM_UNITS && units <= MAX_NUM_UNITS - 2) {
+            setUnits(units + 2);
+        }
+        else {
+            System.out.println("Number of units should be between "
+                    + MIN_NUM_UNITS + " and " + MAX_NUM_UNITS);
+        }
+    }
+
+    // dropCourse() decreases units by 2
+    public void dropCourse() {
+        int units = getUnits();
+        if (units >= MIN_NUM_UNITS + 2 && units <= MAX_NUM_UNITS) {
+            setUnits(units - 2);
+        } else {
+            System.out.println("Number of units should be between "
+                    + MIN_NUM_UNITS + " and " + MAX_NUM_UNITS);
+        }
+    }
+}
+
+/*************************************************************************/
+
+public class CSMajorStudent extends RegisteredStudent implements CourseManager {
+    private String    major;   
+    // constant variables:
+    private final int MIN_NUM_UNITS = 0;
+    private final int MAX_NUM_UNITS = 200;
+
+    // Constructor sets variable major to "CS"
+    public CSMajorStudent() {
+        major = "CS";
+    }
+
+    // mutator for variable major
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    // accessor for variable major
+    public String getMajor() {
+        return major;
+    }
+
+    // printInfo() prints all the information of a student
+    public void printInfo() {
+        System.out.println("Student Information: ");
+        System.out.println("Name: " + getName() + "\nID: " + getId()
+                + "\nUnits: " + getUnits() + "\nMajor: " + major);
+        System.out.print("Grades:");
+        float[] grades = getGrades();
+        for (int i = 0; i < grades.length; ++i) {
+            System.out.print(" " + grades[i]);
+        }
+        System.out.println("\n");
+    }
+
+    // defining interface's methods:
+    // addCourse() increases units by 4
+    public void addCourse() {
+        int units = getUnits();
+        if (units >= MIN_NUM_UNITS && (units <= MAX_NUM_UNITS - 4)) {
+            setUnits(units + 4);
+        } else {
+            System.out.println("Number of units should be between "
+                    + MIN_NUM_UNITS + " and " + MAX_NUM_UNITS);
+        }
+    }
+
+    // dropCourse() decreases units by 4
+    public void dropCourse() {
+        int units = getUnits();
+        if ((units >= MIN_NUM_UNITS + 4) && units <= MAX_NUM_UNITS) {
+            setUnits(units - 4);
+        } else {
+            System.out.println("Number of units should be between "
+                    + MIN_NUM_UNITS + " and " + MAX_NUM_UNITS);
+        }
+    }
+}
+
+/*************************************************************************/
+

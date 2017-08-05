@@ -1,0 +1,10 @@
+Requirements:
+1. Create an android application called ImageApp, it has a user interface as following:
+
+2. This application has a user interface which displays an image using ImageView
+
+3. when user click the button "Change Image", the image in the image view will change to another picture. 
+
+4. Make the ImageView clickable. When image is clicked, the size of the image will shrink to half the dimension; when the image is clicked again, it scales back to its poriginal size. 
+
+5. Create customized launcher icon for the application

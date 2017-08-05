@@ -1,0 +1,7 @@
+Use what we learned of Fragment to implement an vertical linearlayout UI that contains tthree fragments:
+
+Fragment 1: consists of a ImageView and TextView
+
+Fragment 2: consists of a ImageView and TextView
+
+Fragment 3: extends ListFragment and displays a list of items. Implement AdapterView.OnItemClickListener to respond to list item click. 

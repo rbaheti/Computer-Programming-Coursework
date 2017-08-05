@@ -1,0 +1,25 @@
+Design a Dice Rolling Game using what we learned in class. There are three activities.
+
+MainActivity
+
+The first activity is called MainActivity, which has a button "Play Game", and an EditText box to collect user name input. When user click the button, it will open the second Activity called "GameActivity". A welcome message displays the user name passed from MainActivity, and shows the games rules. There's another button "Bet Money", when it's clicked, it will launch another activity called "BettingActivity". 
+
+GameActivity
+
+On the GameActivity, there's a button "Roll Dice", when user click the button, it generates two random integer numbers of range 2 to 12. The first number is display as the game random number, the second random number is used as player's score. If player got a bigger number than the game random number, the plays wins. Otherwise he loses the game. 
+
+Keep track of how many times player wins, or loses the game
+
+There's a "Quit" button, when user clicks it, it will sto the GameActivity and go back to previous Activity, and passing back the player win and lose records to the previous activity and display the record on the UI. 
+
+BettingActivity
+
+The third activity is called BettingActivity. The UI has a Textview "Enter bet amount$", and a EditText box which receives user input of the amount number
+
+There's a "Confirm" button, when you click the button, it stops the current activity and returns back to the caller, the MainActivity. It will pass back the information "You have bet $** on this game" to the MainActivity
+
+MainActivity hanldes the results
+
+If the result is from the GameActivity, the MainActivity is going to display the result in red color
+
+If the result is from the BettingActivity, the MainActivity is going to display the result in blue color

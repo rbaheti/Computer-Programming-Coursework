@@ -1,0 +1,5 @@
+Create a simple UI with a scroll view which contains a TextView, and a clear button. 
+
+When user click the screen (you need to click on the area outside the scroll view), the text view shows output message about gesture events (X and Y coordinates, etc)
+
+When user click the "Clear" button, it clears the TextView message

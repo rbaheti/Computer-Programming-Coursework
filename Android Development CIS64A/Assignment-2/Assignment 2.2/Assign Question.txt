@@ -1,0 +1,120 @@
+
+
+Object oriented programming exercise
+
+Start a new Java project called StudentsRecordApp
+
+ 
+
+Navigate down to /src and create the following interface and classes:
+
+ 
+
+Interface CourseManager: Add a new Interface called CourseManager
+
+Interface has two abstract methods:
+
+public void addCourse();
+
+public void dropCourse();
+
+ 
+
+Class Student: add a class Student and Insert fields following
+
+   String id;
+
+   String name;
+
+   int units;
+
+   float grades[];
+
+public methods:
+
+    setters and getters for the data fields.
+    public method printInfo which prints out the data field values in a user friendly string.
+
+ 
+
+Class RegisteredStudent: add a class RegisteredStudent which inherits from Student class and and interface CourseManager.  Provide implementation to the abstract methods to do the following:
+
+//invoking methods “addCourse” will increase units by 2
+
+   //invoking methods “dropCourse” will decrease units by 2
+
+Make sure to add logic to do unit range validation check, i.e., units value can only be a positive integer, and maximum units cannot exceed 200.
+
+ 
+
+Class CSMajorStudent: add a class CSMajorStudent which inherits from RegisteredStudent class and interface CourseManager.  
+
+    Add a data field String major and set it to "CS".
+    Override method printInfo to print out all data fields values, including major
+    Provide implementation to the abstract methods to do the following:
+
+   //invoking methods “addCourse” will increase units by 4
+
+   //invoking methods “dropCourse” will decrease units by 4
+
+Make sure to add logic to do unit range validation check, i.e., units value can only be a positive integer, and maximum units cannot exceed 200.
+
+ 
+
+Main class: In your main class, implement the main method and meet the following requirements:
+
+Public static void main(String[] args){
+
+// create a RegisteredStudent object John
+
+// set John’s name to “John Smith”
+
+//set John's id to "0001"
+
+// set John’s units to 12
+
+// set John’s grades to {75, 95, 86, 91, 67, 100}
+
+// print John’s information using printInfo()
+
+// calculate the average grade for John
+
+//in another line print out John’s name and average grade
+
+//John adds three courses  (each time a course is added the units will be increased by 2)
+
+//John drops one course (each time a course is dropped the units will be decreased by 2)
+
+//in a new line print out John’s information
+
+//--------Second object--------------
+
+// create a CSMajorStudent object Mary
+
+// set Mary’s name to “Mary Lee”
+
+//set Mary's id to "0002"
+
+// set Mary’s units to 16
+
+ // Set Mary’s grades to {81, 93, 79, 90}
+
+//Mary adds three courses  (each time a course is added the units will be increased by 4)
+
+//Mary drops one course (each time a course is dropped the units will be decreased by 4)
+
+//in a new line print out Mary’s name and her total units
+
+ 
+
+}
+
+ 
+
+Run you java project (NOT as Android application) and capture the console output
+
+[Checkpoint]
+
+    Put all your java class definition in one file. Submit your code in text format.
+    Capture the screen shot of your program and console output to and as save as an image file.
+    Submit the code text file and screen capture image file as attachments for this lab
