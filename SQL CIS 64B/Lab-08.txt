@@ -1,0 +1,134 @@
+------------------------------------------
+Oracle SQL
+Lab Assignment #08
+Name: Rashmi Baheti
+Last four digits of Student ID #7081
+Due date: 23-June-2017
+Date Handed in: 23-June-2017
+------------------------------------------
+
+Q1. Setup a department, course within a department with 2 sections. Section must have a location assigned. Produce a report showing the department, its course and sections (with complete section information.)
+Answer:
+Setting up Member:
+INSERT INTO Resident VALUES (1111, 'San Jose');
+INSERT INTO Member VALUES (
+  22222,
+  'Timothy', 'Bush',
+  '222 Buena Vista Avenue',
+  'timothy@gmail.com',
+  5552223333,
+  1,
+  1111
+);
+
+Setting up Department:
+INSERT INTO Location VALUES (12345, 'Online Learning');
+INSERT INTO Location VALUES (67890, 'Cupertino, CA');
+INSERT INTO College VALUES (55555, 'De Anza College', '21250 Stevens Creek Blvd', '4088645300');
+INSERT INTO Department VALUES (1010, 'Computer Information Systems', 12345, 55555);
+
+Setting up Course:
+INSERT INTO Course VALUES (10001, 64, 'Intro to SQL', NULL, 1010);
+
+Setting up Sections:
+INSERT INTO Section VALUES (
+  66666, 1, 10001, 12345,
+  0900, 1100, '04-APRIL-2017', '30-JUNE-2017',
+  22222
+);
+INSERT INTO Section VALUES (
+  66667, 2, 10001, 67890,
+  1400, 1600, '04-APRIL-2017', '30-JUNE-2017',
+  22222
+);
+
+
+Report:
+SQL> SELECT d.name, c.name, s.*
+FROM Department d, Course c, Section s
+WHERE d.ID = c.Department_ID AND c.ID = s.Course_ID;
+  2    3
+NAME
+--------------------------------------------------
+NAME
+--------------------------------------------------------------------------------
+        ID SECTION_NO  COURSE_ID LOCATION_ID START_TIME   END_TIME START_DAT
+---------- ---------- ---------- ----------- ---------- ---------- ---------
+END_DATE   MEMBER_ID
+--------- ----------
+Computer Information Systems
+Intro to SQL
+
+     66666 1               10001       12345        900       1100 04-APR-17
+30-JUN-17      22222
+
+NAME
+--------------------------------------------------
+NAME
+--------------------------------------------------------------------------------
+        ID SECTION_NO  COURSE_ID LOCATION_ID START_TIME   END_TIME START_DAT
+---------- ---------- ---------- ----------- ---------- ---------- ---------
+END_DATE   MEMBER_ID
+--------- ----------
+
+Computer Information Systems
+Intro to SQL
+
+     66667 2               10001       67890       1400       1600 04-APR-17
+
+NAME
+--------------------------------------------------
+NAME
+--------------------------------------------------------------------------------
+        ID SECTION_NO  COURSE_ID LOCATION_ID START_TIME   END_TIME START_DAT
+---------- ---------- ---------- ----------- ---------- ---------- ---------
+END_DATE   MEMBER_ID
+--------- ----------
+30-JUN-17      22222
+
+
+Q2. Now register a student to a section and process student payment. Produce a report showing student registration information, including payment information.
+Answer:
+Setting up Resident:
+INSERT INTO Resident VALUES (9090, 'Cupertino');
+
+Setting up Member:
+INSERT INTO Member VALUES (
+  99999,
+  'Sophie', 'Turner',
+  '10 Vista Avenue',
+  'sophie@gmail.com',
+  1112223333,
+  2,
+  9090
+);
+
+Setting up Payment:
+INSERT INTO Payment VALUES (3333, 'CIS64B', 'REGISTRATION');
+
+Setting up StudentRegistration:
+INSERT INTO StudentRegistration VALUES (
+  1234567890,
+  'Y',
+  99999,
+  66666,
+  3333,
+  350.00
+);
+
+Report:
+SELECT m.id, m.last_name, sr.*, p.*
+FROM Member m, StudentRegistration sr, Payment p
+WHERE m.id = sr.Student_id AND (p.id = sr.Payment_id);
+
+
+Q3:How can you improve your DB Schema further. Make four recommendations?
+Answer:
+This database schema can be improved by adding an index to tables such as:
+a. StudentRegistration Table: By adding an index to this table over student_id, the data can be sorted by student id. This will make search efficient when we look for student information.
+
+b. Course Table: Adding index to the course table over course_no will help data to get sorted by course number. This will again help in searching for courses faster.
+
+c. Location Table: Adding index to Location table over location id will help to look for college according to the location. This will help to get information faster for the areas with same or similar locations.
+
+d. Section Table: Adding index to Section table over member_id will help to get information about the professor. What all courses does the professor teaches, and other information. This will be really helpful to get professor's information quickly.

@@ -1,0 +1,6 @@
+Testing user automobile choice:
+Choice Name: standard
+Choice Price: -815
+Total Price: 18225
+Base price of Focus Wagon ZTW is: 18445.0
+Honda Accord model does not exists in the system.

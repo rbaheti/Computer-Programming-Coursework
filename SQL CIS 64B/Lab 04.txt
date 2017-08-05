@@ -1,0 +1,106 @@
+------------------------------------------
+Oracle SQL
+Lab Assignment #04
+Name: Rashmi Baheti
+Last four digits of Student ID #7081
+Due date: 15-May-2017
+Date Handed in: 15-May-2017
+------------------------------------------
+
+Q1: Display the manager number and the salary of the lowest paid employee for that manager. Exclude anyone whose manager is not known. Exclude any groups where the minimum salary is less than $1000. Sort the output in descending order of salary. 
+Answer:
+
+select mgr, min(sal)
+from emp
+group by mgr
+having min(sal)>1000 AND mgr is not NULL
+order by min(sal) desc; 
+
+       MGR   MIN(SAL)
+---------- ----------
+      7566       3000
+      7839       2450
+      7782       1300
+      7788       1100
+
+Q2. Write a query to display the department name, location name, number of employees, and the average salary for all employees in that department. Label the columns dname, loc, Number of People, and Salary, respectively. 
+Answer:
+
+select d.dname as "dname", d.loc as "loc", count(e.ename) as "number of employees", avg(e.sal) as "average salary"
+from emp e, dept d
+where d.deptno = e.deptno
+group by d.deptno, d.dname, d.loc;
+
+dname          loc           number of employees average salary
+-------------- ------------- ------------------- --------------
+ACCOUNTING     NEW YORK                        3     2916.66667
+RESEARCH       DALLAS                          6         2312.5
+SALES          CHICAGO                         6     1566.66667
+
+
+Q3. Write a query to display department names with salary grade, minimum salary and average commission. For departments with null commission, you should display 0. (salgrade table can be used for getting salary grade). 
+Answer:
+
+
+SELECT d.dname AS "Dept. Name",
+sg.grade AS "Salary Grade",
+e.sal AS "Lowest Salary",
+TRUNC(AVG(NVL(e2.comm, 0)), 2) AS "Average Commission"
+FROM salgrade sg
+JOIN emp e
+ON (e.sal BETWEEN sg.losal AND sg.hisal)
+JOIN dept d
+ON (d.deptno = e.deptno)
+JOIN emp e2
+ON (d.deptno = e2.deptno)
+WHERE e.sal = (select MIN(e1.sal) from emp e1 WHERE e1.deptno = e.deptno)
+GROUP BY d.deptno, d.dname, sg.grade, e.sal;
+
+Dept. Name     Salary Grade Lowest Salary Average Commission
+-------------- ------------ ------------- ------------------
+SALES                     1           950             366.66
+RESEARCH                  1           800                  0
+ACCOUNTING                2          1300                  0
+
+
+Q4. What is difference between COUNT(*), COUNT(col_name), COUNT(DISTINCT(col_name)), COUNT(ALL(col_name))? Explain with examples. 
+Answer:
+COUNT(*) gives total number of rows in the table. 
+COUNT(col_name) gives the total number of rows in the given "col_name".
+COUNT(DISTINCT(col_name)) gives total number of rows with unique col_name values in the given "col_name".
+COUNT(ALL(col_name)) is similar to COUNT(col_name). It gives the total number of values in the given "col_name".
+
+Example of each is given below:
+query: select count(*) from emp; gives 15 (rows).
+query: select count(mgr) from emp; gives 14 (rows).
+query: COUNT(DISTINCT(mgr)) from emp; gives 6 (rows).
+query: select count(ALL(mgr)) from emp; gives 14 (rows).
+
+
+Q5. Display the employee number, name, salary, and salary increase by 15% expressed as a whole number. Label the column New Salary. 
+Answer:
+
+select empno, ename, sal, TRUNC(sal+sal*0.15) AS "New Salary" from emp;
+
+     EMPNO ENAME             SAL New Salary
+---------- ---------- ---------- ----------
+      7839 KING             5000       5750
+      7698 BLAKE            2850       3277
+      7782 CLARK            2450       2817
+      7566 JONES            2975       3421
+      7654 MARTIN           1250       1437
+      7499 ALLEN            1600       1840
+      7844 TURNER           1500       1725
+      7900 JAMES             950       1092
+      7521 WARD             1250       1437
+      7902 FORD             3000       3450
+      7369 SMITH             800        920
+
+     EMPNO ENAME             SAL New Salary
+---------- ---------- ---------- ----------
+      7788 SCOTT            3000       3450
+      7876 ADAMS            1100       1265
+      7934 MILLER           1300       1495
+      1456 John Smith       3000       3450
+
+15 rows selected.

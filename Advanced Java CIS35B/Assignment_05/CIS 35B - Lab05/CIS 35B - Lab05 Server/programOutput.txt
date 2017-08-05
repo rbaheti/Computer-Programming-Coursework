@@ -1,0 +1,7 @@
+C:\Users\rashmi\workspace\CIS 35B - Lab05 Server\src>java driver.Driver
+Command: SendingPropertiesObject
+Command: NeedAutomobileModelNames
+Command: NeedAutomobileObject:Prius
+Command: NeedAutomobileModelNames
+Command: NeedAutomobileObject:Prius
+Command: bye

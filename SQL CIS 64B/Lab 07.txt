@@ -1,0 +1,149 @@
+------------------------------------------
+Oracle SQL
+Lab Assignment #07
+Name: Rashmi Baheti
+Last four digits of Student ID #7081
+Due date: 14-June-2017
+Date Handed in: 14-June-2017
+------------------------------------------
+
+Q1. Create Table and Tablespaces based on the schema in Lab 6, create tables with constraints. Consider using the following constraints as appropriate Primary Key, Foreign key, Unique, Null or Check. 
+Answer:
+
+DROP TABLE Section CASCADE CONSTRAINTS;
+DROP TABLE Course CASCADE CONSTRAINTS;
+DROP TABLE Department CASCADE CONSTRAINTS;
+DROP TABLE StudentRegistration CASCADE CONSTRAINTS;
+DROP TABLE Member CASCADE CONSTRAINTS;
+DROP TABLE Resident CASCADE CONSTRAINTS;
+DROP TABLE Location;
+DROP TABLE College;
+DROP TABLE Payment;
+
+CREATE TABLE Payment (
+ID NUMBER(4) NOT NULL,
+name CHAR(100),
+type CHAR(25),
+CONSTRAINT Payment_ID_pk PRIMARY KEY(ID));
+
+CREATE TABLE College(
+id NUMBER(5) NOT NULL,
+name CHAR(100),
+address CHAR(100),
+contact_no NUMBER(15),
+CONSTRAINT College_name_uk UNIQUE (name),
+CONSTRAINT College_id_pk PRIMARY KEY(id));
+
+CREATE TABLE Location(
+id NUMBER(5) NOT NULL,
+name CHAR(100),
+CONSTRAINT Location_id_pk PRIMARY KEY(id));
+
+CREATE TABLE Resident (
+id NUMBER(4) NOT NULL,
+name CHAR(100),
+FeeSchedule_id NUMBER(4) NOT NULL,
+CONSTRAINT Resident_id_pk PRIMARY KEY(id));
+
+CREATE TABLE Member(
+id NUMBER(5) NOT NULL,
+first_name CHAR(50),
+last_name CHAR(50),
+address CHAR(100),
+email CHAR(50),
+contact_no NUMBER(15),
+type NUMBER(1),
+Resident_id NUMBER(4) NOT NULL,
+CONSTRAINT Member_id_pk PRIMARY KEY(id),
+CONSTRAINT Member_Resident_fk FOREIGN KEY(Resident_id) REFERENCES Resident(ID));
+
+CREATE TABLE Department(
+id NUMBER(5) NOT NULL,
+name CHAR(50),
+Location_id NUMBER(5) NOT NULL,
+College_id NUMBER(5) NOT NULL,
+CONSTRAINT Department_id_pk PRIMARY KEY(id),
+CONSTRAINT Department_Location_fk FOREIGN KEY(Location_id) REFERENCES Location(id),
+CONSTRAINT Department_College_fk FOREIGN KEY(College_id) REFERENCES College(id));
+
+CREATE TABLE Course(
+id NUMBER(5) NOT NULL,
+course_no CHAR(10),
+name CHAR(100),
+prereq_id CHAR(10),
+Department_id NUMBER(5) NOT NULL,
+CONSTRAINT Course_id_pk PRIMARY KEY(id),
+CONSTRAINT Course_Department_fk FOREIGN KEY(Department_id) REFERENCES Department(id));
+
+CREATE TABLE Section(
+id NUMBER(5) NOT NULL,
+section_no CHAR(10),
+Course_id NUMBER(5) NOT NULL,
+Location_id NUMBER(5) NOT NULL,
+start_time NUMBER(4),
+end_time NUMBER(4),
+start_date DATE,
+end_date DATE,
+Member_id NUMBER(5) NOT NULL,
+CONSTRAINT Section_id_pk PRIMARY KEY(id),
+CONSTRAINT Section_Course_fk FOREIGN KEY(Course_id) REFERENCES Course(id),
+CONSTRAINT Section_Location_fk FOREIGN KEY(Location_id) REFERENCES Location(id),
+CONSTRAINT Section_Member_fk FOREIGN KEY(Member_id) REFERENCES Member(id));
+
+CREATE TABLE StudentRegistration(
+id NUMBER(10) NOT NULL,
+fee_paid CHAR(1) CHECK (fee_paid IN ('Y', 'N')),
+Student_id NUMBER(10) NOT NULL,
+Section_id NUMBER(5) NOT NULL,
+Payment_ID NUMBER(4) NOT NULL,
+payment_amount NUMBER(10,2),
+CONSTRAINT StudentRegistration_id_pk PRIMARY KEY(id),
+CONSTRAINT StudentRegistration_Student_fk FOREIGN KEY(Student_id) REFERENCES Member(id),
+CONSTRAINT StudentRegistration_Section_fk FOREIGN KEY(Section_id) REFERENCES Section(id),
+CONSTRAINT StudentFee_Payment_fk FOREIGN KEY(Payment_ID) REFERENCES Payment(ID));
+
+Q2. Project which tables will increase quickly and implement partitioning types in at least 2 tables in your schema. Explain why these partitioning types would be useful in the context of your implementation. 
+Answer:
+a:
+CREATE TABLE Member(
+id NUMBER(5) NOT NULL,
+first_name CHAR(50),
+last_name CHAR(50),
+address CHAR(100),
+email CHAR(50),
+contact_no NUMBER(15),
+type NUMBER(1),
+Resident_id NUMBER(4) NOT NULL,
+CONSTRAINT Member_id_pk PRIMARY KEY(id),
+CONSTRAINT Member_Resident_fk FOREIGN KEY(Resident_id) REFERENCES Resident(id)
+)
+PARTITION BY RANGE (id)(
+PARTITION Member_id_r1 VALUES LESS THAN (2000000000),
+PARTITION Member_id_r2 VALUES LESS THAN (3000000000),
+PARTITION Member_id_r3 VALUES LESS THAN (4000000000),
+PARTITION Member_id_r4 VALUES LESS THAN (5000000000),
+PARTITION Member_id_r5 VALUES LESS THAN (6000000000),
+PARTITION Member_id_r6 VALUES LESS THAN (7000000000),
+PARTITION Member_id_r7 VALUES LESS THAN (8000000000),
+PARTITION Member_id_r8 VALUES LESS THAN (9000000000),
+PARTITION Member_id_r9 VALUES LESS THAN (MAXVALUE));
+
+Most likely, student id will be assigned sequentially to new students. So the partitions will fill-up one after another. Thus, overtime as the table becomes big, more and more partitions will get filled-up. Hence, range-partitioning will be useful for this table.
+
+b:
+CREATE TABLE StudentRegistration(
+id NUMBER(10) NOT NULL,
+fee_paid CHAR(1) CHECK (fee_paid IN ('Y', 'N')),
+Student_id NUMBER(10) NOT NULL,
+Section_id NUMBER(5) NOT NULL,
+Payment_ID NUMBER(4) NOT NULL,
+payment_amount NUMBER(10,2),
+CONSTRAINT StudentRegistration_id_pk PRIMARY KEY(id),
+CONSTRAINT StudentRegistration_Student_fk FOREIGN KEY(Student_id) REFERENCES Member(id),
+CONSTRAINT StudentRegistration_Section_fk FOREIGN KEY(Section_id) REFERENCES Section(id),
+CONSTRAINT StudentFee_Payment_fk FOREIGN KEY(Payment_ID) REFERENCES Payment(ID)
+)
+PARTITION BY HASH (ID)
+PARTITIONS 10;
+
+For StudentRegistration table, I chose hash partitioning because there are multiple times when a student has to pay fees for a course, apply for the course, etc. for which the sequence will be random. This, hash partitioning will allow to achieve uniform load balancing across all partitions.

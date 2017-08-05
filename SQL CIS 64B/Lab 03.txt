@@ -1,0 +1,122 @@
+------------------------------------------
+Oracle SQL
+Lab Assignment #03
+Name: Rashmi Baheti
+Last four digits of Student ID #7081
+Due date: 10-May-2017
+Date Handed in: 10-May-2017
+------------------------------------------
+
+Q1: Write a query to display employee number, employee name, hiredate, manager's name for those employees, whose manager's name starts with K or M or S. Label the columns Employee Number, Employee Name, Hiredate, Mgr Name. 
+Answer:
+select e.empno as "Employee Number", e.ename as "Employee Name", e.hiredate as "Hiredate", m.ename as "Mgr Name"
+from emp e LEFT OUTER JOIN emp m ON e.mgr = m.empno
+where m.ename LIKE 'K%'
+OR m.ename LIKE 'M%'
+OR m.ename LIKE 'S%';
+
+Output:
+
+Employee Number Employee N Hiredate  Mgr Name
+--------------- ---------- --------- ----------
+           7566 JONES      02-APR-81 KING
+           7782 CLARK      09-JUN-81 KING
+           7698 BLAKE      01-MAY-81 KING
+           7876 ADAMS      12-JAN-83 SCOTT
+
+
+Q2: Create a query that will display the employee name, department number, department name and all the employees that work in the same department as a given employee. Give each column an appropriate label.
+Answer:
+select e1.ename as "Employee Name", e1.deptno as "Dept No.", d.dname as "Dept name"
+from emp e1, emp e2, dept d
+where e1.deptno = e2.deptno AND e1.deptno = d.deptno AND TRIM(e2.ename)='SMITH';
+
+Employee N   Dept No. Dept name
+---------- ---------- --------------
+JONES              20 RESEARCH
+FORD               20 RESEARCH
+SMITH              20 RESEARCH
+SCOTT              20 RESEARCH
+ADAMS              20 RESEARCH
+John Smith         20 RESEARCH
+
+6 rows selected.
+
+
+Q3:Write a query to display the department name, location of all employees who are clerks. 
+Answer:
+select d.dname, d.loc
+from dept d, emp e
+where d.deptno = e.deptno AND TRIM(e.job)='CLERK';  
+
+DNAME          LOC
+-------------- -------------
+SALES          CHICAGO
+RESEARCH       DALLAS
+RESEARCH       DALLAS
+ACCOUNTING     NEW YORK
+
+
+Q4:Insert a new row into the department table: department number = 50, department name = training, location = San Francisco. Now create a query to display all the employees in department number 20 and 50. Columns to be displayed are emp number, emp name, dept name, dept location. 
+Answer:
+INSERT INTO DEPT VALUES (50,'TRAINING','San Francisco');
+
+SQL> INSERT INTO DEPT VALUES (50,'TRAINING','San Francisco');
+
+1 row created.
+
+select e.empno, e.ename, d.dname, d.loc
+from emp e, dept d
+where e.deptno = d.deptno AND (e.deptno = 20 OR  e.deptno = 50);
+
+     EMPNO ENAME      DNAME          LOC
+---------- ---------- -------------- -------------
+      7566 JONES      RESEARCH       DALLAS
+      7902 FORD       RESEARCH       DALLAS
+      7369 SMITH      RESEARCH       DALLAS
+      7788 SCOTT      RESEARCH       DALLAS
+      7876 ADAMS      RESEARCH       DALLAS
+      1456 John Smith RESEARCH       DALLAS
+
+6 rows selected.
+
+
+Q5: Insert a new row into the emp table - you can choose any values for the fields, but department number should be null. Now create a query to display all the employees and all the departments, using joins.
+Answer:
+INSERT INTO EMP2 VALUES (5555,'TIM','CLERK',7782,'14-May-1999',1500,NULL,NULL); 
+
+1 row created.
+
+SELECT e.empno, e.ename, e.deptno, d.dname, d.loc FROM emp2 e FULL OUTER JOIN dept d ON (e.deptno = d.deptno);
+
+     EMPNO ENAME          DEPTNO DNAME          LOC
+---------- ---------- ---------- -------------- -------------
+      7839 KING               10 ACCOUNTING     NEW YORK
+      7698 BLAKE              30 SALES          CHICAGO
+      7782 CLARK              10 ACCOUNTING     NEW YORK
+      7566 JONES              20 RESEARCH       DALLAS
+      7654 MARTIN             30 SALES          CHICAGO
+      7499 ALLEN              30 SALES          CHICAGO
+      7844 TURNER             30 SALES          CHICAGO
+      7900 JAMES              30 SALES          CHICAGO
+      7521 WARD               30 SALES          CHICAGO
+      7902 FORD               20 RESEARCH       DALLAS
+      7369 SMITH              20 RESEARCH       DALLAS
+
+     EMPNO ENAME          DEPTNO DNAME          LOC
+---------- ---------- ---------- -------------- -------------
+      7788 SCOTT
+      7876 ADAMS
+      5555 TIM
+                                 TRAINING       San Francisco
+                                 OPERATIONS     BOSTON
+
+16 rows selected.
+
+
+
+
+
+
+
+

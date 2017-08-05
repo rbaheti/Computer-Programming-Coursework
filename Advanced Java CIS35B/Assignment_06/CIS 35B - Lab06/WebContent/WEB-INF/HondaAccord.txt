@@ -1,0 +1,7 @@
+Model:Honda Accord Sedan
+Base Price:22555
+Color: Gold Clearcoat Metallic,0; Liquid Grey Clearcoat Metallic,0; Infra-Red Clearcoat,0; Green Clearcoat Metallic,0; Sangria Red Clearcoat Metallic,0; French Blue Clearcoat Metallic,0; Twilight Blue Clearcoat Metallic,0; Silver Metallic,0; Pitch Black Clearcoat,0; White Clearcoat,0
+Transmission: non-standard,0; standard,-995
+Brakes/Traction Control: standard,0; ABS,450; ABS with Advance Trac,1600
+Side Impact Air Bags: no,0; yes,200
+Power Moonroof: no,0; yes,600

@@ -1,0 +1,63 @@
+Q1. What are primary and foreign keys? Explain in detail. What are the implications of using these keys in different tables?
+Answer: 
+Primary key:
+A primary key is a special designation for a combination of columns that uniquely identify each row in the table.  This combination of columns is called the primary key of the table. A table cannot have more than one primary key. All values in the primary key must be unique and cannot be null. When a primary key is specified for a table, the Database Engine enforces data uniqueness and hence does not allow row insertions that break the constraint. If primary key constraint is defined on more than one columns, values may be duplicated within one column, but each combination of values from all the  columns in the primary key constraint definition must be unique.
+
+Foe example:
+Lets say we have a table EMP with EMPNO as its primary key.
+
+> CREATE TABLE EMP ( 
+EMPNO NUMBER(4) NOT NULL, 
+ENAME CHAR(10), 
+JOB CHAR(9), 
+DEPTNO NUMBER(2),
+PRIMARY KEY (EMPNO)); 
+
+Of the following 2 row insertions, the 2nd row insertion will fail as it inserts a row with duplicate
+EMPNO.
+> INSERT INTO EMP VALUES (7839,'KING','CLERK', 10); 
+> INSERT INTO EMP VALUES (7839,'Robert','Manager', 20);
+
+
+Foreign Key:
+A foreign key (FK) is a column or combination of columns that is used to establish and enforce a link between the data in two tables, namely foreign key table and primary key table.Foreign key constraint controls the data that can be stored in both tables.Any data changes that break the link established by foreign key constraint are not permitted by the database.
+
+Forr example:
+Lets say we have 2 tables DEPT and EMP a foreign key link. Due to the foreign key constraint, we cannot insert a row in EMP table if no row exists in DEPT table that use the corresponding DEPTNO.
+Similarly, we cannot delete a row from DEPT table if there are rows in EMP table that use the corresponding DEPTNO.
+
+Q2: What is data dictionary? What is it used for?
+Answer: 
+Data dictionary is one of the most important parts of Oracle database. It is a read-only set of tables that provides information about the database. The dictionary contains information about database objects such as-
+-Tables, indexes, columns, datatypes, views, sequences, procedures, functions, packages and so on.
+-Default values for columns
+-Integrity constraint information
+-Privileges and roles each user has been granted
+-The names of Oracle users
+-Other general database information
+
+Data dictionary is used by SQL server to execute queries and is automatically updated whenever objects are added, removed, or changed within the database. The data dictionary has following primary uses:
+-Oracle accesses the data dictionary to find information about users, schema objects, 
+and storage structures.
+-Oracle modifies the data dictionary every time that a data definition language (DDL)
+statement is issued.
+-Any Oracle user can use the data dictionary as a read-only reference for information
+about the database.
+
+Q3: What is the significance of creating a column in a table? What is the significance of a row in a table?
+Answer: 
+A column in a database has set of different types of values. Each value in a column represent a particular type of values.
+For example: A table that represents employees can have following columns:
+ID, Name, Address, deptNo, date of joining, hire date, salary, etc.
+The significance of creating a column in a table is that some of our queries can become very fast. For example, if we want to know the average salary of all employees, all we need to so is sum up all the salaries in the salary column. Thus, we dont have to go row by row and access unnecessary data just to sum up salaries of each employee.
+
+A row in a database provide data for each column. It is then understood as a single structured data value. In above example, it would be an employee.
+The row in a table is useful when you need data from multiple fields. You just need to query about the fields and you get all the required data in that row. A row is also significant when you want to insert a new record. For example, you can easily enter data for a new employee in the employee table.
+
+Q4. What is referential integrity and how is it used in relational databases for adding, removing and updating rows?
+Answer: 
+Referential integrity is a relational database concept in which the table relationships must always be consistent. In other words, a link created between two tables where the primary key of one table is associated with the foreign key of another table such that any primary key field changes must be applied to all foreign keys.
+While adding or inserting rows, user cannot insert a row in the foreign key table if it does not correspond to a primary key value in the primary key table.
+Similarly, while modifying or updating a row, user cannot update foreign key table if it does not have a corresponding row in Primary key table.
+While removing or deleting a row, user cannot delete a row in primary key table if it refers to a row in foreign key table.
+

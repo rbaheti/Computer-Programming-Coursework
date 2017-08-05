@@ -1,0 +1,129 @@
+------------------------------------------
+Oracle SQL
+Lab Assignment #05
+Name: Rashmi Baheti
+Last four digits of Student ID #7081
+Due date: 20-May-2017
+Date Handed in: 20-May-2017
+------------------------------------------
+
+Question 1 
+a. Create a query that displays the employees names and indicates the amounts of their salaries through asterisks. Each asterisk signifies hundred dollars. Sort the data in descending order of salary. Label the column EMPLOYEE_AND_THEIR_SALARIES.
+Answer:
+select CONCAT(ename, LPAD(' ', sal/100+1, '*')) AS "EMPLOYEE_AND_THEIR_SALARIES"
+from emp
+ORDER BY sal DESC;
+
+ EMPLOYEE_AND_THEIR_SALARIES
+--------------------------------------------------------------------------------
+KING       **************************************************
+John Smith ******************************
+SCOTT      ******************************
+FORD       ******************************
+JONES      *****************************
+BLAKE      ****************************
+CLARK      ************************
+ALLEN      ****************
+TURNER     ***************
+MILLER     *************
+MARTIN     ************
+
+EMPLOYEE_AND_THEIR_SALARIES
+--------------------------------------------------------------------------------
+WARD       ************
+ADAMS      ***********
+JAMES      *********
+SMITH      ********
+
+15 rows selected.
+
+
+b. Display the employees name, username, hire date, salary and salary review date, which is the first Monday after six months of service. Label the column REVIEW. Format the dates to appear in the format mm/dd/yy. Salary should be rounded. Username is first two letters of the name in the lower case. 
+Answer:
+
+SELECT ename AS "Emp Name",
+       LOWER(SUBSTR(TRIM(ename), 1, 2)) AS "Username",
+       TO_CHAR(hiredate, 'MM/DD/YY') AS "Hiredate",
+       ROUND(sal, 0) AS "Salary",
+       TO_CHAR(NEXT_DAY(ADD_MONTHS(hiredate, 6), 'MONDAY'), 'MM/DD/YY') AS "REVIEW"
+FROM emp;
+
+Emp Name   Username Hiredate     Salary REVIEW
+---------- -------- -------- ---------- --------
+KING       ki       11/17/81       5000 05/24/82
+BLAKE      bl       05/01/81       2850 11/02/81
+CLARK      cl       06/09/81       2450 12/14/81
+JONES      jo       04/02/81       2975 10/05/81
+MARTIN     ma       09/28/81       1250 03/29/82
+ALLEN      al       02/20/81       1600 08/24/81
+TURNER     tu       09/08/81       1500 03/15/82
+JAMES      ja       12/03/81        950 06/07/82
+WARD       wa       02/22/81       1250 08/24/81
+FORD       fo       12/03/81       3000 06/07/82
+SMITH      sm       12/17/80        800 06/22/81
+
+Emp Name   Username Hiredate     Salary REVIEW
+---------- -------- -------- ---------- --------
+SCOTT      sc       12/09/82       3000 06/13/83
+ADAMS      ad       01/12/83       1100 07/18/83
+MILLER     mi       01/23/82       1300 07/26/82
+John Smith jo       01/01/02       3000 07/08/02
+
+15 rows selected.
+
+
+c. Use subquery to display all employees, in department location 'BOSTON' with a salary of greater than $1000. 
+Answer:
+select e.ename, d.dname 
+from emp e, dept d
+where e.deptno = d.deptno 
+And d.deptno IN (SELECT deptno from dept WHERE loc='BOSTON')
+AND e.sal>1000;
+
+no rows selected
+
+
+Question 2 
+a. Write a query to display the employee name, job, and hire date for all employees who started between 01/01/81 to 12/31/81. Concatenate the name and job together, separated by a space and comma, and label the column Employees. 
+Answer:
+
+select CONCAT(ename, job) as "Employees", hiredate
+from emp
+where hiredate BETWEEN TO_DATE('01/01/1981', 'MM/DD/YYYY') AND TO_DATE('12/31/1981', 'MM/DD/YYYY')
+order by hiredate;
+
+Employees           HIREDATE
+------------------- ---------
+ALLEN     SALESMAN  20-FEB-81
+WARD      SALESMAN  22-FEB-81
+JONES     MANAGER   02-APR-81
+BLAKE     MANAGER   01-MAY-81
+CLARK     MANAGER   09-JUN-81
+TURNER    SALESMAN  08-SEP-81
+MARTIN    SALESMAN  28-SEP-81
+KING      PRESIDENT 17-NOV-81
+JAMES     CLERK     03-DEC-81
+FORD      ANALYST   03-DEC-81
+
+10 rows selected.
+
+
+b. Explain the usage of correlated subqueries, inline views with an example.
+Answer:
+In SQL, correlated subqueries are querries in which a subquery is written in the WHERE clause in refrence to the outer query. In this type of sub quries, a table alias is used to specify which table reference is to be used.
+For example:
+select e.ename, d.dname, d.loc
+from emp e, dept d
+where d.loc=(SELECT d1.loc FROM dept d1, emp e WHERE d1.deptno = e.deptno);
+
+In the above example, the subquery's d1.deptno depends on the outer query's e.deptno. Hence, outer query should execute first. 
+
+Inline views in SQL are subqueries written in the FROM clause rather in the WHERE clause. Inline views are commonly used to solve complex querries.
+For example:
+SELECT e.ename, e.deptno, s.salavg
+FROM emp e, (SELECT  deptno, avg(sal) salavg
+	     FROM emp
+	     GROUP BY deptno)s
+WHERE e.deptno=s.deptno;
+
+In the above inline view example, table name is replaced by a subquery and the outer query references a value from the inline view.
