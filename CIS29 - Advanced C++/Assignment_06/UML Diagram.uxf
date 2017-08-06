@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1020</x>
+      <y>230</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Use case 2
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>150</y>
+      <w>220</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Node
+--
+-tagName : string
+-childrenNodes : vector&lt;Node*&gt;
+-leafValue : string
+--
++GetTagName() : void
++SetTagName() : string
++GetLeafValue() : void
++SetLeafValue() : string
++AddChildrenNode() : void
++GetChildrenNode() : Node*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>40</y>
+      <w>240</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>TagStack
+--
+-stack&lt;string&gt; tagStack
+--
++PushTag(tagName: string) : void
++PopTag() : string
++PeakTag() : string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>380</y>
+      <w>250</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>ChildrenNodesQueue
+--
+-queue&lt;Node*&gt; ChildrenNodes
+--
++extractAllChildren(): vector&lt;Node*&gt; 
++PushBack(childNode : Node*) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>310</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>XMLLineParser
+--
+-tagName : string
+-lineType : XMLLineType
+-leafValue : string
+-XMLLineType : enum 
+--
++ParseLine(line : string) : void
++Reset() : void
++GetLineType() : XMLLineType
++GetTagName() : string
++GetLeafValue() : string
++GetChildrenNode() : Node*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>100</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>XMLNodes
+--
+
+-TopNodes : vector&lt;Node*&gt;
+
+--
+
++size() : int
++AddNode(node : Node*) : void
++GetNode(index : int) : Node*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>330</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>310</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>190</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>210</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Graph
+--
+-adjacency_matrix : vector&lt;vector&lt;int&gt;&gt; 
+-vertex_ids : vector&lt;int&gt;
+--
++Graph (num_vertices : int)
++AddEdge(int v1, int v2, int weight) : void
++HasEdge(int v1, int v2) : bool
++GetWeight(int v1, int v2) : int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>510</y>
+      <w>360</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>DistanceCalculator
+--
+-static const double Degree_toRadian
+-static const double Earth_Radius_In_Meters
+--
++static int GetDistance(from_lat, from_lon, to_lat, to_lon)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>390</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>AllPassShortestPath
+--
+-const Graph &amp;graph 
+-GetShortestPath(v1, v2) : vector&lt;int&gt;
+--
++AllPassShortestPath (graph : Graph)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>340</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>40</y>
+      <w>240</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>HamiltonianGraph
+--
+const Graph &amp;graph
+--
++HamiltonianGraph (&amp;graph : Graph)
++BreakGraph : vector&lt;Graph&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>820</x>
+      <y>140</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

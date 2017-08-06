@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>330</y>
+      <w>240</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>CommandProcessor
+--
+- commands: vector&lt;Command&gt;
+- commandExecutor : thread
+- robot : Robot
+--
++AddCommand() : void
++CommandProcessorLoop() : void
++ShutDown() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>30</y>
+      <w>260</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Robot
+--
+- commandExecutor: thread
+
+--
++ ExecuteCommand(Command): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>160</y>
+      <w>300</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>RobotOperator
+--
+- robot: Robot
+- read: CommandReader
+- cmdProcessor: queue&lt;commandProcessor&gt;
+--
++ Run(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>40</y>
+      <w>220</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>XmlNode
+--
+-tagName : string
+-childrenNodes : vector&lt;Node*&gt;
+-leafValue : string
+--
++GetTagName() : void
++SetTagName() : string
++GetLeafValue() : void
++SetLeafValue() : string
++AddChildrenNode() : void
++GetChildrenNode() : Node*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>220</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>290</y>
+      <w>220</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>XMLLineParser
+--
+-tagName : string
+-lineType : XMLLineType
+-leafValue : string
+-XMLLineType : enum 
+--
++ParseLine(line : string) : void
++Reset() : void
++GetLineType() : XMLLineType
++GetTagName() : string
++GetLeafValue() : string
++GetChildrenNode() : Node*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>280</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CommandExtractor
+--
+- lineParser: XmlLineParser
+- fileName: string
+--
++ GetNextCommandNode(): XmlNode
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>20</y>
+      <w>190</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Command
+--
+- Arm : Enum
+-Speed : Enum
+-degrees: int
+--
++ SetSpeed(): void
++ SetArm(): void
++ SetDegrees(): void
++ GetSpeed(): Speed
++ GetArm(): Arm
++ GetDegrees(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>440</y>
+      <w>240</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>CommandReader
+--
+- inputFileName: const String
+- commands: vector&lt;Commands&gt;
+- cmdExtractor: CommandExtractor
+--
++GetNextCommand() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>60</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>360</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>190</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>110</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>260</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

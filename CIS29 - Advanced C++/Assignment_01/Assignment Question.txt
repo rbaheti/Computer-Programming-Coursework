@@ -1,0 +1,76 @@
+Lab1
+
+Purpose:  Learn to effectively use Bitsets
+
+This lab involved decrypting an encrypted file.  The file was encrypted using Morse Code as a basis for the encryption.  Each Letter/Number/Punctuation character in Morse Code consists of Dots or Dashes.  For example, the 'C' in Morse Code is:  ".-.-".  Based on this, each character can be represented by 2 bit patterns:  Dash [ 01 ] and Dot [ 10 ].  So the letter 'C' would be converted to Morse Code as:  10011001 [ 168 ].  The reason two bits are necessary, is it's also necessary to represent a Character Termination Symbol [ 00 ], and a word terminator [ 11 ]. 
+
+Using SAM as an example:
+
+S = "..." = 101010 (42 in binary) with a letter terminator of 00 which gives 10101000.  This letter, due to its 1 and 0 count (8 bits) can be represented as an 8 bit character in the ASCII table.  10101000 = 168 which is the extended ASCII character [ ¨ ].
+
+A = ".-" = 1001 = (9 in binary) with a letter terminator of 00 which gives 100100.  This is only 6 bits, so two of the bits from the letter M can be added to this bitset to make it align on 8 bit boundaries for the ACSCII character.
+
+M = "--" = 0101 = (5 in binary).  So take the first two bits, and add them to the bitset for 'A':  10010001, which is the extended ASCII  character 145 [ ‘ ].  The remaining two bits for the letter M migrate to the next eight bit character in the series.
+
+When these bit patterns are written to a file with the 'binary' attribute, it will show [ ¨‘ ] for SA and part of M.
+
+To decrypt the file:
+a) Open the Morse.bin file in binary attribute, and read a character.  The first character, for example, is a [ ¨ ] which is bit pattern 10101000.
+b) Read the bits in 2 bit chunks: 
+10 = DOT
+10 = DOT
+10 = DOT
+00 = Character Space
+c) Find the DOT-DOT-DOT symbol in the Morse Code table
+d) Extract its associated ASCII character [ S ]
+e) Repeat from step (a) until EOF.
+
+Morse Code Table
+A .-
+B -...
+C -.-.
+D -..
+E .
+F ..-.
+G --.
+H ....
+I ..
+J .---
+K -.-
+L .-..
+M --
+N -.
+O ---
+P .--.
+Q --.-
+R .-.
+S ...
+T -
+U ..-
+V ...-
+W .--
+X -..-
+Y -.--
+Z --..
+0 -----
+1 .----
+2 ..---
+3 ...--
+4 ....-
+5 .....
+6 -....
+7 --...
+8 ---..
+9 ----.
+' .----.
+@ .--.-.
+: ---...
+, --..--
+$ ...-..-
+= -...-
+! -.-.--
+. .-.-.-
+? ..--..
+" .-..-.
+
+Note:  The ASCII table was generated in Notepad++.  See Notepad++ for a reference.
