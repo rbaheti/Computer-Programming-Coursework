@@ -1,0 +1,167 @@
+/************************  Cross Reference Listing  ************************/
+
+Cross reference listing made at: Tue Aug  2 09:34:13 2016
+
+
+NUM_STU                          4  21  31
+STUDENT                         11  14  14  15  15  16  16  20  21  49  49  50  70  70  72  73  74
+95  95  97  98  99
+char                             8  16  49
+define                           4
+final                           10  58  80  80
+for                             52  76 101
+getchar                         39
+h                                1   2
+include                          1   2
+insertionSort                   14  95
+insertionSortDescendingOrder    15  35  70
+int                              9  10  18
+list                            14  15  70  76  80  95 101 105
+main                            18
+midterm                          9  56  57
+name                             8  55 105 105
+pCurr                           73  76  76  76  78  79  98 101 101 101 103 104
+pLast                           14  15  16  20  31  32  35  37  49  52  70  76  95 101
+pStu                            20  50  52  52  52  55  56  57  58
+pWalk                           74  79  80  80  82  82  83  85  99 104 105 105 107 107 108 110
+printList                       16  32  37  49
+printf                          51  54  60
+return                          40
+stdio                            1
+str                             16  49  51
+strcmp                         105
+string                           2
+struct                           6
+stuList                         16  21  31  32  35  37  49  52
+temp                            72  78  80  85  97 103 105 110
+typedef                          6
+void                            14  15  16  18  49  70  95
+while                           80 105
+
+  1: #include <stdio.h>
+  2: #include <string.h>
+  3:
+  4: #define NUM_STU 6
+  5:
+  6: typedef struct
+  7: {
+  8:   char  name[31];
+  9:   int   midterm[2];
+ 10:   int   final;
+ 11: } STUDENT;
+ 12:
+ 13: // Function Prototypes.
+ 14: void insertionSort(STUDENT  list[], STUDENT *pLast);
+ 15: void insertionSortDescendingOrder(STUDENT  list[], STUDENT *pLast);
+ 16: void printList(STUDENT stuList[], STUDENT *pLast, char* str);
+ 17:
+ 18: int main(void)
+ 19: {
+ 20:   STUDENT *pStu, *pLast;
+ 21:   STUDENT  stuList[NUM_STU] =
+ 22:   {
+ 23:     { "Taylor, Noah",{ 85, 94 }, 92 },
+ 24:     { "Smith, Olivia",{ 91, 89 }, 86 },
+ 25:     { "Brown, Liam",{ 87, 88 }, 90 },
+ 26:     { "Davis, Emma",{ 96, 88 }, 97 },
+ 27:     { "Garcia, Mason",{ 79, 93 }, 92 },
+ 28:     { "Lopez, Sophia",{ 83, 78 }, 95 }
+ 29:   };
+ 30:
+ 31:   pLast = stuList + NUM_STU - 1;
+ 32:   printList(stuList, pLast, "Unsorted data:");
+ 33:
+ 34:   //insertionSort(stuList, pLast);
+ 35:   insertionSortDescendingOrder(stuList, pLast);
+ 36:
+ 37:   printList(stuList, pLast, "Sorted data:");
+ 38:
+ 39:   getchar();
+ 40:   return 0;
+ 41: }
+ 42:
+ 43: /* ========================================================
+ 44: Print list on console.
+ 45: Pre  list[] must contain at least one element
+ 46: size is index to last element in list
+ 47: Post  list has been printed on console.
+ 48: */
+ 49: void printList(STUDENT stuList[], STUDENT *pLast, char* str) {
+ 50:   STUDENT *pStu;
+ 51:   printf("%s\n", str);
+ 52:   for (pStu = stuList; pStu <= pLast; pStu++)
+ 53:   {
+ 54:     printf("%-30s %4d %4d %4d\n",
+ 55:       pStu->name,
+ 56:       pStu->midterm[0],
+ 57:       pStu->midterm[1],
+ 58:       pStu->final);
+ 59:   }
+ 60:   printf("\n");
+ 61: }
+ 62:
+ 63: /* ========================================================
+ 64: Sort list in descending order using Insertion Sort.
+ 65: Pre  list[] must contain at least one element
+ 66: size is index to last element in list
+ 67: Post  list has been rearranged in descending order
+ 68: by the final exam score.
+ 69: */
+ 70: void insertionSortDescendingOrder(STUDENT  list[], STUDENT *pLast)
+ 71: {
+ 72:   STUDENT  temp;
+ 73:   STUDENT *pCurr;
+ 74:   STUDENT *pWalk;
+ 75:
+ 76:   for (pCurr = list + 1; pCurr <= pLast; pCurr++)
+ 77:   {
+ 78:     temp = *pCurr;
+ 79:     pWalk = pCurr - 1;
+ 80:     while (pWalk >= list && (temp.final > pWalk->final))
+ 81:     {
+ 82:       *(pWalk + 1) = *pWalk;
+ 83:       pWalk--;
+ 84:     }
+ 85:     *(pWalk + 1) = temp;
+ 86:   }
+ 87: }
+ 88:
+ 89: /* ========================================================
+ 90: Sort list using Insertion Sort.
+ 91: Pre   list[] must contain at least one element
+ 92: size is index to last element in list
+ 93: Post  list has been rearranged.
+ 94: */
+ 95: void insertionSort(STUDENT  list[], STUDENT *pLast)
+ 96: {
+ 97:   STUDENT  temp;
+ 98:   STUDENT *pCurr;
+ 99:   STUDENT *pWalk;
+100:
+101:   for (pCurr = list + 1; pCurr <= pLast; pCurr++)
+102:   {
+103:     temp = *pCurr;
+104:     pWalk = pCurr - 1;
+105:     while (pWalk >= list && strcmp(temp.name, pWalk->name) < 0)
+106:     {
+107:       *(pWalk + 1) = *pWalk;
+108:       pWalk--;
+109:     }
+110:     *(pWalk + 1) = temp;
+111:   }
+112: }
+
+Enter identifier to search or just press enter to exit: printf
+printf                          51  54  60
+
+Enter identifier to search or just press enter to exit: hello
+Could not find any data corresponding to hello.
+
+Enter identifier to search or just press enter to exit: PRINTF
+Could not find any data corresponding to PRINTF.
+
+Enter identifier to search or just press enter to exit: for
+for                             52  76 101
+
+Enter identifier to search or just press enter to exit:
+No Memory Leak
