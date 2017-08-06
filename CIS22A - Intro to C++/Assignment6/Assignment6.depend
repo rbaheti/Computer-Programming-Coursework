@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1437418798 source:z:\assignments\assignment6\main.cpp
-	<iostream>
-	<fstream>
-	<iomanip>
-
