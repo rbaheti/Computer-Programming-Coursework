@@ -1,0 +1,18 @@
+1Q: 1Write a program that will –
+
+
+Read in the contents of a text file up to a maximum of 1024 words – you create your own input.  When reading the file contents, you can discard words that are single characters to avoid symbols, special characters etc.
+    Sort the words read in ascending order in an array using the Selection Sort algorithm implemented in its own function.
+    Search any item input by user in your sorted list using the Binary Search algorithm implemented in its own function.
+    Use string comparisons as taught in CIS 22A for comparing/ ordering words, i.e. words starting with numbers sort lower than words starting with uppercase letters which are lower than words starting with lowercase letters.  So a word appearing once with one set of case is different than its second appearance with a different set of case, e.g. 'Do' and 'do' are not the same.
+    If a word appears twice using exactly the same case, it can be stored twice side-by-side in the array and either index can be returned in the search.
+    Your program will:
+        first ask the user for a location+name from where to read the file and location+name where to save the output file,
+        read the contents into an array, ignoring single character words,
+        sort the contents of the array and
+        then ask the user for words to search - this should happen in a loop with an appropriate exit condition. 
+        Provide clear prompts as necessary for good user interactivity.
+    Your output should be sent to both screen and an output file concurrently. It should include the sorted array and all the user interaction related to searching for words.
+    User interactivity should be limited to your main, input and/or output functions only.
+    Your output will consist of 4 files – your code files, your text input, the screen output and file outputs.  Compress all of these into a single ZIP file format to upload.
+    I will test your program with my own input file.

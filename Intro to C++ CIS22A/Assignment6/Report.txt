@@ -1,0 +1,7 @@
+The account has a balance of -29.98
+Because the balance is negative, the account has been closed.
+
+Ending balance:               $-29.98
+Amount of deposits:           $20.00
+Amount of withdrawals:        $100.00
+Amount of interest earned:    $0.02
