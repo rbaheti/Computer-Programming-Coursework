@@ -1,0 +1,442 @@
+Alfredo sauce,10.71
+All spice,4.14
+Allergy medication,20.06
+Aluminum foil,8.92
+Anchovies,6.04
+Antacids,10.88
+Apple sauce,16.84
+Apple sauce,20.77
+Apples,14.30
+Apricots,7.51
+Asparagus,20.23
+Avocados,9.38
+Baby cookies,14.13
+Baby food,5.82
+Baby Items Cereal,12.69
+Baby Lotion,6.74
+Baby shampoo,3.25
+Baby wash,6.32
+Baby wipes,10.10
+Bacon,1.68
+Bagels,9.16
+Baguette,14.64
+Baking powder,6.45
+Baking soda,17.97
+Bananas,16.76
+Band-aids,4.59
+Bar soap,12.72
+Basil,10.95
+Basil,14.90
+Bathroom cleaner,6.17
+Bay leaf,14.08
+BBQ sauce,18.73
+Bean salad,6.26
+Beans,13.68
+Beans,5.54
+Beef pot pie,5.53
+Beets,18.30
+Berries,11.89
+Bisquick,6.33
+Bleach,17.85
+Blue berries,19.78
+Body wash,7.91
+Bologna,4.80
+Bottle liners,19.44
+Bottle nipples,12.13
+Bottles,7.16
+Bouillon cubes,5.46
+Bran,9.70
+Bread crumbs,2.82
+Breast pads,9.24
+Breath mints,15.99
+Broccoli soup,15.79
+Broccoli,14.42
+Brown sugar,19.55
+Brownie mix,11.27
+Brownies,18.76
+Brussels sprouts,7.26
+Buns,18.10
+Burger patties,5.04
+Burritos,6.07
+Butter,2.64
+Cabbage,12.36
+Cake mix,18.73
+Cake,17.09
+Candles,11.87
+Candy,2.35
+Cantaloupe,8.99
+Carpet cleaner,17.84
+Carpet freshener,19.55
+Carrots,3.47
+Carrots,8.22
+Cat food,17.31
+Cat litter,5.90
+Catnip,15.80
+Cauliflower,14.74
+Celery,12.74
+Chard,13.79
+Cheese bread,4.31
+Cheese slices,20.78
+Cheese spread,12.23
+Cheezies,19.24
+Cherries,13.34
+Chew toy,1.21
+Chick peas,15.73
+Chicken bologna,16.07
+Chicken breast,8.56
+Chicken flaked,9.55
+Chicken legs,12.35
+Chicken loaf,14.45
+Chicken noodle soup,20.77
+Chicken nuggets,9.40
+Chicken pot pie,6.77
+Chicken wings,20.08
+Chicken,12.93
+Chicken,14.62
+Chili Sauce,13.83
+Chili,3.39
+Chip dip,11.33
+Chips,13.34
+Chives,20.62
+Chocolate sauce,20.80
+Chocolate,7.52
+Cilantro,5.73
+Cinnamon buns,11.27
+Cinnamon,3.28
+Clams,2.27
+Cloves,12.02
+Club soda,10.01
+Cocoa powder,12.46
+Cod,14.45
+Coffee whitener,20.42
+Coffee,18.98
+Cold medicine,15.81
+Collards,11.52
+Conditioner,15.26
+Cookies,11.12
+Cookies,2.74
+Corn chips,14.51
+Corn creamed,3.44
+Corn dogs,7.04
+Corn flakes,20.26
+Corn meal,13.40
+Corn whole,12.63
+Corn,3.06
+Corned beef,12.87
+Cottage cheese,15.82
+Cotton balls,11.69
+Cotton swabs,15.90
+Couscous,9.27
+Crab,7.98
+Crackers,17.89
+Cranberries,15.17
+Cream cheese,3.79
+Cream of wheat,5.80
+Cream,4.74
+Croissants,20.62
+Cucumbers,11.72
+Decorations,8.76
+Dental/Breath bones,20.74
+Deodorant,18.58
+Diaper rash ointment,3.40
+Diapers,20.37
+Dish soap,18.64
+Dishwasher detergent,15.18
+Dog food,15.79
+Doughnuts,2.10
+Dried fruit,2.81
+Drink crystals,13.34
+Egg Nog,11.82
+Egg plant,20.66
+Egg substitute,13.79
+Eggs,6.48
+Endives,4.62
+English muffins,3.88
+Escargot (snails),15.12
+Fabric softener,19.58
+Facial tissue,19.80
+Fish sticks,2.88
+Flea collar,2.33
+Floss,11.64
+Flounder,16.03
+Flour,7.57
+Flu medicine,17.09
+Formula,18.52
+French bread,6.27
+French fries,19.82
+Fruit juice,19.86
+Fruit salad,12.65
+Fruit,6.24
+Garbage bags,7.03
+Garlic bread,1.10
+Garlic,14.17
+Garlic,20.72
+Ginger,1.98
+Glass's cleaner,15.99
+Graham crumbles,8.15
+Granola bars,2.88
+Grape nuts,18.84
+Grapefruit,14.50
+Grapes,11.35
+Gravy,19.94
+Green peppers,10.10
+Grooming comb,20.00
+Ground beef,7.68
+Ground pork,6.66
+Gum,7.55
+Hair color,16.81
+Hair gel,18.04
+Hair spray,6.03
+Half & half,10.69
+Halibut,3.20
+Ham,20.83
+Hamburger buns,5.07
+Hamburgers,5.28
+Hand soap,14.51
+Hash browns,13.68
+Hickory sticks,1.12
+Honey comb,16.56
+Honey nut ohs,11.30
+Honey,5.29
+Honeydew,5.72
+Hot dog buns,18.36
+Hot dogs,13.05
+Hot sauce,12.89
+Hot/Cold rub,11.97
+HP sauce,14.92
+Ice cream,12.72
+Icing,10.28
+Instant Noodles,16.15
+Jam,13.68
+Jell-O,20.58
+Jelly,1.67
+Juice concentrate,7.49
+Juice,20.89
+Kale,9.82
+Ketchup,8.58
+Kid's cereal,4.55
+Kitchen cleaner,4.65
+Kiwi,11.97
+Kohlrabi,3.83
+Kumquats,6.72
+Laundry detergent,7.74
+Lemon juice,11.90
+Lemons,4.01
+Lettuce,7.63
+Life,6.88
+Limes,5.58
+Linguini,15.21
+Lip balm,9.70
+Liver,18.61
+Lobster,16.69
+Lunch bags,7.43
+Mac&cheese,2.07
+Macaroni,18.83
+Mangoes,9.06
+Maple syrup,13.75
+Margarine,14.13
+Marmalade,9.61
+Mashed potatoes,13.35
+Mayonnaise,8.25
+Meat sauce,15.71
+Meat tenderizer,9.11
+Medicine,9.56
+Melon,6.21
+Milk 1%,14.53
+Milk 2%,20.49
+Milk chocolate,8.58
+Mineral water,9.30
+Mini wheats,18.90
+Mint,14.32
+Mixed vegetables,9.11
+Mixers,15.77
+Molasses,15.01
+Montreal meat spice,15.36
+Mosquito repellant,3.15
+Mousse,11.02
+Mozzarella sticks,8.26
+Muffin Mix,2.62
+Mushrooms,5.01
+Muslix,5.83
+Mussels,15.41
+Mustard,7.67
+Nacho chips,8.31
+Nacho dip,14.54
+Nail clippers,6.45
+Napkins,17.70
+Nectarines,1.76
+Non-stick spray,16.68
+Nuts,12.70
+Nuts,8.84
+Oat meal,5.57
+Oatmeal,6.55
+Oil,13.48
+Olives,18.46
+Onion rings,9.76
+Onion soup,12.01
+Onions,13.83
+Oranges,19.30
+Oregano,1.35
+Oregano,19.77
+Oven cleaner,8.15
+Oysters,14.42
+Oysters,15.81
+Pabulum,8.54
+Pancake mix,13.60
+Pancakes,8.30
+Papaya,20.29
+Paper plates,13.48
+Paper towel,2.86
+Paper towels,11.91
+Paprika,13.82
+Parsley,13.03
+Parsley,17.25
+Parsnips,12.46
+Pasta sauce,10.35
+Pasta,9.20
+Pate,18.74
+Peaches,13.90
+Peaches,18.40
+Peanut butter,10.97
+Peanuts,3.69
+Peanuts,8.15
+Pears,19.91
+Pears,5.71
+Peas,17.63
+Peas,5.44
+Pectin,1.56
+Pepper,14.44
+Pepperoni,19.74
+Perogies,1.51
+Pickles,10.63
+Pie,16.13
+Pie,20.07
+Pineapple,15.00
+Pineapple,17.37
+Pita bread,6.66
+Pizza snacks,1.11
+Pizza,1.05
+Pizza,4.55
+Plastic containers,19.56
+Plastic cups,18.20
+Plastic cutlery,4.29
+Plastic wrap,12.51
+Plums,1.13
+Pop,2.97
+Popcorn,19.08
+Popsicles,3.77
+Pork & beans,2.34
+Pork chops,2.13
+Pork rinds,5.85
+Pot scrubbers,11.09
+Potato nuggets,16.42
+Potato soup,18.93
+Potatoes,17.48
+Pretzels,1.17
+Protein bars,11.18
+Puffed wheat,20.32
+Pumpernickel,11.50
+Pumpkin,7.10
+Radishes,17.98
+Raisin bran,9.15
+Raisin bread,8.01
+Raspberries,4.25
+Ravioli,1.31
+Red peppers,8.72
+Red snapper,17.83
+Reflective collar,3.63
+Relish,19.32
+Rice crispies,3.63
+Rice,4.91
+Roast beef,20.67
+Rotini,12.31
+Rutabagas,13.36
+Rye bread,5.00
+Salad dressing,3.52
+Salami,2.71
+Salmon,14.72
+Salmon,16.39
+Salsa,9.80
+Salt,15.45
+Salt,3.22
+Sandwich bags,10.46
+Sandwich bread,17.81
+Sardines,19.65
+Sausage,4.32
+Scrubbers,1.89
+Seafood Frozen,10.63
+Sealable bags,18.84
+Shampoo,7.35
+Shortening,10.61
+Shreddies,20.78
+Shrimp,17.92
+Sorbet,8.66
+Soup,19.55
+Sour cream,17.68
+Sourdough,11.34
+Soy milk,3.12
+Soy sauce,9.36
+Spaghetti,17.58
+Spam,4.97
+Spinach,19.17
+Sponges,5.71
+Sport drink,14.26
+Sprinkles,4.31
+Sprouts,5.54
+Squash,10.39
+Steak sauce,6.35
+Steak,6.92
+Stew,5.30
+Stir fry,7.59
+Strawberries,15.26
+Sugar substitute,18.82
+Sugar,4.91
+Sweet & sour sauce,3.88
+Sword fish,11.78
+Syrup,3.46
+Taquitos,14.26
+Tartar Sauce,19.88
+Tater tots,9.30
+Tea,3.55
+Teething ointment,11.76
+Teething ring,18.72
+Tilapia,2.43
+Tofu,18.57
+Toilet bowl cleaner,9.12
+Toilet paper,11.10
+Toilet tank fresheners,5.65
+Tomato paste,2.83
+Tomato sauce,3.93
+Tomatoes,14.12
+Tomatoes,6.36
+Tortillas,3.99
+Toys,12.38
+Trail mix,12.90
+Treats,18.64
+Tub&Tile cleaner,11.51
+Tuna,13.92
+Tuna,19.81
+Turkey breast,19.59
+Turkey pot pie,5.62
+Turkey,1.31
+Turkey,13.95
+Turkey,8.84
+TV dinners,3.50
+Vacuum bags,20.37
+Vanilla extract,11.05
+Vector,10.12
+Vegetables Fruits,4.14
+Veggie burgers,1.47
+Veggie burgers,9.39
+Veggie dogs,7.08
+Vinegar,5.85
+Waffles,3.53
+Wax paper,18.43
+Whipping cream,13.76
+Whole grain,19.78
+Worcestershire sauce,15.94
+Yams,17.70
+Yeast,16.48
+Yellow peppers,6.73
+Yogurt,7.99
+Zucchini,13.20
