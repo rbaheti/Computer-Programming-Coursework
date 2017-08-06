@@ -1,7 +1,0 @@
-Ask querries:
-1. function getEntry() takes two parameters while only one is needed
-
-
-To-Do:
-1. delete _inset2() function and also part of it in the insert function.
-2. delete _longest branch which calculates total number of levels in the tree
