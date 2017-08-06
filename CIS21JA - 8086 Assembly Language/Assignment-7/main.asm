@@ -12,11 +12,11 @@ COMMENT !
  never be larger than 32 bits.
 3.This process will continue till the user enters 0 for both inputs.
 
-You can’t use mul instruction in your program. You need to use shifting
+You canâ€™t use mul instruction in your program. You need to use shifting
  and addition only.
 
 Your program must have at least one procedure called multiply. 
-1.This procedure can’t use any global variables (variables that are
+1.This procedure canâ€™t use any global variables (variables that are
  inside .data segment).
 2.The caller of this procedure sends its argument through the stack.
 3.The procedure receives the multiplicand and multiplier through the stack.
