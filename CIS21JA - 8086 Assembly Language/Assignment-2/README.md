@@ -1,5 +1,4 @@
-
-Part one: (22 Points)
+#Part one: (22 Points)
 
     1. Assume that you are given values in eax,ebx,ecx. Write code that adds the
     values inside all those registers, and stores the final result inside edx.
@@ -46,7 +45,7 @@ Part one: (22 Points)
 	      mov a, al
 	      mov b, al
 
-Part two:(8 points)
+#Part two:(8 points)
 
    Copy C:\irvine\Examples\Project_sample to your local directory
    Open the project and open sample.asm
