@@ -1,7 +1,7 @@
 Assignment 4
 
 Question:  
-Write a complete program that:  
+Write a complete program that:
 1. Promts the user to enter 10 numbers.  
 2. saves those numbers in a 32 bit integer array.  
 3. Calculates the sum of the numbers and displays it.  
