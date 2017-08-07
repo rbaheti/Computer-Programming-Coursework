@@ -1,6 +1,7 @@
 Part one: (22 Points)
 
 1. Assume that you are given values in eax,ebx,ecx. Write code that adds the values inside all those registers, and stores the final result inside edx.
+
 Solution: add eax, ebx
 	  add eax, ecx
 	  mov edx, eax
