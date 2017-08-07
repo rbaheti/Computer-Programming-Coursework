@@ -1,35 +1,3 @@
-; Program template
-TITLE   Assignment 3
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; name: Rashmi Baheti
-; date: 04/20/2016
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-COMMENT !
-a. you need four variables a, b, cc and result. 
-   Don't use c. c is a reserved letter.
-   your variables need to be 4 bytes 
-   unsigned 
-b. you need three prompt strings 
-  
-c. procedures that you need to call:
-   writeString
-   readDec
-   writeDec 
-   crlf
-
-   Question:
-Starting with the main.asm, write a complete program that will input values for a,
-b and c and display the value of the expression (a + b * c)/ (2*b)
-assume that the user enters only numbers that are greater than zero.
-Sample run:
-
-Enter the value of a? 3
-Enter the value of b? 6
-Enter the value of c? 8
-The restult is:  4
-Press any key to continue . . .
-!
-
 INCLUDE Irvine32.inc
 
 .data
