@@ -1,11 +1,3 @@
-/** Name          : Rashmi Omprakash Baheti
-    Date          : 23rd July 2015
-    Assignment 7  : Option A
-    Program Title : This program calculates a contestant’s score in a
-                    particular talent competition.
-
-**/
-
 #include <iostream>
 #include <iomanip>
 using namespace std;

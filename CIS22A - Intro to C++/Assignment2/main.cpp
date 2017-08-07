@@ -1,10 +1,3 @@
-/*
-    Name    : Rashmi Omprakash Baheti
-    Date    : 1st July 2015
-    Program : Estimation of Ideal Body Weight
-*/
-
-
 #include <iostream>
 using namespace std;
 

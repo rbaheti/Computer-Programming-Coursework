@@ -1,13 +1,3 @@
-/** Name          : Rashmi Omprakash Baheti
-    Date          : 27th July 2015
-    Assignment 8  : Option B
-    Program Title : This program checks the result of the local Driver’s
-                    License exam and then displays the total number of
-                    correctly answered questions, the total number of
-                    incorrectly answered questions, and a list showing the
-                    question numbers of the incorrectly answered questions.
-**/
-
 #include <iostream>
 using namespace std;
 

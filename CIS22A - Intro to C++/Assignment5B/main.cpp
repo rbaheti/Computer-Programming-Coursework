@@ -1,11 +1,3 @@
-/** Name          : Rashmi Omprakash Baheti
-    Date          : 13th July 2015
-    Assignment 5  : Option B
-    Program Title : Program that calculates a customer’s monthly phone bill
-                    and displaying the savings in other packages
-
-**/
-
 #include <iostream>
 #include <iomanip>
 

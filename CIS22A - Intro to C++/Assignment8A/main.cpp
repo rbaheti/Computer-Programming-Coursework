@@ -1,13 +1,3 @@
-/** Name          : Rashmi Omprakash Baheti
-    Date          : 27th July 2015
-    Assignment 8  : Option A
-    Program Title : This program asks the user to enter 10 integers and saves
-                    them in an array, then it asks the user to enter a number.
-                    Then the program displays all of the numbers in the array
-                    that are greater than the input number.
-
-**/
-
 #include <iostream>
 using namespace std;
 

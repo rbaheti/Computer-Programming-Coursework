@@ -1,12 +1,3 @@
-/**
-    Name          : Rashmi Omprakash Baheti
-    Date          : 8th July 2015
-    Assignment 3  : Option A
-    Program Title : To calculate calories of a person
-                    from the given data
-**/
-
-
 #include <iostream> // Including input-output header file
 #include <iomanip>  // Including input-output manipulative header file
 

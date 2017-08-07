@@ -1,11 +1,3 @@
-/** Name          : Rashmi Omprakash Baheti
-    Date          : 20th July 2015
-    Assignment 6  : Option B
-    Program Title : This program calculates the balance of a savings account at
-                    the end of a period of time.
-
-**/
-
 #include <iostream>
 #include <fstream>
 #include <iomanip>

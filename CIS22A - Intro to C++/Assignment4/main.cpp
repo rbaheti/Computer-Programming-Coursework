@@ -1,9 +1,3 @@
-/** Name          : Rashmi Omprakash Baheti
-    Date          : 9th July 2015
-    Assignment    : Option B
-    Program Title : Program that calculates a customer’s monthly phone bill **/
-
-
 #include <iostream>
 #include <iomanip>
 
