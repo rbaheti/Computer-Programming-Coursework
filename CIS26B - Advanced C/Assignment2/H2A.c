@@ -1,23 +1,3 @@
-/*
-Pointers, Stacks & Queues
-
-There are a number of errors (about 10) in the following program.
-Locate all errors, fix them (as shown below), run the program and save its output.
-
-Here is an example:
-
-int num = 10;
-int *ptr;
-
-num = &ptr; // <== Error: Comment the line and write the correct line below
-
-// num = &ptr; // Error #1
-ptr = &num;
-
-NAME: Rashmi Baheti
-IDE: Visual Studio
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -40,7 +20,6 @@ typedef struct node NODE;
 struct node
 {
   STUDENT     data;
-  //struct node next;   // Error #1
   struct node* next;
 };
 
@@ -62,11 +41,9 @@ int main(void)
     { "Lopez, Sophia",{ 83, 78 }, 95 }
   };
 
-  //NODE *stack; // Error #4
   NODE *stack = NULL;
   NODE *top = NULL;
   NODE *queue = NULL, *rear = NULL;
-  //NODE front; // Error #2
   NODE *front = NULL;
   int i, n, count = 4;
 
@@ -75,30 +52,24 @@ int main(void)
   for (n = 0; n < count; n++)
   {
     i = rand() % NUM_STU;
-    // push(stack, &stuList[i]); // Error #9
     push(&stack, &stuList[i]);
-    //enqueue(&queue, &rear, stuList[i]); // Error #3
     enqueue(&queue, &rear, &stuList[i]);
   }
 
   // display stack
   printf("STACK contents from top to bottom:\n");
-  // while ((top = pop(stack))) //  Error #5
   while ((top = pop(&stack))) // top != NULL
   {
     printStu(&top->data);
-    // Error #7  (Need to free every node in the stack)
     free(top); 
   }
   printf("\n\n");
 
   // display queue
   printf("QUEUE contents from front to rear:\n");
-  // while ((front = dequeue(queue, rear))) // Error #6
   while ((front = dequeue(&queue, &rear))) // front != NULL
   {
     printStu(&front->data);
-    // Error #8 (Need to free every node in the queue)
     free(front); 
   }
   printf("\n\n");
@@ -125,7 +96,6 @@ void printStu(const STUDENT *pStu)
 /***************************************************
 Stack Insert: insert in the beginning
 */
-// NODE *push(NODE *stack, const STUDENT *pStu) // Error #10
 NODE *push(NODE **stack, const STUDENT *pStu)
 {
   NODE *pnew;

@@ -1,24 +1,3 @@
-/*********************************************************************************
-** CIS 26B                                                            Summer, 2016
-** Advanced C
-******************
-**
-** Homework 2:
-**        A Circularly Doubly Linked List of Stacks
-**
-**********************************************************************************
-
-This program reads temperature data for cities from given input file. Stores the data in
-a circular doubly linked list and stacks. It prints the data in ascending and descending
-order of city names. It also allows user to see average temperature data for any city.
-
-Save the output as a comment at the end of the program!
-**********************************************************
-**
-**  Written By:Rashmi Baheti 
-**
-**  Date:09-July-2016
-***************************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>

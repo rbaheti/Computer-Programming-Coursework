@@ -1,17 +1,3 @@
-/***
-CIS 26B: Homework 1B
-********************
-NAME: Rashmi Baheti
-IDE (compiler): Visula Studio
-*************************************************************************
-
-Review: Functions, Structures, Pointers, Arrays, Sorting, Data Files,
-and Dynamic Allocation of Memory
-
-Create and process a dynamically allocated array of structures
-Save the output as a comment at the end of the program!
-*/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>

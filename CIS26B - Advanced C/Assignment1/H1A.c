@@ -1,20 +1,3 @@
-/***
-CIS 26B: Homework 1A
-********************
-NAME: Rashmi Baheti
-IDE(compiler): Visual Studio
-*************************************************************************
-Review: Functions, Structures, Pointers, Arrays, and Sorting
-Sort an array of STUDENT structures using the insertion sort algorithm.
-
-Your task:
-1. Write function named printList() that displays the list to the screen and call it twice.
-2. Write a second sort function that sorts the array in descending order
-by the final exam score, then call it.
-3. Call the printList() function again to show the results of the second sort.
-4. Replace the "Sample Output" below with the new results.
-*/
-
 #include <stdio.h>
 #include <string.h>
 
