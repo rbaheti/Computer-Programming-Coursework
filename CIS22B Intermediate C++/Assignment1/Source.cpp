@@ -1,34 +1,3 @@
-/*
-Course    : CIS 22B
-Lab_No 01 : Read a file then sorting it using selection sort and searching a word in the file using Binary search.
-Name      : 1. Rashmi Baheti
-	        2. Joshua Bowen
-*/
-
-/*
-Pseudocode:
-Define a recursive function for selection sort:
-Input : Array arr[] to sort, Size of array arr[], Index 'i' in the array from where the array needs to be sorted.
-Check the condition : If no more numbers are left for sorting then return.
-
-Now, find the lowest number in the array arr[] using variables i and j.
-	Once the lowest number is found, send it to the 1st element of the array.
-		Similarly, find the lowest number from the remaining unsorted array arr[] and
-		send it to the 2nd element in the array.
-		In this way, sort all the remaining elements in the array in the ascending order.
-		(This is done by calling the search function to itself until  no more numbers are left for sorting).
-
-Define a void function "printWords()" to print the array elements:
-Input : Array arr[] of string datatype, No. of words "numWords" of integer datatype.
-For integer i is set to each subscript in array from 0 through the next-to-last subscript.
-	Then printing the value of each element in the array arr[].
-
-Define binary search function "binarySearch()" to search the user word.
-Input : Array arr[] to search the word in it, first
-
-*/
-
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -88,12 +57,12 @@ int binarySearch(string arr[], int first, int last, string search)
 
 int main()
 {
-	cout << "Please open Assignment1_Que.txt file." << endl;
+	cout << "Opening input.txt file." << endl;
 	
 	ifstream infile;
 	string arr[1024];
 	int numWords = 0;
-	infile.open("Assignment1_Que.txt");
+	infile.open("input.txt");
 	while (!infile.eof())
 	{
 		infile >> arr[numWords];

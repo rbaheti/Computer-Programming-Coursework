@@ -1,6 +1,3 @@
-// Name: Rashmi Baheti, Joshua Bowen
-// Project: Demonstration of Templates with various data types
-
 #include <iostream>
 #include <iomanip>
 using namespace std;

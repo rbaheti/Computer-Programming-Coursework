@@ -1,6 +1,3 @@
-// Name: Rashmi Baheti, Joshua Bowen
-// Project: Demonstration of inheritance, static binding and dynamic binding
-
 #include <iostream>
 #include <string>
 #include "ProductionWorker.h"
