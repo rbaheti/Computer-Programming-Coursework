@@ -1,6 +1,6 @@
 Assignment 3
 
-Question:
+Question:  
 Starting with the main.asm, write a complete program that will input values for a, b and c and display the value of the expression (a + b * c) / (2*b).  
 Assume that the user enters only numbers that are greater than zero.  
 
