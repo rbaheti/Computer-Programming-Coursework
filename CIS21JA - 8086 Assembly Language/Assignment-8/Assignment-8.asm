@@ -1,23 +1,3 @@
-; Program template
-TITLE   Assignment 8
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; name: Rashmi Baheti
-; date: 06/11/2016
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-COMMENT !
-Write a program that would build a two-dimensional array using the inputs from
-the user and find the sum of a selected row.
-Your program must do the following:
-Ask the user to enter how many elements the array has. The maxSize is 40.
-Ask the user to enter how many elements in each row in the array.
-Ask the user what type the array is. It could be byte, word or dword array.
-Ask the user to enter the elements inside the array.
-Ask the user for the row index and display the sum of the selected row.
-Your program must have a procedure that calculates the sum of one row in the
-two-dimensional array of bytes, words, or doublewords.
-For the parameters and the return value use the stack.
-!
-
 INCLUDE Irvine32.inc
 
 .data

@@ -1,10 +1,3 @@
-; Program template
-TITLE   Assignment 5
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; name: Rashmi Baheti
-; date: 05/09/2016
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 INCLUDE Irvine32.inc
 
 .data
