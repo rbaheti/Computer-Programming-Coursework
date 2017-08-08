@@ -1,21 +1,3 @@
-/*********************************************************************************
-** CIS 26B                                                            Summer, 2016
-** Advanced C
-******************
-**
-** Homework 4:
-**        Bit Manipulation
-**
-**********************************************************************************
-This program presents program menu to the user to let the user control theater
-lights.
-**********************************************************
-**
-**  Written By: Rashmi Baheti
-**
-**  Date: 22-July-2016
-***************************************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>

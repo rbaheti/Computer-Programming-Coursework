@@ -1,18 +1,3 @@
-/*********************************************************************************
-** CIS 26B                                                            Summer, 2016
-** Advanced C
-******************
-** Homework 5:
-**        BST and Queue - Hybrid Data Structure
-**********************************************************************************
-This program reads identifiers from a given C program and uses a binary search tree
-and Queue data structures to track the line numbers on which each of these 
-identifiers appear in the given program.
-
-**********************************************************
-**  Written By: Rashmi Baheti
-**  Date:26-July-2016
-***************************************************************************/
 #include "HW5.h"
 
 #ifdef _MSC_VER
