@@ -137,8 +137,8 @@ public:
   return ptr;
   }
 
-    // Overload delete (Scalar delete) operator
-    void operator delete(void* ptr) {
+  // Overload delete (Scalar delete) operator
+  void operator delete(void* ptr) {
     memoryManager.Deallocate(ptr);
     free(ptr);
   }

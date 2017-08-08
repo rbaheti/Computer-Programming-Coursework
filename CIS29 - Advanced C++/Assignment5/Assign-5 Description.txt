@@ -1,9 +1,0 @@
-Lab 5
-
-Purpose:  Use a variety of STL structure to use Huffman Encoding
-
-This is a 2 part lab assignment.  Following the "Agile" programming technique of having two programmers work on the same problem, this lab is divided into Encoding and Decoding.  One student performs the Encoding, while the other performs the Decoding.  Encoding and Decoding share a common "Huffman" tree.
-
-The Frequency Table provided in the Documents folder for this week, contains the character fequencies based on a Presidential Speech.  Use this Frequency Table as the basis for the Huffman Encoding technique.
-
-You will likely find some implementations of Huffman Encoding using GTS, however, these be adapted to use STL containers and bitsets.  Implementations turned in as a simple C/C++ program will receive ZERO points.  See the HuffmanEncoding.pdf in the documents folder for an overview of the Huffman Encoding process.
