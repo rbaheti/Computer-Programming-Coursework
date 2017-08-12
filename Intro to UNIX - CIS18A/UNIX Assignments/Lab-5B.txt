@@ -1,0 +1,446 @@
+
+Voyager Terminal Output:
+
+[rashmibaheti@voyager ~]$ ls
+Bye  Hello  Rashmi  album  bye  hi  practice  practice_copy  public_html  rashmi_new  west.txt
+[rashmibaheti@voyager ~]$ cat west.txt
+jghaskajfh;AIGU
+KAJSLHF.KAJ
+LASKJFHOLSWA
+KJDGLS
+KLJSDFIL
+KJSDF;H
+kjd;fhg
+kjfhg
+[rashmibaheti@voyager ~]$ cat > west.txt
+hello,
+I am editing west.txt
+Hope you dont mind
+kjh.as
+lrhelrkg
+lerh;go
+wlreijh
+oeirhg
+
+Thank you
+See you again!
+bye
+
+[rashmibaheti@voyager ~]$ echo This message goes to standard output.
+This message goes to standard output.
+[rashmibaheti@voyager ~]$ cat /etc/hosts
+# Do not remove the following line, or various programs
+# that require network functionality will fail.
+#127.0.0.1              voyager.deanza.edu voyager localhost.localdomain localhost
+127.0.0.1       localhost.localdomain localhost
+::1             localhost6.localdomain6 localhost6
+153.18.17.10    businesssql
+
+153.18.17.12    voyager.deanza.edu voyager
+[rashmibaheti@voyager ~]$ echo > 'My new file' new_file
+[rashmibaheti@voyager ~]$ cat new_file
+cat: new_file: No such file or directory
+[rashmibaheti@voyager ~]$ ls
+Bye  Hello  My new file  Rashmi  album  bye  hi  practice  practice_copy  public_html  rashmi_new  west.txt
+[rashmibaheti@voyager ~]$ rm My new file
+rm: cannot remove `My': No such file or directory
+rm: cannot remove `new': No such file or directory
+rm: cannot remove `file': No such file or directory
+[rashmibaheti@voyager ~]$ echo 'My new file' > new_file
+[rashmibaheti@voyager ~]$ cat new_file
+My new file
+[rashmibaheti@voyager ~]$ cat < new_file
+My new file
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ ls -l > ls.out
+[rashmibaheti@voyager ~]$ cat ls.out
+total 96
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
+-rw-r--r-- 1 rashmibaheti unixStudent    9 Jul 15 15:21 My new file
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:48 bye
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 15 15:34 ls.out
+-rw-r--r-- 1 rashmibaheti unixStudent   12 Jul 15 15:23 new_file
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+-rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ who >> ls.out
+[rashmibaheti@voyager ~]$ cat ls.out
+total 96
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
+-rw-r--r-- 1 rashmibaheti unixStudent    9 Jul 15 15:21 My new file
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:48 bye
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 15 15:34 ls.out
+-rw-r--r-- 1 rashmibaheti unixStudent   12 Jul 15 15:23 new_file
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+-rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
+maychulin pts/1        Jul 15 14:10 (c-107-3-156-3.hsd1.ca.comcast.net)
+rashmibaheti pts/2        Jul 15 15:16 (153.18.26.150)
+lakshmi  pts/4        Jul 15 15:02 (c-67-188-213-66.hsd1.ca.comcast.net)
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ who > ls.out
+[rashmibaheti@voyager ~]$ cat ls.out
+maychulin pts/1        Jul 15 14:10 (c-107-3-156-3.hsd1.ca.comcast.net)
+rashmibaheti pts/2        Jul 15 15:16 (153.18.26.150)
+lakshmi  pts/4        Jul 15 15:02 (c-67-188-213-66.hsd1.ca.comcast.net)
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ cat > days
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+[rashmibaheti@voyager ~]$ cat | sort days
+Friday
+Monday
+Saturday
+Sunday
+Thursday
+Tuesday
+Wednesday
+[rashmibaheti@voyager ~]$ cat | grep T days
+Tuesday
+Thursday
+[rashmibaheti@voyager ~]$ cat days  | grep T
+Tuesday
+Thursday
+[rashmibaheti@voyager ~]$ cat days | grep T | sort
+Thursday
+Tuesday
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ ls /etc&
+[4] 16029
+[3]   Done                    ls --color=tty /sbin
+[rashmibaheti@voyager ~]$ DIR_COLORS        autofs_ldap_auth.conf  default              ghostscript           inputrc            libaudit.conf         modprobe.conf         oratab           profile         redhat-lsb         sgml                syslog.conf
+DIR_COLORS.xterm  avahi                  depmod.d             gnome-vfs-2.0         iproute2           libaudit.conf.rpmnew  modprobe.d            oratab_save      profile.d       redhat-release     shadow              termcap
+Muttrc            bash_completion.d      desktop-profiles     gnome-vfs-mime-magic  iscsi              libuser.conf          motd                  pam.d            profile.rpmnew  resolv.conf        shadow-             tux.mime.types
+Muttrc.local      bashrc                 dev.d                gpm-root.conf         isdn               libuser.conf.rpmnew   mtab                  pam_pkcs11       profile_orig    rhgb               shadow.OLD          udev
+NetworkManager    bashrc.rpmnew          dhcp6c.conf          group                 issue              localtime             mtools.conf           pam_smb.conf     profile_save    rhsm               shells              updatedb.conf
+VRTSralus         blkid                  dnsmasq.conf         group-                issue.net          login.defs            multipath.conf        pango            protocols       rmt                skel                vimrc
+X11               bluetooth              dnsmasq.d            grub.conf             java               logrotate.conf        my.cnf                passwd           quotagrpadmins  rpc                slrn.rc             virc
+a2ps-site.cfg     bonobo-activation      dovecot.conf         gshadow               jvm                logrotate.d           my.cnf.rpmnew         passwd-          quotatab        rpm                smartd.conf         warnquota.conf
+a2ps.cfg          capi.conf              dovecot.conf.rpmnew  gshadow-              jvm-commmon        logwatch              netplug               passwd.OLD       racoon          rwtab              smartd.conf.rpmnew  webalizer.conf
+acpi              cdrecord.conf          dumpdates            gssapi_mech.conf      jwhois.conf        lsb-release.d         netplug.d             pcmcia           rc              rwtab.d            smrsh               wgetrc
+adjtime           cipe                   enscript.cfg         gtk-2.0               kde                ltrace.conf           nscd.conf             pear.conf        rc.d            samba              snmp                wpa_supplicant
+aliases           conman.conf            environment          hal                   kderc              lvm                   nsswitch.conf         php.d            rc.local        sane.d             sound               wvdial.conf
+aliases.db        cron.d                 esd.conf             host.conf             kdump.conf         mail                  nsswitch.conf.rpmnew  php.ini          rc.sysinit      sasl2              squid               xdg
+alsa              cron.daily             exports              hosts                 krb5.conf          mail.rc               ntp                   pine.conf        rc0.d           scrollkeeper.conf  squirrelmail        xinetd.conf
+alternatives      cron.deny              fb.modes             hosts.allow           krb5.conf.rpmnew   mailcap               ntp.conf              pine.conf.fixed  rc1.d           scsi_id.config     ssh                 xinetd.d
+anacrontab        cron.hourly            filesystems          hosts.deny            ksysguarddrc       makedev.d             odbc.ini              pinforc          rc2.d           securetty          stunnel             xml
+at.deny           cron.monthly           firmware             hp                    ld.so.cache        man.config            odbcinst.ini          pki              rc3.d           security           subversion          yp.conf
+audisp            cron.weekly            fonts                htdig                 ld.so.conf         maven                 odbcinst.ini.rpmnew   pm               rc4.d           selinux            sudoers             yum
+audit             crontab                foomatic             httpd                 ld.so.conf.d       mcelog.conf           ofed                  ppp              rc5.d           sensors.conf       sysconfig           yum.conf
+auto.master       csh.cshrc              fstab                idmapd.conf           ld.so.conf.rpmnew  mgetty+sendfax        openldap              prelink.cache    rc6.d           services           sysctl.conf         yum.repos.d
+auto.misc         csh.login              gconf                init.d                ldap.conf          mime.types            opt                   prelink.conf     readahead.d     sestatus.conf      sysctl.conf.rpmnew
+auto.net          cups                   gcrypt               initlog.conf          ldap.conf.rpmnew   minicom.users         oraInst.loc           prelink.conf.d   reader.conf     setroubleshoot     sysctl.conf_save
+auto.smb          dbus-1                 gdm                  inittab               lftp.conf          mke2fs.conf           oraInst.loc_save      printcap         reader.conf.d   setuptool.d        sysctl.confe
+[rashmibaheti@voyager ~]$ ls /usr/bin&
+artsrec                      fdebugrpm                                htdig                        make_driver_db_lpr                   pbmtonokia             rctest                                  timed-read
+artsshell                    fdformat                                 htdigest                     makedb                               pbmtopgm               rdate                                   timed-run
+artswrapper                  ferror                                   htdump                       makedepend                           pbmtopi3               rdist                                   tload
+as                           festival-synthesis-driver                htfuzzy                      makeg                                pbmtopk                rdistd                                  tmail
+as86                         fetchmail                                htload                       makeinfo                             pbmtoplot              rdjpgcom                                toc2cddb
+ascii-xfr                    fexe                                     htmerge                      makekdewidgets                       pbmtoppa               readcd                                  toc2cue
+asciitopgm                   fgconsole                                htmlview                     makemap                              pbmtopsg3              readelf                                 toe
+aseqdump                     fhpd                                     htnotify                     makestrs                             pbmtoptx               readlink                                top
+aseqnet                      fiascotopnm                              htpasswd                     man                                  pbmtowbmp              reboot                                  tput
+aserver                      file                                     htpurge                      man2html                             pbmtox10bm             rebuild-gcj-db                          tr
+aspell                       file-roller                              htsearch                     manpath                              pbmtoxbm               rebuild-jar-repository                  tree
+aspell-import                filesharelist                            htstat                       manweb                               pbmtoybm               rebuild-security-providers              troff
+at                           fileshareset                             huge_page_setup_helper.py    mapscrn                              pbmtozinc              rec                                     tset
+atktopbm                     filterdiff                               huge_page_setup_helper.pyc   mattrib                              pbmupc                 recode-sr-latin                         tsort
+atq                          find                                     huge_page_setup_helper.pyo   mbadblocks                           pc1toppm               recountdiff                             ttmkfdir
+atrm                         find-jar                                 i386                         mbchk                                pcdovtoppm             rediff                                  tty
+attr                         find2perl                                icc2ps                       mcat                                 pcregrep               refer                                   twm
+audiofile-config             findsmb                                  icclink                      mcd                                  pcretest               rename                                  typelib-dump
+audit2allow                  finger                                   icctrans                     mcheck                               pcxtoppm               renice                                  tzselect
+aulastlog                    fipscheck                                iceauth                      mclasserase                          pdbedit                replace                                 ucd5820stat
+ausyscall                    fipshmac                                 icontopbm                    mcomp                                pdf2dsc                repo-graph                              ucs2any
+authconfig                   firefox                                  iconv                        mcookie                              pdf2ps                 repo-rss                                udevinfo
+authconfig-gtk               fitstopnm                                id                           mcopy                                pdffonts               repoclosure                             udevtest
+authconfig-tui               fixcvsdiff                               ident                        md5sum                               pdfimages              repodiff                                ul
+autoconf                     fixdlsrps                                identify                     mdatopbm                             pdfinfo                repomanage                              unbuffer
+autoexpect                   fixfmps                                  idlj                         mdel                                 pdfopt                 repoquery                               unexpand
+autoheader                   fixmacps                                 idn                          mdeltree                             pdftohtml              reposync                                uniq
+autom4te                     fixmswrd.pl                              iecset                       mdir                                 pdftops                repotrack                               unix-lpr.sh
+automake                     fixnt                                    ifnames                      mdu                                  pdftotext              reset                                   unix2dos
+automake-1.4                 fixps                                    ilbmtoppm                    meinproc                             pdiff                  resetall                                unpack200
+automake-1.5                 fixpsditps                               im-chooser                   memdiskfind                          pear                   resize                                  unprotoize
+automake-1.6                 fixpspps                                 imagetops                    memhog                               peardev                resolve_stack_dump                      unwrapdiff
+automake-1.7                 fixscribeps                              imake                        merge                                pecl                   resolveip                               unxz
+automake-1.9                 fixtpps                                  imgtoppm                     mergelib                             perl                   rev                                     unzip
+autoreconf                   fixwfwps                                 import                       mesg                                 perl5.8.8              revpath                                 unzipsfx
+autoscan                     fixwpps                                  includeres                   metacity                             perlbug                rexec                                   update-desktop-database
+autoupdate                   fixwwps                                  indent                       metacity-message                     perlbug5.8.8           rfcomm                                  update-gdk-pixbuf-loaders
+autovbox                     flac                                     indxbib                      metacity-theme-viewer                perlcc                 rftp                                    update-gtk-immodules
+awk                          flex                                     info                         metacity-window-demo                 perldoc                rgb2ycbcr                               update-mime-database
+b2m                          flex++                                   infocmp                      metaflac                             perldoc5.8.8           rgb3toppm                               updatedb
+baobab                       flipdiff                                 infokey                      mev                                  perlivp                rh-upload                               uptime
+base64                       flock                                    infotocap                    mformat                              perlivp5.8.8           rh-upload-core                          url_handler.sh
+bashbug-64                   floppy                                   infotopam                    mgrtopbm                             perlthanks             rhgb                                    urlgrabber
+batch                        fmaps                                    innochecksum                 mib2c                                perror                 rhgb-client                             urlview
+bc                           fmt                                      install                      migratepages                         pf2afm                 rhn_register                            userformat
+bcc                          fold                                     install-catalog              minfo                                pfbtopfa               rhsm-debug                              userinfo
+bdftopcf                     font2c                                   instmodsh                    minicom                              pfbtops                rhsmcertd                               usermount
+bdftops                      fonttosfnt                               interdiff                    mk_cmds                              pfdbg                  rlatopam                                userpasswd
+bdftruncate                  foomatic-combo-xml                       invest-chart                 mkafmmap                             pfmon                  rletopnm                                users
+bioradtopgm                  foomatic-compiledb                       ionice                       mkdirhier                            pfmon_gen              rlog                                    utmpdump
+bison                        foomatic-configure                       ior-decode-2                 mkfifo                               pfmtopam               rlogin                                  uuidgen
+bmp2tiff                     foomatic-datafile                        iostat                       mkfontdir                            pftp                   rlogin-cwd                              uxterm
+bmptopnm                     foomatic-gswrapper                       ipcount                      mkfontscale                          pgmabel                rmail                                   uz
+bmptoppm                     foomatic-perl-data                       ipcrm                        mkhtmlindex                          pgmbentley             rmail.sendmail                          valgrind
+bonobo-activation-run-query  foomatic-ppd-options                     ipcs                         mkhybrid                             pgmcrater              rmcp_ping                               valgrind-listener
+bonobo-browser               foomatic-ppdfile                         ipmi_ui                      mkisofs                              pgmdeshadow            rmdtovbox                               vbox
+bonobo-slay                  foomatic-printjob                        ipmicmd                      mkmanifest                           pgmedge                rmic                                    vboxbeep
+brushtopbm                   foomatic-rip                             ipmilan                      mkpasswd                             pgmenhance             rnano                                   vboxcnvt
+bt-applet                    formail                                  ipmish                       mkrfc2734                            pgmhist                rngtest                                 vboxctrl
+bug-buddy                    free                                     iptab                        mkxauth                              pgmkernel              rpcclient                               vboxmail
+build-classpath              freetype-config                          irkbd                        mlabel                               pgmmake                rpcgen                                  vboxmode
+build-classpath-directory    fstack                                   irpsion5                     mmd                                  pgmmedian              rpdump                                  vboxplay
+build-jar-repository         fstep                                    isdnbill                     mmount                               pgmminkowski           rpload                                  vboxtoau
+bunzip2                      fstopgm                                  isdnconf                     mmove                                pgmmorphconv           rpm2cpio                                vdir
+byacc                        ftp                                      isdnrate                     mmroff                               pgmnoise               rpmbuild                                verifytree
+bzcat                        ftp-rfc                                  isdnrep                      modutil                              pgmnorm                rpmdb                                   vim
+bzcmp                        ftrace                                   isodebug                     mogrify                              pgmoil                 rpmgraph                                vimdiff
+bzdiff                       funzip                                   isodump                      montage                              pgmramp                rpmquery                                vimtutor
+bzgrep                       g++                                      isohybrid                    mouse-test                           pgmslice               rpmsign                                 vino-preferences
+bzip2                        g3topbm                                  isoinfo                      mozilla-plugin-config                pgmtexture             rpmverify                               vmstat
+bzip2recover                 gawk                                     isosize                      mp2bug                               pgmtofs                rsh                                     vncconfig
+bzless                       gcalctool                                isovfy                       mpartition                           pgmtolispm             rsvg                                    vncpasswd
+bzmore                       gcc                                      ispell                       mpstat                               pgmtopbm               rsvg-convert                            vncserver
+c++                          gccmakedep                               isql                         mrd                                  pgmtopgm               rsvg-view                               volname
+c++filt                      gcj-dbtool                               iusql                        mren                                 pgmtoppm               rsync                                   vorbiscomment
+c2ph                         gconf-merge-tree                         jade                         mrftopbm                             pgpewrap               run-parts                               w
+c89                          gconftool-2                              jar                          ms_print                             pgpring                run-with-aspell                         wacdump
+c99                          gcore                                    jarsigner                    msgattrib                            pgrep                  runcon                                  wacomcpl
+c_rehash                     gcov                                     java                         msgcat                               php                    rundig                                  wacomcpl-exec
+cadaver                      gctags                                   javac                        msgcmp                               php-cgi                runscript                               wall
+cal                          gdb                                      javadoc                      msgcomm                              php-config             rvim                                    watch
+callgrind_annotate           gdbserver                                javah                        msgconv                              phpize                 rx                                      wbinfo
+callgrind_control            gdbtui                                   javap                        msgen                                pi1toppm               rz                                      wbmptopbm
+cameratopam                  gdialog                                  jbigtopnm                    msgexec                              pi3topbm               s2p                                     wc
+cancel                       gdk-pixbuf-csource                       jconsole                     msgfilter                            pic                    sa-awl                                  weather
+cancel.cups                  gdk-pixbuf-query-loaders-32              jdb                          msgfmt                               pic2graph              sa-check_spamd                          webalizer
+capifax                      gdk-pixbuf-query-loaders-64              jhat                         msggrep                              pico                   sa-compile                              webazolver
+capifaxrcvd                  gdlib-config                             jinfo                        msghack                              piconv                 sa-learn                                wftopfa
+capiinfo                     gdm-dmx-reconnect-proxy                  jmap                         msginit                              pilot                  sa-update                               wget
+captoinfo                    gdmXnest                                 join                         msgmerge                             pine                   sabayon                                 whatis
+card                         gdmXnestchooser                          jpeg2ktopam                  msgunfmt                             pine-spellcheck        sadf                                    whereis
+catchsegv                    gdmdynamic                               jpegicc                      msguniq                              pinegpg                sane-find-scanner                       which
+cc                           gdmflexiserver                           jpegtopnm                    mshowfat                             pinegpg-install        sar                                     whiptail
+ccmakedep                    gdmphotosetup                            jpegtran                     msql2mysql                           pinepgpgpg-install     sasl2-sample-client                     who
+cdda2wav                     gdmsetup                                 jps                          mtools                               pinfo                  sasl2-sample-server                     whoami
+cddb-slave2-properties       gdmthemetester                           jrunscript                   mtoolstest                           pinky                  sb                                      whois
+cdparanoia                   gedit                                    jsadebugd                    mtvtoppm                             pirut                  sbigtopgm                               winicontoppm
+cdrdao                       gemtopbm                                 jsattach                     mtype                                pjtoppm                scanadf                                 wish
+cdrecord                     gemtopnm                                 jscal                        mutt                                 pk11install            scanimage                               wish8.4
+certutil                     gencat                                   jstack                       mxtar                                pk12util               scanpci                                 wmf2eps
+cg_annotate                  gendiff                                  jstat                        my_print_defaults                    pkcs11_eventmgr        schemagen                               wmf2fig
+cg_merge                     genkdmconf                               jstatd                       myisam_ftdump                        pkcs11_inspect         scp                                     wmf2gd
+chacl                        geqn                                     jstest                       myisamchk                            pkcs11_setup           script                                  wmf2svg
+chage                        get_module                               jv-convert                   myisamlog                            pkg-config             scrollkeeper-config                     wmf2x
+charmap                      getafm                                   jvisualvm                    myisampack                           pkill                  scrollkeeper-extract                    word-list-compress
+chattr                       getconf                                  jvmjar                       mysql                                pkinit-get-san         scrollkeeper-gen-seriesid               write
+chcat                        getent                                   jw                           mysql_config                         pkinit-show-cert-guid  scrollkeeper-get-cl                     wrjpgcom
+chcon                        getfacl                                  jwhois                       mysql_convert_table_format           pklogin_finder         scrollkeeper-get-content-list           wsgen
+check-binary-files           getfattr                                 kab2kabc                     mysql_explain_log                    pktopbm                scrollkeeper-get-extended-content-list  wsimport
+checkXML                     gethostip                                kaccess                      mysql_find_rows                      pl2pm                  scrollkeeper-get-index-from-docpath     wtpt
+checkmodule                  getkeycodes                              kaddprinterwizard            mysql_fix_extensions                 play                   scrollkeeper-get-toc-from-docpath       wvdial
+checkpolicy                  getopt                                   kapplymousetheme             mysql_fix_privilege_tables           pm-hibernate           scrollkeeper-get-toc-from-id            wvdialconf
+chfn                         getproxy                                 kasbar                       mysql_install_db                     pm-is-supported        scrollkeeper-install                    x0vncserver
+chrt                         gettext                                  kate                         mysql_secure_installation            pm-powersave           scrollkeeper-preinstall                 x11perf
+chsh                         gettext.sh                               kbdrate                      mysql_setpermission                  pm-restart             scrollkeeper-rebuilddb                  x11perfcomp
+chvt                         gfloppy                                  kblankscrn.kss               mysql_tableinfo                      pm-shutdown            scrollkeeper-uninstall                  x86_64
+ci                           gfortran                                 kbookmarkmerger              mysql_tzinfo_to_sql                  pm-suspend             scrollkeeper-update                     x86_64-redhat-linux-c++
+cifsiostat                   ghostscript                              kbuildsycoca                 mysql_upgrade                        pman                   sdiff                                   x86_64-redhat-linux-g++
+ciptool                      gif2tiff                                 kcheckpass                   mysql_upgrade_shell                  pmap                   sdl-config                              x86_64-redhat-linux-gcc
+cjpeg                        giftopnm                                 kcheckrunning                mysql_waitpid                        pngtopnm               sdptool                                 xargs
+cksum                        gij                                      kcminit                      mysql_zap                            pnmalias               sealert                                 xauth
+clean-binary-files           gindxbib                                 kcminit_startup              mysqlaccess                          pnmarith               sechecker                               xbiff
+cleanlinks                   gjarsigner                               kcmshell                     mysqladmin                           pnmcat                 secon                                   xbmtopbm
+clear                        gjdoc                                    kconf_update                 mysqlbinlog                          pnmcolormap            sediff                                  xcam
+cmp                          gkeytool                                 kconfig_compiler             mysqlbug                             pnmcomp                seinfo                                  xclipboard
+cmsutil                      glade-2                                  kcontrol                     mysqlcheck                           pnmconvol              semodule_deps                           xclock
+cmuwmtopbm                   glib-genmarshal                          kcontroledit                 mysqld_multi                         pnmcrop                semodule_expand                         xcmsdb
+co                           glib-gettextize                          kcookiejar                   mysqld_safe                          pnmcut                 semodule_link                           xconsole
+col                          glib-mkenums                             kdcop                        mysqldump                            pnmdepth               semodule_package                        xcursorgen
+colcrt                       glookbib                                 kde-config                   mysqldumpslow                        pnmenlarge             sendiso                                 xcutsel
+collateindex.pl              glxgears                                 kde-menu                     mysqlhotcopy                         pnmfile                sensors                                 xdpr
+colrm                        glxinfo                                  kdebugdialog                 mysqlimport                          pnmflip                seq                                     xdpyinfo
+column                       gmake                                    kded                         mysqlshow                            pnmgamma               serialver                               xdriinfo
+combinediff                  gneqn                                    kdeeject                     mysqltest                            pnmhisteq              serviceconf                             xev
+comm                         gnome-about                              kdeinit                      mysqltestmanager                     pnmhistmap             sesearch                                xeyes
+compare                      gnome-about-me                           kdeinit_shutdown             mysqltestmanager-pwgen               pnmindex               sessreg                                 xfd
+compile_et                   gnome-accessibility-keyboard-properties  kdeinit_wrapper              mysqltestmanagerc                    pnminterp              setarch                                 xfontsel
+composeglyphs                gnome-at-properties                      kdeinstallktheme             mzip                                 pnminvert              setfacl                                 xfs
+composite                    gnome-audio-profiles-properties          kdepasswd                    namei                                pnmmargin              setfattr                                xgamma
+conjure                      gnome-background-properties              kdesktop                     nano                                 pnmmontage             setkeycodes                             xgettext
+conman                       gnome-calculator                         kdesktop_lock                native2ascii                         pnmnlfilt              setleds                                 xhost
+conmen                       gnome-cd                                 kdesktop_lock.bin            nautilus                             pnmnoraw               setmetamode                             xidump
+consolehelper                gnome-character-map                      kdesu                        nautilus-cd-burner                   pnmnorm                setsid                                  ximtoppm
+consolehelper-gtk            gnome-control-center                     kdesu_stub                   nautilus-connect-server              pnmpad                 setterm                                 xinit
+convert                      gnome-default-applications-properties    kdesud                       nautilus-file-management-properties  pnmpaste               setup                                   xjc
+cpan                         gnome-default-printer                    kdialog                      nc                                   pnmpsnr                setxkbmap                               xkbbell
+cpp                          gnome-desktop-item-edit                  kdm                          neat                                 pnmquant               sfconvert                               xkbcomp
+cpufreq-selector             gnome-dictionary                         kdm_config                   neat-control                         pnmremap               sfinfo                                  xkbevd
+crash                        gnome-display-properties                 kdm_greet                    nenscript                            pnmrotate              sftp                                    xkbprint
+create-branching-keyboard    gnome-doc-prepare                        kdmctl                       neotoppm                             pnmscale               sg                                      xkbvleds
+create-jar-links             gnome-eject                              kdontchangethehostname       neqn                                 pnmscalefixed          sgitopnm                                xkbwatch
+crlutil                      gnome-font-properties                    kdostartupconfig             net                                  pnmshear               sgml2xml                                xkibitz
+croco-0.6-config             gnome-font-viewer                        keditbookmarks               newaliases                           pnmsmooth              sgmldiff                                xkill
+crontab                      gnome-help                               keditfiletype                newaliases.sendmail                  pnmsplit               sgmlnorm                                xload
+cscope                       gnome-keybinding-properties              kfile                        newgrp                               pnmstitch              sgmlspl                                 xlogo
+cscope-indexer               gnome-keyboard-properties                kfind                        ngettext                             pnmtile                sgmlwhich                               xlsatoms
+csplit                       gnome-keyring-daemon                     kfmclient                    nl                                   pnmtoddif              sha1hmac                                xlsclients
+csslint-0.6                  gnome-mount                              kfmexec                      nm                                   pnmtofiasco            sha1sum                                 xlsfonts
+ctags                        gnome-mouse-properties                   kfontinst                    nm-applet                            pnmtofits              sha224sum                               xmag
+cue2toc                      gnome-network-preferences                kfontview                    nm-connection-editor                 pnmtojbig              sha256hmac                              xmessage
+cupsdconf                    gnome-open                               kgrantpty                    nm-online                            pnmtojpeg              sha256sum                               xminicom
+cupsdoprint                  gnome-panel                              khc_docbookdig.pl            nm-tool                              pnmtopalm              sha384hmac                              xmkmf
+cupstestdsc                  gnome-panel-screenshot                   khc_htdig.pl                 nm86                                 pnmtopclxl             sha384sum                               xml2-config
+cupstestppd                  gnome-power-inhibit-test                 khc_htsearch.pl              nmblookup                            pnmtoplainpnm          sha512hmac                              xml2po
+curl                         gnome-power-manager                      khc_indexbuilder             no_op_client_for_valgrind            pnmtopng               sha512sum                               xml_grep
+curl-config                  gnome-power-preferences                  khc_mansearch.pl             nohup                                pnmtopnm               showchar                                xml_merge
+cut                          gnome-screensaver                        khelpcenter                  notify-send                          pnmtops                showconsolefont                         xml_pp
+cvs                          gnome-screensaver-command                khotkeys                     nroff                                pnmtorast              showkey                                 xml_spellcheck
+cvsbug                       gnome-screensaver-preferences            khotnewstuff                 nsgmls                               pnmtorle               showrgb                                 xml_split
+cvt                          gnome-screenshot                         kibitz                       nslookup                             pnmtosgi               shred                                   xmlcatalog
+cxpm                         gnome-search-tool                        kicker                       nspluginscan                         pnmtosir               signtool                                xmllint
+dateconfig                   gnome-session                            kill                         nspluginviewer                       pnmtotiff              signver                                 xmlproc_parse
+db2html                      gnome-session-properties                 killall                      nspr-config                          pnmtotiffcmyk          sip                                     xmlproc_val
+db2rtf                       gnome-session-remove                     kinfocenter                  nss-config                           pnmtoxwd               sirtopnm                                xmlsec1
+dbiprof                      gnome-session-save                       kinstalltheme                nsupdate                             pod2html               size                                    xmlsec1-config
+dbiproxy                     gnome-sound-properties                   kio_http_cache_cleaner       ntlm_auth                            pod2latex              size86                                  xmlwf
+dbus-binding-tool            gnome-system-log                         kio_media_mounthelper        ntpstat                              pod2man                skel                                    xmodmap
+dbus-launch                  gnome-system-monitor                     kio_system_documenthelper    numactl                              pod2text               skill                                   xorg-x11-filesystem-upgrade
+dc                           gnome-terminal                           kio_uiserver                 numademo                             pod2usage              slabtop                                 xpmtoppm
+dc_client                    gnome-text-editor                        kioexec                      numastat                             podchecker             sldtoppm                                xpr
+dc_server                    gnome-theme-manager                      kioslave                     objcopy                              podselect              sliceprint                              xprop
+dc_snoop                     gnome-theme-thumbnailer                  kjobviewer                   objdump                              post-grohtml           slogin                                  xrandr
+dc_test                      gnome-thumbnail-font                     klauncher                    objdump86                            poweroff               slrn                                    xrdb
+dcop                         gnome-typing-monitor                     klipper                      oclock                               ppm2tiff               smbcacls                                xrefresh
+dcopclient                   gnome-ui-properties                      klocaldomainurifilterhelper  ocs                                  ppm3d                  smbclient                               xrestop
+dcopfind                     gnome-umount                             kmailservice                 od                                   ppmbrighten            smbcquotas                              xsane
+dcopobject                   gnome-volume-control                     kmenuedit                    odbc_config                          ppmchange              smbget                                  xset
+dcopquit                     gnome-volume-manager                     knetattach                   odbcinst                             ppmcie                 smbpasswd                               xsetmode
+dcopref                      gnome-volume-properties                  kompmgr                      ogg123                               ppmcolormask           smbprint                                xsetpointer
+dcopserver                   gnome-window-properties                  konqueror                    oggdec                               ppmcolors              smbspool                                xsetroot
+dcopserver_shutdown          gnome-wm                                 konsole                      oggenc                               ppmdcfont              smbtar                                  xsetwacom
+dcopstart                    gnomevfs-cat                             kpac_dhcp_helper             ogginfo                              ppmddumpfont           smbtree                                 xslt-config
+dcraw                        gnomevfs-copy                            kpager                       ogonkify                             ppmdim                 snice                                   xsltproc
+ddate                        gnomevfs-df                              kpersonalizer                oldrdist                             ppmdist                sniff                                   xsri
+ddbugtopbm                   gnomevfs-info                            kpm                          on_ac_power                          ppmdither              soelim                                  xstdcmap
+ddcmon                       gnomevfs-ls                              kprinter                     onsgmls                              ppmdmkfont             solterm                                 xsubpp
+deallocvt                    gnomevfs-mkdir                           krandom.kss                  opannotate                           ppmdraw                sound-juicer                            xterm
+debuginfo-install            gnomevfs-monitor                         krandrtray                   oparchive                            ppmfade                sox                                     xtrapchar
+decode-dimms.pl              gnomevfs-mv                              krb5-auth-dialog             opcontrol                            ppmflash               soxmix                                  xtrapin
+decode-edid.pl               gnomevfs-rm                              krdb                         open                                 ppmforge               soxplay                                 xtrapinfo
+decode-vaio.pl               gnroff                                   kreadconfig                  openipmicmd                          ppmglobe               spam                                    xtrapout
+decode-xeon.pl               gobject-query                            krootimage                   openipmish                           ppmhist                spamassassin                            xtrapproto
+dehtmldiff                   gok                                      ksendbugmail                 openjade                             ppmlabel               spamc                                   xtrapreset
+desktop-file-install         gouldtoppm                               ksh                          openssl                              ppmmake                spamd                                   xtrapstats
+desktop-file-validate        gpasswd                                  kshell                       openvt                               ppmmix                 spctoppm                                xulrunner
+devdump                      gpg                                      ksmserver                    opgprof                              ppmnorm                speaker-test                            xvidtune
+devhelp                      gpg-check                                ksplash                      ophelp                               ppmntsc                speexdec                                xvinfo
+dfutool                      gpg-encrypt                              ksplashsimple                opimport                             ppmpat                 speexenc                                xvminitoppm
+diff                         gpg-error                                kstart                       opjitconv                            ppmquant               spell                                   xwd
+diff-jars                    gpg-error-config                         kstartupconfig               opreport                             ppmquantall            spent                                   xwdtopnm
+diff3                        gpg-sign                                 ksvgtopng                    oprofiled                            ppmrainbow             sperl5.8.8                              xwininfo
+diffpp                       gpg-sign+encrypt                         ksysguard                    orbit-idl-2                          ppmrelief              splain                                  xwud
+diffstat                     gpg-zip                                  ksysguardd                   orbit2-config                        ppmrough               splint                                  xxd
+dig                          gpgsplit                                 ksystraycmd                  orca                                 ppmshadow              split                                   xz
+dir                          gpgv                                     ktelnetservice               osgmlnorm                            ppmshift               splitdiff                               xzcat
+dircolors                    gphoto2                                  ktip                         ospam                                ppmspread              spottopgm                               xzcmp
+dirname                      gpic                                     ktradertest                  ospcat                               ppmtoacad              sprof                                   xzdec
+dislocate                    gpm-root                                 ktrash                       ospent                               ppmtoarbtxt            sputoppm                                xzdiff
+display                      gprof                                    kunittestmodrunner           osx                                  ppmtobmp               sqlite3                                 xzegrep
+djpeg                        grefer                                   kwebdesktop                  over                                 ppmtoeyuv              ssh                                     xzfgrep
+dltest                       grep-changelog                           kwin                         pack200                              ppmtogif               ssh-add                                 xzgrep
+dmail                        grepdiff                                 kwin_killer_helper           package-cleanup                      ppmtoicr               ssh-agent                               xzless
+docbook2html                 grepjar                                  kwin_rules_dialog            pal2rgb                              ppmtoilbm              ssh-copy-id                             xzmore
+docbook2man                  grmic                                    kwrapper                     palmtopnm                            ppmtojpeg              ssh-keygen                              yacc
+docbook2rtf                  grmiregistry                             kwrite                       pam-panel-icon                       ppmtoleaf              ssh-keyscan                             ybmtopbm
+docbook2tex                  grn                                      kwriteconfig                 pamaddnoise                          ppmtolj                sslswamp                                yelp
+docbook2texi                 grodvi                                   kxkb                         pamarith                             ppmtomap               ssltap                                  yes
+docbook2txt                  groff                                    l2ping                       pambayer                             ppmtomitsu             stap                                    ypcat
+dogtail-detect-session       groffer                                  l2test                       pamchannel                           ppmtompeg              stap-merge                              ypchfn
+dogtail-recorder             grog                                     last                         pamcomp                              ppmtoneo               stap-prep                               ypchsh
+dogtail-run-headless         grolbp                                   lastb                        pamcut                               ppmtopcx               stap-report                             ypmatch
+dos2unix                     grolj4                                   lastcomm                     pamdeinterlace                       ppmtopgm               staprun                                 yppasswd
+doxygen                      grops                                    lastlog                      pamdepth                             ppmtopi1               stapsh                                  ypwhich
+doxytag                      grotty                                   lchfn                        pamdice                              ppmtopict              startkde                                yum
+dprofpp                      groups                                   lchsh                        pamditherbw                          ppmtopj                startx                                  yum-builddep
+drkonqi                      growisofs                                ld                           pamedge                              ppmtopjxl              stat                                    yum-debug-dump
+du                           gs                                       ld86                         pamendian                            ppmtoppm               states                                  yum-groups-manager
+dumphint                     gsbj                                     ldapadd                      pamenlarge                           ppmtopuzz              strace                                  yumdownloader
+dumpiso                      gsdj                                     ldapcompare                  pamfile                              ppmtorgb3              strings                                 yuvsplittoppm
+dund                         gsdj500                                  ldapdelete                   pamflip                              ppmtosixel             strip                                   yuvtoppm
+dvcont                       gsf-office-thumbnailer                   ldapmodify                   pamfunc                              ppmtoterm              subscription-manager                    zcmp
+dvd+rw-booktype              gslj                                     ldapmodrdn                   pamgauss                             ppmtouil               sudo                                    zdiff
+dvd+rw-format                gslp                                     ldappasswd                   pamgradient                          ppmtowinicon           sudoedit                                zegrep
+dvd+rw-mediainfo             gsnd                                     ldapsearch                   pamlookup                            ppmtoxpm               suidperl                                zeisstopnm
+dvd-ram-control              gsoelim                                  ldapwhoami                   pammasksharpen                       ppmtoyuv               sum                                     zenity
+dvdrecord                    gst-feedback                             ldd                          pammixinterlace                      ppmtoyuvsplit          svn                                     zfgrep
+dvipdf                       gst-feedback-0.10                        leaftoppm                    pamoil                               ppmtv                  svnadmin                                zforce
+ebrowse                      gst-inspect                              less                         pamperspective                       ppmwheel               svndumpfilter                           zgrep
+editdiff                     gst-inspect-0.10                         lessecho                     pampick                              pr                     svnlook                                 zip
+eggcups                      gst-launch                               lesskey                      pampop9                              pre-grohtml            svnserve                                zipcloak
+eject                        gst-launch-0.10                          lesspipe.sh                  pamrgbatopng                         precat                 svnsync                                 zipgrep
+elinks                       gst-typefind                             lex                          pamscale                             preparetips            svnversion                              zipinfo
+emacs                        gst-typefind-0.10                        lftp                         pamseq                               preunzip               swig                                    zipnote
+emacs-21.4                   gst-visualise-0.10                       lftpget                      pamsharpmap                          prezip                 sx                                      zipsplit
+emacs-21.4-x                 gst-xmlinspect                           libIDL-config-2              pamsharpness                         prezip-bin             sxpm                                    zless
+emacs-x                      gst-xmlinspect-0.10                      libart2-config               pamslice                             printafm               symlinks                                zmore
+emacsclient                  gst-xmllaunch                            libgcrypt-config             pamsplit                             printenv               synclient                               znew
+emacspeak                    gst-xmllaunch-0.10                       libglade-convert             pamstack                             printf                 syndaemon                               zsoelim
+enc2xs                       gstack                                   libgnutls-config             pamstereogram                        procmail               syslinux
+enscript                     gstreamer-properties                     libgnutls-extra-config       pamstretch                           profiles               system-cdinstall-helper
+env                          gswitchit-plugins-capplet                libieee1284_test             pamstretch-gen                       protoize               system-config-authentication
+envsubst                     gtbl                                     libnetcfg                    pamsumm                              prove                  system-config-date
+
+
+[1]+  Done                    ls --color=tty /usr/bin
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ ls /sbin&
+[1] 16099
+[rashmibaheti@voyager ~]$ MAKEDEV       cbq              dump                    grub            ip6tables          kexec              mii-diag                mpath_prio_emc                 netplugd                 pppoe-relay      runlevel     udevd
+accton        cciss_id         dump.static             grub-install    ip6tables-restore  killall5           mii-tool                mpath_prio_emc.static          netreport                pppoe-server     runuser      udevd.static
+addpart       change_console   dumpe2fs                grub-md5-crypt  ip6tables-save     klogd              mingetty                mpath_prio_hds_modular         new-kernel-pkg           pppoe-sniff      salsa        udevsettle
+adsl-connect  chkconfig        e2fsck                  grub-terminfo   ipmaddr            kpartx             mkbootdisk              mpath_prio_hds_modular.static  nologin                  pvscan           scsi_id      udevtrigger
+adsl-setup    clock            e2image                 grubby          ipppstats          kpartx.static      mkdosfs                 mpath_prio_hp_sw               ntpd                     quotacheck       service      umount.cifs
+adsl-start    consoletype      e2label                 halt            iprofd             kudzu              mkdumprd                mpath_prio_hp_sw.static        ntpdate                  quotaoff         setfiles     umount.nfs
+adsl-status   cryptsetup       ether-wake              hdparm          iptables           ldconfig           mke2fs                  mpath_prio_intel               pam_console_apply        quotaon          setkey       umount.nfs4
+adsl-stop     ctrlaltdel       ethtool                 hisaxctrl       iptables-restore   logsave            mkfs                    mpath_prio_intel.static        pam_tally                rdisc            setpci       unix_chkpwd
+agetty        debugfs          fdisk                   hwclock         iptables-save      loopctrl           mkfs.cramfs             mpath_prio_netapp              pam_tally2               rdump            setsysfont   unix_update
+alsactl       delpart          findfs                  ibod            iptunnel           losetup            mkfs.ext2               mpath_prio_netapp.static       pam_timestamp_check      rdump.static     sfdisk       update-pciids
+arp           depmod           firmware_helper         icnctrl         iscsi-iname        lsmod              mkfs.ext3               mpath_prio_ontap               parted                   reboot           sgpio        vboxd
+arping        dhcdbd           fixfiles                ifcfg           iscsiadm           lspci              mkfs.msdos              mpath_prio_ontap.static        partprobe                resize2fs        shutdown     vconfig
+audispd       dhclient         fsck                    ifconfig        iscsid             lspcmcia           mkfs.vfat               mpath_prio_rdac                partx                    restore          slattach     vgchange
+auditctl      dhclient-script  fsck.cramfs             ifdown          iscsistart         lsusb              mkinitrd                mpath_prio_rdac.static         pcbitctl                 restore.static   sln          vgscan
+auditd        dhcp6c           fsck.ext2               ifenslave       iscsiuio           lvm                mkswap                  mpath_prio_tpc                 pccardctl                restorecon       start_udev   weak-modules
+aureport      dm_dso_reg_tool  fsck.ext3               ifrename        isdnctrl           lvm.static         mkzonedb                mpath_prio_tpc.static          pcmcia-check-broken-cis  rmmod            sulogin      ypbind
+ausearch      dmevent_tool     fsck.msdos              ifup            isdnlog            makedumpfile       modinfo                 mpath_prio_weighted            pcmcia-socket-startup    rmt              swapoff
+autrace       dmeventd         fsck.vfat               init            iwconfig           mcstransd          modprobe                mpath_prio_weighted.static     pidof                    rngd             swapon
+avmcapictrl   dmraid           fsfreeze                initlog         iwevent            mdadm              mount.cifs              mpath_wait                     pivot_root               route            sysctl
+badblocks     dmraid.static    fstab-decode            insmod          iwgetid            mdadm.static       mount.nfs               multipath                      plipconfig               rpc.lockd        syslogd
+blkid         dmsetup          fuser                   insmod.static   iwlist             mdassemble.static  mount.nfs4              multipath.static               portmap                  rpc.statd        tc
+blockdev      dmsetup.static   generate-modprobe.conf  install-info    iwpriv             mdmpd              mpath_ctl               multipathd                     poweroff                 rrestore         telinit
+busybox       dosfsck          genhostid               installkernel   iwspy              mgetty             mpath_prio_alua         nameif                         ppp-watch                rrestore.static  tune2fs
+capiinit      dosfslabel       getkey                  ip              kdump              microcode_ctl      mpath_prio_alua.static  nash                           pppoe                    rtmon            udevcontrol
+
+
