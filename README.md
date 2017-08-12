@@ -1,4 +1,4 @@
-This repository contains the computer programming related coursework I did at [De Anza College](https://www.deanza.edu) over last 2 years. After completing these courses, I fulfilled the technical requirement for achieving following three [Certificate of Achievement](https://www.deanza.edu/counseling/pdf/degrees/cis_programming.pdf):  
+This repository contains the computer programming related coursework I did at [De Anza College](https://www.deanza.edu){:target="_blank"} over last 2 years. After completing these courses, I fulfilled the technical requirement for achieving following three [Certificate of Achievement](https://www.deanza.edu/counseling/pdf/degrees/cis_programming.pdf){:target="_blank"}:  
 
 1. Programming in JAVA
 2. Programming in C/C++
