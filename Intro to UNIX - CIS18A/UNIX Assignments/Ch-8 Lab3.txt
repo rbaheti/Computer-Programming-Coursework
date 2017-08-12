@@ -1,0 +1,414 @@
+[rashmibaheti@voyager ~]$ head  /etc/services
+# /etc/services:
+# $Id: services,v 1.42 2006/02/23 13:09:23 pknirsch Exp $
+#
+# Network services, Internet style
+#
+# Note that it is presently the policy of IANA to assign a single well-known
+# port number for both TCP and UDP; hence, most entries here have two entries
+# even if the protocol doesn't support UDP operations.
+# Updated from RFC 1700, ``Assigned Numbers'' (October 1994).  Not all ports
+# are included, only the more common ones.
+[rashmibaheti@voyager ~]$ ls /etc
+DIR_COLORS             inittab               prelink.conf.d
+DIR_COLORS.xterm       inputrc               printcap
+Muttrc                 iproute2              profile
+Muttrc.local           iscsi                 profile.d
+NetworkManager         isdn                  profile.rpmnew
+VRTSralus              issue                 profile_orig
+X11                    issue.net             profile_save
+a2ps-site.cfg          java                  protocols
+a2ps.cfg               jvm                   quotagrpadmins
+acpi                   jvm-commmon           quotatab
+adjtime                jwhois.conf           racoon
+aliases                kde                   rc
+aliases.db             kderc                 rc.d
+alsa                   kdump.conf            rc.local
+alternatives           krb5.conf             rc.sysinit
+anacrontab             krb5.conf.rpmnew      rc0.d
+at.deny                ksysguarddrc          rc1.d
+audisp                 ld.so.cache           rc2.d
+audit                  ld.so.conf            rc3.d
+auto.master            ld.so.conf.d          rc4.d
+auto.misc              ld.so.conf.rpmnew     rc5.d
+auto.net               ldap.conf             rc6.d
+auto.smb               ldap.conf.rpmnew      readahead.d
+autofs_ldap_auth.conf  lftp.conf             reader.conf
+avahi                  libaudit.conf         reader.conf.d
+bash_completion.d      libaudit.conf.rpmnew  redhat-lsb
+bashrc                 libuser.conf          redhat-release
+bashrc.rpmnew          libuser.conf.rpmnew   resolv.conf
+blkid                  localtime             rhgb
+bluetooth              login.defs            rhsm
+bonobo-activation      logrotate.conf        rmt
+capi.conf              logrotate.d           rpc
+cdrecord.conf          logwatch              rpm
+cipe                   lsb-release.d         rwtab
+conman.conf            ltrace.conf           rwtab.d
+cron.d                 lvm                   samba
+cron.daily             mail                  sane.d
+cron.deny              mail.rc               sasl2
+cron.hourly            mailcap               scrollkeeper.conf
+cron.monthly           makedev.d             scsi_id.config
+cron.weekly            man.config            securetty
+crontab                maven                 security
+csh.cshrc              mcelog.conf           selinux
+csh.login              mgetty+sendfax        sensors.conf
+cups                   mime.types            services
+dbus-1                 minicom.users         sestatus.conf
+default                mke2fs.conf           setroubleshoot
+depmod.d               modprobe.conf         setuptool.d
+desktop-profiles       modprobe.d            sgml
+dev.d                  motd                  shadow
+dhcp6c.conf            mtab                  shadow-
+dnsmasq.conf           mtools.conf           shadow.OLD
+dnsmasq.d              multipath.conf        shells
+dovecot.conf           my.cnf                skel
+dovecot.conf.rpmnew    my.cnf.rpmnew         slrn.rc
+dumpdates              netplug               smartd.conf
+enscript.cfg           netplug.d             smartd.conf.rpmnew
+environment            nscd.conf             smrsh
+esd.conf               nsswitch.conf         snmp
+exports                nsswitch.conf.rpmnew  sound
+fb.modes               ntp                   squid
+filesystems            ntp.conf              squirrelmail
+firmware               odbc.ini              ssh
+fonts                  odbcinst.ini          stunnel
+foomatic               odbcinst.ini.rpmnew   subversion
+fstab                  ofed                  sudoers
+gconf                  openldap              sysconfig
+gcrypt                 opt                   sysctl.conf
+gdm                    oraInst.loc           sysctl.conf.rpmnew
+ghostscript            oraInst.loc_save      sysctl.conf_save
+gnome-vfs-2.0          oratab                sysctl.confe
+gnome-vfs-mime-magic   oratab_save           syslog.conf
+gpm-root.conf          pam.d                 termcap
+group                  pam_pkcs11            tux.mime.types
+group-                 pam_smb.conf          udev
+grub.conf              pango                 updatedb.conf
+gshadow                passwd                vimrc
+gshadow-               passwd-               virc
+gssapi_mech.conf       passwd.OLD            warnquota.conf
+gtk-2.0                pcmcia                webalizer.conf
+hal                    pear.conf             wgetrc
+host.conf              php.d                 wpa_supplicant
+hosts                  php.ini               wvdial.conf
+hosts.allow            pine.conf             xdg
+hosts.deny             pine.conf.fixed       xinetd.conf
+hp                     pinforc               xinetd.d
+htdig                  pki                   xml
+httpd                  pm                    yp.conf
+idmapd.conf            ppp                   yum
+init.d                 prelink.cache         yum.conf
+initlog.conf           prelink.conf          yum.repos.d
+
+[rashmibaheti@voyager ~]$ who
+muttb    pts/1        Jul 30 17:44 (153.18.25.108)
+lin3398032 pts/2        Jul 30 17:40 (153.18.24.242)
+jamesanthonydlc pts/4        Jul 30 18:09 (153.18.25.4)
+nsuj     pts/5        Jul 30 18:09 (153.18.26.139)
+garry20002b pts/6        Jul 30 16:38 (c-50-136-182-226.hsd1.ca.comcast.net)
+sgupta794 pts/7        Jul 30 17:48 (153.18.27.212)
+egongsue pts/8        Jul 30 18:02 (153.18.25.123)
+sgupta794 pts/10       Jul 30 18:03
+rashmibaheti pts/11       Jul 30 18:12 (153.18.25.105)
+20161500 pts/12       Jul 30 18:23 (153.18.24.253)
+horta    pts/13       Jul 30 18:16 (153.18.26.91)
+batman   pts/14       Jul 30 18:34 (153.18.27.149)
+20052620 pts/15       Jul 30 18:34 (153.18.27.161)
+xprisillax pts/16       Jul 30 18:27 (153.18.27.215)
+suzard   pts/17       Jul 30 18:45 (153.18.27.153)
+gideonhou pts/18       Jul 30 18:30 (153.18.25.130)
+lin3398032 pts/19       Jul 30 18:57
+sapot    pts/20       Jul 30 18:40 (10.41.112.123)
+lakshmi  pts/21       Jul 30 18:38 (10.41.50.37)
+suzard   pts/22       Jul 30 18:45
+tannguyenucb pts/23       Jul 30 18:45 (153.18.26.110)
+
+[rashmibaheti@voyager ~]$ date
+Thu Jul 30 18:58:59 PDT 2015
+[rashmibaheti@voyager ~]$ uname -a
+Linux voyager.deanza.edu 2.6.18-406.el5 #1 SMP Fri May 1 10:37:57 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+[rashmibaheti@voyager ~]$ history | tail
+  814  if["$$"-eq"$I"]
+  815  $-
+  816  head/etc/services
+  817  head  /etc/services
+  818  ls etc
+  819  ls /etc
+  820  who
+  821  date
+  822  uname -a
+  823  history | tail
+
+[rashmibaheti@voyager ~]$ !819
+ls /etc
+DIR_COLORS             inittab               prelink.conf.d
+DIR_COLORS.xterm       inputrc               printcap
+Muttrc                 iproute2              profile
+Muttrc.local           iscsi                 profile.d
+NetworkManager         isdn                  profile.rpmnew
+VRTSralus              issue                 profile_orig
+X11                    issue.net             profile_save
+a2ps-site.cfg          java                  protocols
+a2ps.cfg               jvm                   quotagrpadmins
+acpi                   jvm-commmon           quotatab
+adjtime                jwhois.conf           racoon
+aliases                kde                   rc
+aliases.db             kderc                 rc.d
+alsa                   kdump.conf            rc.local
+alternatives           krb5.conf             rc.sysinit
+anacrontab             krb5.conf.rpmnew      rc0.d
+at.deny                ksysguarddrc          rc1.d
+audisp                 ld.so.cache           rc2.d
+audit                  ld.so.conf            rc3.d
+auto.master            ld.so.conf.d          rc4.d
+auto.misc              ld.so.conf.rpmnew     rc5.d
+auto.net               ldap.conf             rc6.d
+auto.smb               ldap.conf.rpmnew      readahead.d
+autofs_ldap_auth.conf  lftp.conf             reader.conf
+avahi                  libaudit.conf         reader.conf.d
+bash_completion.d      libaudit.conf.rpmnew  redhat-lsb
+bashrc                 libuser.conf          redhat-release
+bashrc.rpmnew          libuser.conf.rpmnew   resolv.conf
+blkid                  localtime             rhgb
+bluetooth              login.defs            rhsm
+bonobo-activation      logrotate.conf        rmt
+capi.conf              logrotate.d           rpc
+cdrecord.conf          logwatch              rpm
+cipe                   lsb-release.d         rwtab
+conman.conf            ltrace.conf           rwtab.d
+cron.d                 lvm                   samba
+cron.daily             mail                  sane.d
+cron.deny              mail.rc               sasl2
+cron.hourly            mailcap               scrollkeeper.conf
+cron.monthly           makedev.d             scsi_id.config
+cron.weekly            man.config            securetty
+crontab                maven                 security
+csh.cshrc              mcelog.conf           selinux
+csh.login              mgetty+sendfax        sensors.conf
+cups                   mime.types            services
+dbus-1                 minicom.users         sestatus.conf
+default                mke2fs.conf           setroubleshoot
+depmod.d               modprobe.conf         setuptool.d
+desktop-profiles       modprobe.d            sgml
+dev.d                  motd                  shadow
+dhcp6c.conf            mtab                  shadow-
+dnsmasq.conf           mtools.conf           shadow.OLD
+dnsmasq.d              multipath.conf        shells
+dovecot.conf           my.cnf                skel
+dovecot.conf.rpmnew    my.cnf.rpmnew         slrn.rc
+dumpdates              netplug               smartd.conf
+enscript.cfg           netplug.d             smartd.conf.rpmnew
+environment            nscd.conf             smrsh
+esd.conf               nsswitch.conf         snmp
+exports                nsswitch.conf.rpmnew  sound
+fb.modes               ntp                   squid
+filesystems            ntp.conf              squirrelmail
+firmware               odbc.ini              ssh
+fonts                  odbcinst.ini          stunnel
+foomatic               odbcinst.ini.rpmnew   subversion
+fstab                  ofed                  sudoers
+gconf                  openldap              sysconfig
+gcrypt                 opt                   sysctl.conf
+gdm                    oraInst.loc           sysctl.conf.rpmnew
+ghostscript            oraInst.loc_save      sysctl.conf_save
+gnome-vfs-2.0          oratab                sysctl.confe
+gnome-vfs-mime-magic   oratab_save           syslog.conf
+gpm-root.conf          pam.d                 termcap
+group                  pam_pkcs11            tux.mime.types
+group-                 pam_smb.conf          udev
+grub.conf              pango                 updatedb.conf
+gshadow                passwd                vimrc
+gshadow-               passwd-               virc
+gssapi_mech.conf       passwd.OLD            warnquota.conf
+gtk-2.0                pcmcia                webalizer.conf
+hal                    pear.conf             wgetrc
+host.conf              php.d                 wpa_supplicant
+hosts                  php.ini               wvdial.conf
+hosts.allow            pine.conf             xdg
+hosts.deny             pine.conf.fixed       xinetd.conf
+hp                     pinforc               xinetd.d
+htdig                  pki                   xml
+httpd                  pm                    yp.conf
+idmapd.conf            ppp                   yum
+init.d                 prelink.cache         yum.conf
+initlog.conf           prelink.conf          yum.repos.d
+
+[rashmibaheti@voyager ~]$ !822
+uname -a
+Linux voyager.deanza.edu 2.6.18-406.el5 #1 SMP Fri May 1 10:37:57 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+[rashmibaheti@voyager ~]$ !!
+uname -a
+Linux voyager.deanza.edu 2.6.18-406.el5 #1 SMP Fri May 1 10:37:57 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+[rashmibaheti@voyager ~]$ history 20
+  811  !
+  812  $!
+  813  $!
+  814  if["$$"-eq"$I"]
+  815  $-
+  816  head/etc/services
+  817  head  /etc/services
+  818  ls etc
+  819  ls /etc
+  820  who
+  821  date
+  822  uname -a
+  823  history | tail
+  824  history 819
+  825  ls /etc
+  826  history | tail
+  827  uname -a
+  828  uname -a
+  829  history | tail
+  830  history 20
+[rashmibaheti@voyager ~]$ !817
+head  /etc/services
+# /etc/services:
+# $Id: services,v 1.42 2006/02/23 13:09:23 pknirsch Exp $
+#
+# Network services, Internet style
+#
+# Note that it is presently the policy of IANA to assign a single well-known
+# port number for both TCP and UDP; hence, most entries here have two entries
+# even if the protocol doesn't support UDP operations.
+# Updated from RFC 1700, ``Assigned Numbers'' (October 1994).  Not all ports
+# are included, only the more common ones.
+
+[rashmibaheti@voyager ~]$ alias d='date'
+[rashmibaheti@voyager ~]$ d
+Thu Jul 30 19:56:54 PDT 2015
+
+[rashmibaheti@voyager ~]$ alias ls='ls -l'
+[rashmibaheti@voyager ~]$ ls
+total 328
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 23 18:26 #emacsPractice#
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 23 18:31 #file1#
+-rw-r--r-- 1 rashmibaheti unixStudent  651 Jul 23 19:14 #helloworld.txt#
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 28 18:47 A
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 28 18:47 B
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 28 18:47 C
+drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
+-rw-r--r-- 1 rashmibaheti unixStudent    9 Jul 15 15:21 My new file
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+-rwxr-xr-x 1 rashmibaheti unixStudent   28 Jul 30 19:51 aliasFile
+-rwxr-xr-x 1 rashmibaheti unixStudent   45 Jul 28 20:50 cpTobak
+-rw-r--r-- 1 rashmibaheti unixStudent   61 Jul 16 21:09 days
+-r--r--r-- 1 rashmibaheti unixStudent    0 Jul 16 19:40 dog
+-rwxr-xr-x 1 rashmibaheti unixStudent  106 Jul 28 18:58 example1
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 28 20:43 file name
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 28 20:46 file name.bak
+-rwxr-xr-x 1 rashmibaheti unixStudent   29 Jul 23 20:59 file2
+-rwxr-xr-x 1 rashmibaheti unixStudent   62 Jul 28 20:07 first
+-rwxr-xr-x 1 rashmibaheti unixStudent   62 Jul 28 20:35 first.bak
+-rw-r--r-- 1 rashmibaheti unixStudent    1 Jul 16 20:27 garbage
+-rwxr--r-- 1 rashmibaheti unixStudent  102 Jul 23 20:23 helloWorld
+-rw-r--r-- 1 rashmibaheti unixStudent  647 Jul 23 19:07 helloworld.txt
+-rw-r--r-- 1 rashmibaheti unixStudent  649 Jul 23 18:59 helloworld.txt~
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent   27 Jul 28 18:24 hold1
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 28 18:24 hold2
+-rw-r--r-- 1 rashmibaheti unixStudent   27 Jul 28 18:28 hold3
+-rw-r--r-- 1 rashmibaheti unixStudent   27 Jul 28 18:31 hold4
+-rw-r--r-- 1 rashmibaheti unixStudent  200 Jul 15 15:42 ls.out
+-rwxr--r-- 1 rashmibaheti unixStudent    0 Jul 23 19:46 name.sh
+-rw-r--r-- 1 rashmibaheti unixStudent   12 Jul 15 15:23 new_file
+-rw-r--r-- 1 rashmibaheti unixStudent  229 Jul 21 19:53 pizza
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+-rwxr-xr-x 1 rashmibaheti unixStudent   61 Jul 28 19:25 short
+lrwxrwxrwx 1 rashmibaheti unixStudent   12 Jul 21 18:46 softlink.txt -> hardlink.txt
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 16 19:30 two
+-rw-r--r-- 1 rashmibaheti unixStudent   23 Jul 23 21:01 update
+-rw-r--r-- 1 rashmibaheti unixStudent   18 Jul 16 18:58 west
+-rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
+-rw-r--r-- 1 rashmibaheti unixStudent   11 Jul 28 18:22 x
+-rw-r--r-- 1 rashmibaheti unixStudent   16 Jul 28 18:23 y
+
+[rashmibaheti@voyager ~]$ unalias ls
+[rashmibaheti@voyager ~]$ ls
+#emacsPractice#   album          first.bak        ls.out         two
+#file1#           aliasFile      garbage          name.sh        update
+#helloworld.txt#  cpTobak        helloWorld       new_file       west
+A                 days           helloworld.txt   pizza          west.txt
+B                 dog            helloworld.txt~  practice       x
+Bye               example1       hi               practice_copy  y
+C                 file name      hold1            public_html
+Hello             file name.bak  hold2            rashmi_new
+My new file       file2          hold3            short
+Rashmi            first          hold4            softlink.txt
+
+Alias should be defined in the ~/.bashrc (bash) or ~/.tcshrc (tcsh) startup
+files so that they are available each time we log in.
+
+[rashmibaheti@voyager ~]$ function welcom ()
+> {
+> echo "Welcome to my computer"
+> }
+[rashmibaheti@voyager ~]$ welcom
+Welcome to my computer
+
+[rashmibaheti@voyager ~]$ function long ()
+> {
+> date
+> ls -l
+> }
+[rashmibaheti@voyager ~]$ long
+Thu Jul 30 20:23:46 PDT 2015
+total 328
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 23 18:26 #emacsPractice#
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 23 18:31 #file1#
+-rw-r--r-- 1 rashmibaheti unixStudent  651 Jul 23 19:14 #helloworld.txt#
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 28 18:47 A
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 28 18:47 B
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 28 18:47 C
+drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
+-rw-r--r-- 1 rashmibaheti unixStudent    9 Jul 15 15:21 My new file
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+-rwxr-xr-x 1 rashmibaheti unixStudent   28 Jul 30 19:51 aliasFile
+-rwxr-xr-x 1 rashmibaheti unixStudent   45 Jul 28 20:50 cpTobak
+-rw-r--r-- 1 rashmibaheti unixStudent   61 Jul 16 21:09 days
+-r--r--r-- 1 rashmibaheti unixStudent    0 Jul 16 19:40 dog
+-rwxr-xr-x 1 rashmibaheti unixStudent  106 Jul 28 18:58 example1
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 28 20:43 file name
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 28 20:46 file name.bak
+-rwxr-xr-x 1 rashmibaheti unixStudent   29 Jul 23 20:59 file2
+-rwxr-xr-x 1 rashmibaheti unixStudent   62 Jul 28 20:07 first
+-rwxr-xr-x 1 rashmibaheti unixStudent   62 Jul 28 20:35 first.bak
+-rw-r--r-- 1 rashmibaheti unixStudent    1 Jul 16 20:27 garbage
+-rwxr--r-- 1 rashmibaheti unixStudent  102 Jul 23 20:23 helloWorld
+-rw-r--r-- 1 rashmibaheti unixStudent  647 Jul 23 19:07 helloworld.txt
+-rw-r--r-- 1 rashmibaheti unixStudent  649 Jul 23 18:59 helloworld.txt~
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent   27 Jul 28 18:24 hold1
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 28 18:24 hold2
+-rw-r--r-- 1 rashmibaheti unixStudent   27 Jul 28 18:28 hold3
+-rw-r--r-- 1 rashmibaheti unixStudent   27 Jul 28 18:31 hold4
+-rw-r--r-- 1 rashmibaheti unixStudent  200 Jul 15 15:42 ls.out
+-rwxr--r-- 1 rashmibaheti unixStudent    0 Jul 23 19:46 name.sh
+-rw-r--r-- 1 rashmibaheti unixStudent   12 Jul 15 15:23 new_file
+-rw-r--r-- 1 rashmibaheti unixStudent  229 Jul 21 19:53 pizza
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+-rwxr-xr-x 1 rashmibaheti unixStudent   61 Jul 28 19:25 short
+lrwxrwxrwx 1 rashmibaheti unixStudent   12 Jul 21 18:46 softlink.txt -> hardlink.txt
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 16 19:30 two
+-rw-r--r-- 1 rashmibaheti unixStudent   23 Jul 23 21:01 update
+-rw-r--r-- 1 rashmibaheti unixStudent   18 Jul 16 18:58 west
+-rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
+-rw-r--r-- 1 rashmibaheti unixStudent   11 Jul 28 18:22 x
+-rw-r--r-- 1 rashmibaheti unixStudent   16 Jul 28 18:23 y
+
+A function can be defined in the ~/.bash_profile startup file so that it is available each time we log in
+
+
+
+

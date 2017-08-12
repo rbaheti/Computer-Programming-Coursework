@@ -1,0 +1,156 @@
+LAB - 5A:
+
+Answer 1: 
+
+Tocken : On the command line, each sequence of non-blank characters is a token 
+ 	 or a word.
+
+Argument : An argument is a file name or other data (path of the file) that is 
+	   provided to a command in order for a command to use it as an input.
+
+Option : Option is used to change the behaviour of the command.
+
+
+Argument and Option : Option is used to change the behaviour of command.
+		      Argument is the name of the file or path.
+
+		     Example : head -10 file1
+
+	     Here, 'head' is the command, '-10' is the option and 'file1' is the argument.
+
+
+Answer 4: Utilities which are buit in shell are called as builtins. 
+	  A built-in command is a part of shell itself. A utility is an 
+	  executable program that is installed (usually in a system directory)
+	  which the shell executes. We have used cd, cat, cp, echo builtins.
+
+
+
+
+Voyager Terminal Output:
+
+
+[rashmibaheti@voyager ~]$ ls
+Bye  Hello  Rashmi  album  bye  hi  practice  practice_copy  public_html  rashmi_new  west.txt
+[rashmibaheti@voyager ~]$ cat practice
+Hello, this is a practice file
+line number 1
+line number 2
+number 3
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+10
+11
+13
+bbye
+thank you!
+[rashmibaheti@voyager ~]$ cp practice practice_copy
+[rashmibaheti@voyager ~]$ ls -l
+total 76
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Hello
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:48 bye
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+-rw-r--r-- 1 rashmibaheti unixStudent   79 Jul 14 21:54 west.txt
+[rashmibaheti@voyager ~]$ head -10 practice
+Hello, this is a practice file
+line number 1
+line number 2
+number 3
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+[rashmibaheti@voyager ~]$ ls -r
+west.txt  rashmi_new  public_html  practice_copy  practice  hi  bye  album  Rashmi  Hello  Bye
+[rashmibaheti@voyager ~]$ ls -l -r
+total 76
+-rw-r--r-- 1 rashmibaheti unixStudent   79 Jul 14 21:54 west.txt
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:48 bye
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Hello
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+[rashmibaheti@voyager ~]$ cp -r Hello
+cp: missing destination file operand after `Hello'
+Try `cp --help' for more information.
+[rashmibaheti@voyager ~]$ cp -r Rashmi Hello
+[rashmibaheti@voyager ~]$ head -11 practice
+Hello, this is a practice file
+line number 1
+line number 2
+number 3
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+10
+[rashmibaheti@voyager ~]$ tail -11 practice
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+10
+11
+13
+bbye
+thank you!
+[rashmibaheti@voyager ~]$ ls --version
+ls (GNU coreutils) 5.97
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software.  You may redistribute copies of it under the terms of
+the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Richard Stallman and David MacKenzie.
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ echo hi there
+hi there
+[rashmibaheti@voyager ~]$ echo hello there
+hello there
+[rashmibaheti@voyager ~]$ cd /usr/bin
+[rashmibaheti@voyager bin]$ pwd
+/usr/bin
+[rashmibaheti@voyager bin]$ ls *ab*
+ab      crontab      gnome-about-me          hp-fab  kab2kabc  mysql_convert_table_format  mysql_tableinfo  ppmlabel     psfgettable    psfxtable  slabtop                  update-mime-database
+baobab  gnome-about  hal-find-by-capability  iptab   mlabel    mysql_fix_privilege_tables  pgmabel          psfaddtable  psfstriptable  sabayon    update-desktop-database  urlgrabber
+[rashmibaheti@voyager bin]$ ls u*
+ucd5820stat  udevinfo  ul        unexpand  unix-lpr.sh  unpack200   unwrapdiff  unzip     update-desktop-database    update-gtk-immodules  updatedb  url_handler.sh  urlview     userinfo   userpasswd  utmpdump  uxterm
+ucs2any      udevtest  unbuffer  uniq      unix2dos     unprotoize  unxz        unzipsfx  update-gdk-pixbuf-loaders  update-mime-database  uptime    urlgrabber      userformat  usermount  users       uuidgen   uz
+[rashmibaheti@voyager bin]$ ls un*
+unbuffer  unexpand  uniq  unix-lpr.sh  unix2dos  unpack200  unprotoize  unwrapdiff  unxz  unzip  unzipsfx
+[rashmibaheti@voyager bin]$ ls ?
+X  [  w
+[rashmibaheti@voyager bin]$ cd ..
+[rashmibaheti@voyager usr]$ pwd
+/usr
+[rashmibaheti@voyager usr]$ cd ..
+[rashmibaheti@voyager /]$ pwd
+/
+[rashmibaheti@voyager /]$ .bash*
+-bash: ./.bash_history: Permission denied
+[rashmibaheti@voyager /]$
+
+
+

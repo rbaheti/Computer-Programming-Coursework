@@ -1,0 +1,37 @@
+Voyager Terminal Output:
+
+
+[rashmibaheti@voyager ~]$ cd
+[rashmibaheti@voyager ~]$ pwd
+/home/student/rashmibaheti
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ mkdir two
+[rashmibaheti@voyager ~]$ ls
+Bye    My new file  album  hi      new_file  practice_copy  rashmi_new  west
+Hello  Rashmi       days   ls.out  practice  public_html    two         west.txt
+[rashmibaheti@voyager ~]$ file two
+two: directory
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ cd two
+[rashmibaheti@voyager two]$ pwd
+/home/student/rashmibaheti/two
+[rashmibaheti@voyager two]$
+[rashmibaheti@voyager two]$ vim fox
+[rashmibaheti@voyager two]$ ls
+fox
+[rashmibaheti@voyager two]$
+[rashmibaheti@voyager ~]$ ls two/
+fox
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager two]$ cd ..
+[rashmibaheti@voyager ~]$ pwd
+/home/student/rashmibaheti
+[rashmibaheti@voyager ~]$ ls two
+fox
+[rashmibaheti@voyager ~]$
+[rashmibaheti@voyager ~]$ rmdir two
+rmdir: two: Directory not empty
+[rashmibaheti@voyager ~]$
+
+
+
