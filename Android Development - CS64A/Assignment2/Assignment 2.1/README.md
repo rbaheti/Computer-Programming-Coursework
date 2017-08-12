@@ -1,6 +1,6 @@
 Assignment 2.1
 
-App Screenshots  
+Screenshots  
 [[https://user-images.githubusercontent.com/9449212/29244558-db4a638a-7f6f-11e7-8715-f20402ce0e97.png]]
 [[https://user-images.githubusercontent.com/9449212/29244559-db59fcfa-7f6f-11e7-829d-080d395e41b0.png]]
 [[https://user-images.githubusercontent.com/9449212/29244560-db671782-7f6f-11e7-99ef-74121ed7d829.png]]
