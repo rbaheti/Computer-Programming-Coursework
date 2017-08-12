@@ -1,17 +1,3 @@
-/*******************************************************
-Homework 4: Part A
-
-Biwise Operators
-
-There are three requirements:
-1. Define and use a macro to turn on a range of bits
-2. Define and use a macro to turn off a range of bits
-3. Define and use a macro to toggle a range of bits
-
-NAME: Rashmi Baheti
-IDE: Visula Studio
-*******************************************************/
-
 #include <stdio.h>
 
 int  testbit(unsigned short wrd, int bit_to_test);

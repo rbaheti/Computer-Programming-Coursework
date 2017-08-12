@@ -3,7 +3,7 @@ Answer:
 Primary key:
 A primary key is a special designation for a combination of columns that uniquely identify each row in the table.  This combination of columns is called the primary key of the table. A table cannot have more than one primary key. All values in the primary key must be unique and cannot be null. When a primary key is specified for a table, the Database Engine enforces data uniqueness and hence does not allow row insertions that break the constraint. If primary key constraint is defined on more than one columns, values may be duplicated within one column, but each combination of values from all the  columns in the primary key constraint definition must be unique.
 
-Foe example:
+For example:
 Lets say we have a table EMP with EMPNO as its primary key.
 
 > CREATE TABLE EMP ( 
@@ -22,7 +22,7 @@ EMPNO.
 Foreign Key:
 A foreign key (FK) is a column or combination of columns that is used to establish and enforce a link between the data in two tables, namely foreign key table and primary key table.Foreign key constraint controls the data that can be stored in both tables.Any data changes that break the link established by foreign key constraint are not permitted by the database.
 
-Forr example:
+For example:
 Lets say we have 2 tables DEPT and EMP a foreign key link. Due to the foreign key constraint, we cannot insert a row in EMP table if no row exists in DEPT table that use the corresponding DEPTNO.
 Similarly, we cannot delete a row from DEPT table if there are rows in EMP table that use the corresponding DEPTNO.
 

@@ -1,14 +1,3 @@
-/**
-CIS 26B - Advanced C Programming
-Homework #3:
-Hashing to a file and using advanced string manipulation functions.
-
-This program allows additions to, deletions from, or displays of database records in a student database.
-
-NAME: Rashmi Baheti
-IDE: Visual Studio
-*/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
