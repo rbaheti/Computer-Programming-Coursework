@@ -5,19 +5,19 @@ This repository contains the computer programming related coursework I did at <a
 3. Systems Programming
 
 These are the courses I took at De Anza College.  
-| Course | Grade |
-| --- | --- |
-| Advanced Java Programming | A+ |
-| Writing Apps For Android in Java | A+ |
-| Introduction to Java Programming | A+ |
-| Advanced C++ | A+ |
-| Data Structures in C++ | A- |
-| Intermediate C++ | A+ |
-| Introduction to C++ | A+ |
-| Advanced C | A |
-| Introduction to 8086 Processor Assembly Language and Computer Architecture | A+ |
-| Introduction to JavaScript | A |
-| Web Page Development | B |
-| Intro To SQL | A |
-| Introduction to Unix | A |
-| Operating System Concepts | A+ |
+| Course | Grade |  
+| --- |:—:|  
+| Advanced Java Programming | A+ |  
+| Writing Apps For Android in Java | A+ |  
+| Introduction to Java Programming | A+ |  
+| Advanced C++ | A+ |  
+| Data Structures in C++ | A- |  
+| Intermediate C++ | A+ |  
+| Introduction to C++ | A+ |  
+| Advanced C | A |  
+| Introduction to 8086 Processor Assembly Language and Computer Architecture | A+ |  
+| Introduction to JavaScript | A |  
+| Web Page Development | B |  
+| Intro To SQL | A |  
+| Introduction to Unix | A |  
+| Operating System Concepts | A+ |  
