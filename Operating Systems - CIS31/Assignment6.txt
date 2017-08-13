@@ -1,0 +1,19 @@
+6.1 In Section 6.4, we mentioned that disabling interrupts frequently can affect the system’s clock. Explain why this can occur and how such effects can be minimized.
+A:
+For every clock interrupt, system clock is updated. Now, if we disable interrupts for a long period of time, the system clock could easily lose correct time. System clock is also used for scheduling purposes. At every clock interrupt, the scheduler determines if the time quantum for the currently running process has expired. Thus, if clock interrupts were disabled, the scheduler will not accurately assign time quantum. Such effects can be minimized by disabling clock interrupts for only very short period of time.
+
+6.6 Explain the concept of transaction atomicity. 
+A:
+A transaction consists of a sequence of read and write statements on some shared data. A transaction needs to be processed atomically, that is, the modifications performed by the transaction must never be applied partially. Atomic execution of transaction is necessary to ensure the integrity of shared data. If operations from two or more transactions are allowed to interleave with each other, then the data can get corrupted.
+
+6.11 What is the meaning of the term busy waiting? What other kinds of waiting are there in an operating system? Can busy waiting be avoided altogether? Explain your answer.
+A:
+Busy waiting means that a process is waiting for a condition to be satisfied in a busy loop without freeing the CPU.  This continual looping is a problem in a multi-programming system, where a single CPU is shared among many processes. Busy waiting wastes CPU cycles that some other process might be able to use productively.
+
+Alternative to busy waiting is to free-up the CPU and block on a condition and wait to until appropriate time in future.
+
+Busy waiting can be avoided but it brings the overhead of putting a process to sleep and having to wake it up when appropriate state of program is reached.
+
+6.26 How does the signal() operation associated with monitors differ from the corresponding operation defined for semaphores?
+A:
+The signal() operation of monitor resumes exactly one suspended process and if no process is suspended, then the signal() operation has no effect. So, monitor does not remember the fact that a signal took place. If wait() operation is performed subsequently, then the caller thread simply blocks. However, in semaphores, every signal results in a corresponding increment of the semaphore value even if there are no waiting threads. A future wait operation would immediately succeed because of the earlier signal.

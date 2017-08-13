@@ -1,0 +1,49 @@
+1.3 List the four steps that are necessary to run a program on a completely dedicated machine—a computer that is running only that program. 
+
+Answer:
+Step 1. load the program into computer memory.
+
+Step 2. Load PC register with the address of the 1st instruction of the program
+
+Step 3. Hand over control of CPU to the program and start its execution
+
+Step 4. Periodically check the status of the program to make sure it exits before the given time deadline, if any.
+
+1.8 Which of the following instructions should be privileged?
+a.Set value of timer
+b.Read the clock
+c.Clear memory
+d.Issue a trap instruction
+e.turn off interrupts
+f.modify entries in device-status table
+g.switch from user to kernel mode
+h.access I/O device 
+
+Answer:
+a.Set value of timer
+c.Clear memory
+e.turn off interrupts
+f.modify entries in device-status table
+g.switch from user to kernel mode
+h.access I/O device
+
+1.13 In a multiprogramming and time-sharing environment, several users share the system simultaneously. This situation can result in various security problems.
+a. What are two such problems?
+b. Can we ensure the same degree of security in a time-shared machine as in a dedicated machine? Explain your answer.
+Answer:
+a. If the OS does not provide proper isolation across users, then following security problems could happen:
+
+1. A misbehaving user could alter the memory owned by some other user. This could lead to a change in behavior of the programs run by the other user.
+
+2. A misbehaving user could read the memory owned by some other user. This could lead to leaking of private data of another user.
+b. Yes. To achieve this, the OS should provide complete isolation across users such that computer resources(e.g. RAM, disk space, etc.) owned by one user are not accessible to any other user.
+
+1.22 What is the purpose of interrupts? What are the differences between a trap and an interrupt? Can traps be generated intentionally by a user program? If so, for what purpose? 
+Answer:
+Interrupts are signals from devices attached to the computer. They require immediate attention of the OS. Few examples of interrupts are keyboard key presses, mouse movements, incoming network requests, etc.Interrupts allow OS to take care of important events in the computer system.
+
+The difference between trap and interrupt is:
+
+A trap is a software-generated interrupt that signals occurrence of an unexpected event that requires immediate attention. For example, division by zero, invalid memory access, etc. Interrupts are hardware interrupts whereas traps are software-generated interrupts.
+
+Yes, traps can be created by a user programs for debugging purpose.
