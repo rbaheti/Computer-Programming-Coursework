@@ -1,4 +1,4 @@
-Output on the terminal:
+Voyager Terminal Output:
 
 $ nano short
 $ cat short
