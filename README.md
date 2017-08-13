@@ -6,7 +6,7 @@ This repository contains the computer programming related coursework I did at <a
 
 These are the courses I took at De Anza College.
 
-| course           | grade |
+| Course           | Grade |
 |------------------|-------|
 | Advanced Java Programming | A+ |  
 | Writing Apps For Android in Java | A+ |  
