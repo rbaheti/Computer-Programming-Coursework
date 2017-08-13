@@ -1,13 +1,12 @@
-15.2 A password may become known to other users in a variety of ways. Is there a simple method for detecting that such an event has occurred? Explain your answer.
+Q 15.2 A password may become known to other users in a variety of ways. Is there a simple method for detecting that such an event has occurred? Explain your answer.
 A:
 One method is to set up the system such that whenever a user logs in, the system should print the last time user was logged on the system. This way, user could see if the system has been used inappropriately.
 
-15.4 The list of all passwords is kept within the operating system. Thus, if a user manages to read this list, password protection is no longer provided. Suggest a scheme that will avoid this problem. (Hint: Use different internal and external representations.)
+Q 15.4 The list of all passwords is kept within the operating system. Thus, if a user manages to read this list, password protection is no longer provided. Suggest a scheme that will avoid this problem. (Hint: Use different internal and external representations.)
 A:
 On of the schemes would be to encrypt the passwords internally so that they can only be accessed in coded form. Only system operator should have access or the knowledge of decoding those passwords.
 
-
-15.9 Make a list of six security concerns for a bank’s computer system. For each item on your list, state whether this concern relates to physical, human, or operating-system security.
+Q 15.9 Make a list of six security concerns for a bank’s computer system. For each item on your list, state whether this concern relates to physical, human, or operating-system security.
 A:
 Data transfer over network is encrypted: operating system.
 Staff is trustworthy: human
@@ -17,8 +16,7 @@ Access to network devices eliminated or limited: physical, human.
 In a protected location, well guarded: physical, human.
 Network tamperproof: physical, human, operating system.
 
-
-15.14 Discuss how the asymmetric encryption algorithm can be used to achieve the following goals.
+Q 15.14 Discuss how the asymmetric encryption algorithm can be used to achieve the following goals.
 a. Authentication: receiver knows that only the sender could have generated the message.
 b. Secrecy: only the receiver can decrypt the message.
 c. Authentication and secrecy: only the receiver can decrypt the message, and the receiver knows that only the sender could have generated the message.

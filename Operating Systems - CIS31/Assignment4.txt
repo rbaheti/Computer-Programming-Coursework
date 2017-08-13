@@ -1,4 +1,4 @@
-Q:4.2 What are two differences between user-level threads and kernel-level threads? Under what circumstances is one type better than the other? 
+Q 4.2 What are two differences between user-level threads and kernel-level threads? Under what circumstances is one type better than the other? 
 A:
 Differences between user-level threads and kernel-level threads are:
 
@@ -10,7 +10,7 @@ When we only have user-level threads, kernel does not know about all these threa
 
 If the user programs create way too many threads, then creating and running those many kernel threads will burden the CPU and hence severely affect the performance of the system. Hence, in such a case, its not such a good idea to have only use-level threads.
 
-Q4.4 What resources are used when a thread is created? How do they differ from those used when a process is created? 
+Q 4.4 What resources are used when a thread is created? How do they differ from those used when a process is created? 
 A:
 When a thread is created, the attributes, state or the data corresponding to the thread needs to be tracked by the thread library. For example, Linux uses struct task_struct to track all the data about a thread. This consumes system memory.
 

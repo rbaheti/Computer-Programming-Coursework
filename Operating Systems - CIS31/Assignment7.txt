@@ -1,4 +1,4 @@
-7.2 Suppose that a system is in an unsafe state. Show that it is possible for the processes to complete their execution without entering a deadlocked state.
+Q 7.2 Suppose that a system is in an unsafe state. Show that it is possible for the processes to complete their execution without entering a deadlocked state.
 A:
 A system is said to be in unsafe state when the processes running in the system cannot be put into a sequence such that resource requirement of a process Pi can be satisfied when all processes preceding Pi in the sequence release the resources held by them. This sequence is called safe sequence. When the system is unsafe, the unsafe state of the system is necessary but not sufficient condition to enter a deadlock state. This is because a process could release some of its resources before acquiring more resources. When this happens, the resource requirement of all processes in an unsafe system could still be satisfied.
 
@@ -12,11 +12,11 @@ P2                4                 6
 
 Currently, there are no resources available to satisfy the resource requirement of the 2 processes. So the system is in unsafe state. But, if process P1 releases 2 of its currently held resources and then requests 2 resources, then its resource requirement can be satisfied. After P1 exits, resource requirement of P2 can be satisfied using the resources released by P1. Thus, it is possible for an unsafe system to not enter deadlock state and complete its execution successfully.
 
-7.6 Can a system detect that some of its processes are starving? If you answer “Yes,” explain how it can. If you answer “No,” explain how the system can deal with the starvation problem. 
+Q 7.6 Can a system detect that some of its processes are starving? If you answer “Yes,” explain how it can. If you answer “No,” explain how the system can deal with the starvation problem. 
 A:
 Yes, it should be possible for a system to detect when any of its processes has been waiting to acquire some resource for a really long time.System can use some time threshold T, and periodically check if any process has been stuck in the waiting queue of a resource for more than T. The system can then mark this process to be starved and prioritize allocating resources to it. By prioritizing resource allocation to the starved processes, it can ensure that no process in the system is indefinitely starved.
 
-7.10 Consider the traffic deadlock depicted in Figure 7.10.
+Q 7.10 Consider the traffic deadlock depicted in Figure 7.10.
 a. Show that the four necessary conditions for deadlock hold in this example.
 b. State a simple rule for avoiding deadlocks in this system.
 A:
@@ -29,7 +29,7 @@ a. The four necessary conditions for deadlock are listed below.
 
 b. One way to avoid the deadlock in this system is to ensure that a closed circuit can never be formed. This can be achieved by enforcing that car should never stop at the intersection.
 
-7.15 Consider a system consisting of four resources of the same type that are shared by three processes, each of which needs at most two resources. Show that the system is deadlock-free. 
+Q 7.15 Consider a system consisting of four resources of the same type that are shared by three processes, each of which needs at most two resources. Show that the system is deadlock-free. 
 A:
 When a system is deadlocked, it means that each process is holding some resources and waiting to acquire more resources held by other processes. In this example, there are resources available in the system to satisfy the resource requirement of one of the processes. After the available resources are allocated to a process and that process releases all its acquired resources, those resources can be used to satisfy the resource requirement of some other process.
 

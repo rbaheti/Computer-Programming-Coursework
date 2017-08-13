@@ -1,4 +1,4 @@
-11.1 Consider a file currently consisting of 100 blocks.Assume that the file-control block (and the index block, in the case of indexed allocation) is already in memory. Calculate how many disk I/O operations are required for contiguous, linked, and indexed (single-level) allocation strategies, if, for one block, the following conditions hold. In the contiguous allocation case, assume that there is no room to grow at the beginning but there is room to grow at the end. Also assume that the block information to be added is stored in memory.
+Q 11.1 Consider a file currently consisting of 100 blocks.Assume that the file-control block (and the index block, in the case of indexed allocation) is already in memory. Calculate how many disk I/O operations are required for contiguous, linked, and indexed (single-level) allocation strategies, if, for one block, the following conditions hold. In the contiguous allocation case, assume that there is no room to grow at the beginning but there is room to grow at the end. Also assume that the block information to be added is stored in memory.
 
 a. The block is added at the beginning
 
@@ -29,12 +29,11 @@ e. The block is removed from the middle -       98 (49+49)                      
 
 f. The block is removed from the end -             0                                       101(100+1)                          0
 
-
-11.3 Why must the bit map for file allocation be kept on mass storage, rather than in main memory? 
+Q 11.3 Why must the bit map for file allocation be kept on mass storage, rather than in main memory? 
 A:
 The main memory is a volatile memory. In case of power failure or system crash, the bit map for file allocation would be lost. To prevent such loss of this critical information, mass storage need to be used rather than main memory to store this data.
 
-11.11 Consider a system where free space is kept in a free-space list.
+Q 11.11 Consider a system where free space is kept in a free-space list.
 
 a. Suppose that the pointer to the free-space list is lost. Can the system reconstruct the free-space list? Explain your answer.
 
@@ -54,8 +53,7 @@ b. There would be 5 disk I/O operations required to read the contents of a file 
 
 c. To ensure that the pointer is never lost as a result of memory failure, we can store pointer in the mass storage in multiple locations. A corruption in 1 block of the disk, will not be able to corrupt the pointer in all its locations.
 
-
-11.20 Consider the following backup scheme:
+Q 11.20 Consider the following backup scheme:
 
 • Day 1. Copy to a backup medium all files from the disk.
 
