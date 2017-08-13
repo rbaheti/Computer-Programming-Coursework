@@ -1,3 +1,5 @@
+Voyager Terminal Output:
+
 $ vim pizza
 $ ls
 Bye  Hello  My new file  Rashmi  album  days  dog  garbage  hi  ls.out  new_file  pizza  practice  practice_copy  public_html  rashmi_new  softlink.txt  two  west  west.txt
