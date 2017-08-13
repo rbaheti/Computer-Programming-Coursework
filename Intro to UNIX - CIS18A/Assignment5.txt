@@ -1,3 +1,5 @@
+Voyager Terminal Output:
+
 $ head  /etc/services
 # /etc/services:
 # $Id: services,v 1.42 2006/02/23 13:09:23 pknirsch Exp $
