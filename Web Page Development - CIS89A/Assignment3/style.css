@@ -1,0 +1,28 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 20px;
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color:purple
+}
+
+div {
+  background-color: lightgrey;
+  width: 500px;
+  border: 25px solid green;
+  padding: 25px;
+  margin: 25px;
+}

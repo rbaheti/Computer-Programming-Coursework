@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="font_color" id="top">
+      <div class="bg" style="background-image: url(bakery1b.JPG);">
+        <div class="menu-container">
+          <div class="menu-items">
+            <a href="/rashmibaheti/288682/index.html"> Home </a>
+          </div>
+          <div class="menu-items">
+            <a href="/rashmibaheti/288682/pictures.html"> Pictures </a>
+          </div>
+          <div class="menu-items">
+            <a href="/rashmibaheti/288682/menu.html"> Menu </a>
+          </div>
+          <div class="menu-items">
+            <a href="/rashmibaheti/288682/aboutus.html"> About Us </a>
+          </div>
+          <div class="menu-items">
+            <a href="/rashmibaheti/288682/contactus.html"> Contact Us </a>
+          </div>
+        </div> <!-- closing menu-container div -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>OUR HISTORY</h1> 
+        <div class="paragraph">   Our Vision And The Transformation</div> <!-- closing paragraph div -->
+      </div> <!-- closing bg div -->
+    </div> <!-- closing font_color div -->
+    
+    <div>
+      <div style="padding: 10px; font-family:cursive; padding: 100px;">Learn how one family restaurant brought San José together for 60 years. When Rashmi's Bakery opened in 1946, it offered a smorgasbord, barbecued dinner, and dancing in its 5,500 square foot building. For decades, Rashmi's Bakery was known for offering live entertainment in addition to quality food. Over its long and colorful history, millions of guests enjoyed entertainment, parties and fine food at Rashmi's Bakery. Many of our staff have been with us for a number of years and have become part of our extended family. One of our staffs still comes by to see old customers and friends; she turned 91 in July 2016.
+        <br><br><h2>Our Vision</h2>
+        Rashmi's Bakery is a beacon of light for an alternative way of living to achieve World Peace. While striving to make Our Vision a reality, we continually focus on improving our Core Values. <br><br>
+        <h2>Our Core Values</h2>
+        <span style="color:green">HEALTHY:</span> Serve delicious meals using only natural and healthy ingredients.<br>
+
+        <span style="color:green">COMPASSION:</span> Honor all lives to live in peace & harmony together.<br>
+
+        <span style="color:green">GREEN:</span> Respect & protect Mother Earth through sustainable practices.<br>
+
+        <span style="color:green">SERVICE:</span> Treat each customer as a VIP, a friend and a partner.<br>
+
+        <span style="color:green">HAPPINESS:</span> Provide joyful experiences for customers, employees, friends, and families.<br>
+
+        <span style="color:green">LOYALTY:</span> Make Rashmi's Bakery a destination of choice for all.</div>
+    </div>
+    
+    <div class="location-map-hours">
+      <div class="location-map-hours-inner">
+        <div class="location"><br><br> LOCATION <br><br> <pre style="font-family: Gill Sans, Gill Sans MT, sans-serif; font-size: 22px;"><i>Rashmi's Bakery</i><br>222 Buena Vista Avenue<br>San Jose, CA 900055<br><br>(408)555-2222<br><br><a href="/rashmibaheti/288682/contactus.html">info@rashmisbakery.com</a><br><br>Website designed by <a href="mailto:baheti.rash123@gmail.com">Rashmi B</a>.</pre>  
+        </div> <!-- closing div for "location" -->
+
+        <div class="map"><br><br> MAP<br><br><br> <div id="googleMap" style="width:100%; height:300px;"></div> 
+        </div><!-- closing div for "map" -->
+
+        <div class="hours"><br><br> HOURS <br><br> <pre style="font-family: Gill Sans, Gill Sans MT, sans-serif; font-size: 22px;">Tuesday-Friday<br>8am - 6pm<br><br>Saturday<br>8am - 5pm<br><br>Sunday<br>8am - 4pm</pre>
+        </div><!-- closing div for "hours" -->
+
+        <div  style="clear:both;"></div> <!-- prevent any floating elements on left and right -->
+      </div> <!-- closing div for "location-map-hours-inner"-->
+    </div> <!-- closing div for "location-map-hours"-->
+    
+    <br>
+    <br>
+    
+    <div style="margin:auto; text-align:center;">
+      <a href="#top" class="select" style="color:blue; ">Return to the top of this page</a>
+    </div>
+
+    <script>
+      function myMap() {
+        var mapProp= {
+          center: new google.maps.LatLng(37.332919, -121.897559),
+          zoom: 15,
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBwl8NwdSbEHu8-QX1f5wjPZbrfD-JF57M&callback=myMap"></script>
+  </body>
+</html>

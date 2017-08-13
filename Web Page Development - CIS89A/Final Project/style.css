@@ -1,0 +1,210 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-size: 18px;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("bakery1a.JPG");
+
+  /* Center and scale the image nicely */
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 500px;
+  padding: 45px 75px;
+  margin: 0;
+  opacity: 0.9;
+  font-variant-alternates:normal;
+  background-blend-mode;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 64px;
+  text-align: center;
+}
+
+.cold-mezza-container {
+  text-align:center;  
+}
+
+.cold-mezza-inner {
+  margin: auto;
+}
+
+.hot-mezza-container {
+  text-align:center;  
+}
+
+.hot-mezza-inner {
+  margin: auto;
+}
+
+.sweets-container {
+  text-align:center;  
+}
+
+.sweets-inner {
+  margin: auto;
+}
+
+.drinks-container {
+  text-align:center;  
+}
+
+.drinks-inner {
+  margin: auto;
+}
+
+.menu-items {
+  display: inline-block;
+  vertical-align: top;
+  padding: 50px;
+  text-align: left;
+  font-family:cursive;
+}
+
+.menu-details {
+  width: 250px;
+}
+
+.font_color {
+  color:white;
+}
+
+a {
+  color:white;
+  font-size: 22px;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  
+}
+
+/* selected link */
+a:active {
+  color:aqua;
+  
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+}
+
+.paragraph {
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  max-width: 70%;
+  margin: auto;
+}
+
+.subtitle {
+  font-family: cursive;
+  font-weight:bold;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  max-width: 70%;
+  margin: auto;
+  color:black;
+}
+
+.menuDetails{
+  font-family: cursive;
+  color:gray;
+}
+
+.location-map-hours {
+  background-color: #581845;
+  color: white;
+  height: auto;
+  font-style: normal;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-size: 137.50%;
+  text-align: center;
+}
+
+.location-map-hours-inner {
+  display: inline-block;
+  vertical-align: top;
+  margin: auto;
+  width: 100%;
+  text-align: left;
+}
+
+.location {
+  display:inline-block;
+  vertical-align: top;
+  width: 20%;
+  padding-left: 40px;
+  padding: 0px 0px 20px 40px;
+  font-size: 22px;
+}
+
+.map{
+  display:inline-block;
+  vertical-align: top;
+  width: 40%;
+  padding: 0px 0px 20px 40px;
+  font-size: 22px;
+}
+
+.hours{
+  display:inline-block;
+  vertical-align: top;
+  width: 20%;
+  padding: 0px 0px 20px 40px;
+  font-size: 22px;
+}
+
+.gallery-container {
+  text-align:center;  
+}
+
+.gallery-inner {
+  margin: auto;
+}
+
+.gallery {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+}
+
+.contact-container {
+  text-align:center;  
+}
+
+.contact-inner {
+  margin: auto;
+}
+
+.contact-element {
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+  color:gray;
+}
+
+form {
+  text-align: left;
+}
