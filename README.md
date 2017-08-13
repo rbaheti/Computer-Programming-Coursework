@@ -6,6 +6,12 @@ This repository contains the computer programming related coursework I did at <a
 
 These are the courses I took at De Anza College.
 
+| course           | grade |
+|------------------|-------|
+| df ads ad sada d |       |
+|  ads asd d       |       |
+|  ads ad s        |       |
+
 
 | Course | Grade |
 |————|-———-|
