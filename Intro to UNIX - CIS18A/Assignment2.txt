@@ -1,10 +1,10 @@
 Voyager Terminal Output:
 
-[rashmibaheti@voyager ~]$ touch dog
-[rashmibaheti@voyager ~]$ ls dog
+$ touch dog
+$ ls dog
 dog
-[rashmibaheti@voyager ~]$
-[rashmibaheti@voyager ~]$ ls -l
+
+$ ls -l
 total 124
 drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
 drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
@@ -23,12 +23,12 @@ drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
 drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 16 19:30 two
 -rw-r--r-- 1 rashmibaheti unixStudent   18 Jul 16 18:58 west
 -rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
-[rashmibaheti@voyager ~]$
-[rashmibaheti@voyager ~]$ ls -l /bin/bash
+
+$ ls -l /bin/bash
 -rwxr-xr-x 1 root root 801816 Sep 25  2014 /bin/bash
-[rashmibaheti@voyager ~]$
-[rashmibaheti@voyager ~]$ chmod 600 dog
-[rashmibaheti@voyager ~]$ ls -l
+
+$ chmod 600 dog
+$ ls -l
 total 132
 drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
 drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
@@ -48,9 +48,9 @@ drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
 drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 16 19:30 two
 -rw-r--r-- 1 rashmibaheti unixStudent   18 Jul 16 18:58 west
 -rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
-[rashmibaheti@voyager ~]$
-[rashmibaheti@voyager ~]$ chmod 444 dog
-[rashmibaheti@voyager ~]$ ls -l
+
+$ chmod 444 dog
+$ ls -l
 total 132
 drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
 drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
@@ -70,5 +70,3 @@ drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
 drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 16 19:30 two
 -rw-r--r-- 1 rashmibaheti unixStudent   18 Jul 16 18:58 west
 -rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
-
-

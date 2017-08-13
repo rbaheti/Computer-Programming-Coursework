@@ -1,0 +1,49 @@
+Output on the terminal:
+
+$ nano short
+$ cat short
+echo 'hi there'
+
+$ ./short
+-bash: ./short: Permission denied
+
+$ ls -l short
+-rw-r--r-- 1 rashmibaheti unixStudent 16 Jul 28 19:18 short
+
+$ chmod +x short
+$ ./short
+hi there
+
+$ nano short
+$ ./short
+hi there
+
+$ nano short
+$ ./short
+hi there
+
+$ nano first
+$ chmod +x first
+$ nano first
+$ ./first kitten
+kitten
+
+$ nano cpTobak
+$ chmod +x cpTobak
+$ ./cpTobak first
+$ ls -l
+-rwxr-xr-x 1 rashmibaheti unixStudent   62 Jul 28 20:07 first
+-rwxr-xr-x 1 rashmibaheti unixStudent   62 Jul 28 20:35 first.bak
+
+$ ./cpTobak "file name"
+cp: target `name.bak' is not a directory
+
+$ touch "file name"
+$ ls -l "file name"
+-rw-r--r-- 1 rashmibaheti unixStudent 0 Jul 28 20:43 file name
+
+$ ./cpTobak "file name"
+$ ls -l
+-rw-r--r-- 1 rashmibaheti unixStudent 0 Jul 28 20:43 file name
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 28 20:43 file name
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 28 20:46 file name.bak
