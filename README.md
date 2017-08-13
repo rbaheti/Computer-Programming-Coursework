@@ -8,13 +8,6 @@ These are the courses I took at De Anza College.
 
 | course           | grade |
 |------------------|-------|
-| df ads ad sada d |       |
-|  ads asd d       |       |
-|  ads ad s        |       |
-
-
-| Course | Grade |
-|————|-———-|
 | Advanced Java Programming | A+ |  
 | Writing Apps For Android in Java | A+ |  
 | Introduction to Java Programming | A+ |  
