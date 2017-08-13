@@ -1,0 +1,256 @@
+Voyager Terminal Output:
+
+$ ls
+Bye  Hello  Rashmi  album  bye  hi  practice  practice_copy  public_html  rashmi_new  west.txt
+
+$ cat practice
+Hello, this is a practice file
+line number 1
+line number 2
+number 3
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+10
+11
+13
+bbye
+thank you!
+
+$ cp practice practice_copy
+$ ls -l
+total 76
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Hello
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:48 bye
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+-rw-r--r-- 1 rashmibaheti unixStudent   79 Jul 14 21:54 west.txt
+
+$ head -10 practice
+Hello, this is a practice file
+line number 1
+line number 2
+number 3
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+
+$ ls -r
+west.txt  rashmi_new  public_html  practice_copy  practice  hi  bye  album  Rashmi  Hello  Bye
+
+$ ls -l -r
+total 76
+-rw-r--r-- 1 rashmibaheti unixStudent   79 Jul 14 21:54 west.txt
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:48 bye
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Hello
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+
+$ cp -r Hello
+cp: missing destination file operand after `Hello'
+Try `cp --help' for more information.
+
+$ cp -r Rashmi Hello
+$ head -11 practice
+Hello, this is a practice file
+line number 1
+line number 2
+number 3
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+10
+
+$ tail -11 practice
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+10
+11
+13
+bbye
+thank you!
+
+$ ls --version
+ls (GNU coreutils) 5.97
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software.  You may redistribute copies of it under the terms of
+the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Richard Stallman and David MacKenzie.
+
+$ echo hi there
+hi there
+$ echo hello there
+hello there
+$ cd /usr/bin
+$ pwd
+/usr/bin
+
+$ ls ?
+X  [  w
+$ cd ..
+$ pwd
+/usr
+$ cd ..
+$ pwd
+/
+$ .bash*
+-bash: ./.bash_history: Permission denied
+
+$ ls
+Bye  Hello  Rashmi  album  bye  hi  practice  practice_copy  public_html  rashmi_new  west.txt
+
+$ cat west.txt
+jghaskajfh;AIGU
+KAJSLHF.KAJ
+LASKJFHOLSWA
+KJDGLS
+KLJSDFIL
+KJSDF;H
+kjd;fhg
+kjfhg
+$ cat > west.txt
+hello,
+I am editing west.txt
+Hope you dont mind
+kjh.as
+lrhelrkg
+lerh;go
+wlreijh
+oeirhg
+
+Thank you
+See you again!
+bye
+
+$ echo This message goes to standard output.
+This message goes to standard output.
+
+$ cat /etc/hosts
+# Do not remove the following line, or various programs
+# that require network functionality will fail.
+#127.0.0.1              voyager.deanza.edu voyager localhost.localdomain localhost
+127.0.0.1       localhost.localdomain localhost
+::1             localhost6.localdomain6 localhost6
+153.18.17.10    businesssql
+
+153.18.17.12    voyager.deanza.edu voyager
+
+$ echo > 'My new file' new_file
+$ cat new_file
+cat: new_file: No such file or directory
+
+$ ls
+Bye  Hello  My new file  Rashmi  album  bye  hi  practice  practice_copy  public_html  rashmi_new  west.txt
+
+$ rm My new file
+rm: cannot remove `My': No such file or directory
+rm: cannot remove `new': No such file or directory
+rm: cannot remove `file': No such file or directory
+
+$ echo 'My new file' > new_file
+$ cat new_file
+My new file
+$ cat < new_file
+My new file
+
+$ ls -l > ls.out
+$ cat ls.out
+total 96
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
+-rw-r--r-- 1 rashmibaheti unixStudent    9 Jul 15 15:21 My new file
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:48 bye
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 15 15:34 ls.out
+-rw-r--r-- 1 rashmibaheti unixStudent   12 Jul 15 15:23 new_file
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+-rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
+
+$ who >> ls.out
+$ cat ls.out
+total 96
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 21:00 Bye
+drwxr-xr-x 3 rashmibaheti unixStudent 4096 Jul 15 14:55 Hello
+-rw-r--r-- 1 rashmibaheti unixStudent    9 Jul 15 15:21 My new file
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 14 20:59 Rashmi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 album
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:48 bye
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 14 21:01 hi
+-rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 15 15:34 ls.out
+-rw-r--r-- 1 rashmibaheti unixStudent   12 Jul 15 15:23 new_file
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 14 21:10 practice
+-rw-r--r-- 1 rashmibaheti unixStudent  147 Jul 15 14:42 practice_copy
+drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jun 29 10:11 public_html
+-rw-r--r-- 1 rashmibaheti unixStudent   13 Jul 14 21:59 rashmi_new
+-rw-r--r-- 1 rashmibaheti unixStudent  117 Jul 15 15:18 west.txt
+maychulin pts/1        Jul 15 14:10 (c-107-3-156-3.hsd1.ca.comcast.net)
+rashmibaheti pts/2        Jul 15 15:16 (153.18.26.150)
+lakshmi  pts/4        Jul 15 15:02 (c-67-188-213-66.hsd1.ca.comcast.net)
+
+$ who > ls.out
+$ cat ls.out
+maychulin pts/1        Jul 15 14:10 (c-107-3-156-3.hsd1.ca.comcast.net)
+rashmibaheti pts/2        Jul 15 15:16 (153.18.26.150)
+lakshmi  pts/4        Jul 15 15:02 (c-67-188-213-66.hsd1.ca.comcast.net)
+
+$ cat > days
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+
+$ cat | sort days
+Friday
+Monday
+Saturday
+Sunday
+Thursday
+Tuesday
+Wednesday
+
+$ cat | grep T days
+Tuesday
+Thursday
+
+$ cat days  | grep T
+Tuesday
+Thursday
+
+$ cat days | grep T | sort
+Thursday
+Tuesday

@@ -1,4 +1,6 @@
-[rashmibaheti@voyager ~]$ head  /etc/services
+Voyager Terminal Output:
+
+$ head  /etc/services
 # /etc/services:
 # $Id: services,v 1.42 2006/02/23 13:09:23 pknirsch Exp $
 #
@@ -9,7 +11,8 @@
 # even if the protocol doesn't support UDP operations.
 # Updated from RFC 1700, ``Assigned Numbers'' (October 1994).  Not all ports
 # are included, only the more common ones.
-[rashmibaheti@voyager ~]$ ls /etc
+
+$ ls /etc
 DIR_COLORS             inittab               prelink.conf.d
 DIR_COLORS.xterm       inputrc               printcap
 Muttrc                 iproute2              profile
@@ -102,7 +105,7 @@ idmapd.conf            ppp                   yum
 init.d                 prelink.cache         yum.conf
 initlog.conf           prelink.conf          yum.repos.d
 
-[rashmibaheti@voyager ~]$ who
+$ who
 muttb    pts/1        Jul 30 17:44 (153.18.25.108)
 lin3398032 pts/2        Jul 30 17:40 (153.18.24.242)
 jamesanthonydlc pts/4        Jul 30 18:09 (153.18.25.4)
@@ -125,11 +128,13 @@ lakshmi  pts/21       Jul 30 18:38 (10.41.50.37)
 suzard   pts/22       Jul 30 18:45
 tannguyenucb pts/23       Jul 30 18:45 (153.18.26.110)
 
-[rashmibaheti@voyager ~]$ date
+$ date
 Thu Jul 30 18:58:59 PDT 2015
-[rashmibaheti@voyager ~]$ uname -a
+
+$ uname -a
 Linux voyager.deanza.edu 2.6.18-406.el5 #1 SMP Fri May 1 10:37:57 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
-[rashmibaheti@voyager ~]$ history | tail
+
+$ history | tail
   814  if["$$"-eq"$I"]
   815  $-
   816  head/etc/services
@@ -141,7 +146,7 @@ Linux voyager.deanza.edu 2.6.18-406.el5 #1 SMP Fri May 1 10:37:57 EDT 2015 x86_6
   822  uname -a
   823  history | tail
 
-[rashmibaheti@voyager ~]$ !819
+$ !819
 ls /etc
 DIR_COLORS             inittab               prelink.conf.d
 DIR_COLORS.xterm       inputrc               printcap
@@ -235,13 +240,15 @@ idmapd.conf            ppp                   yum
 init.d                 prelink.cache         yum.conf
 initlog.conf           prelink.conf          yum.repos.d
 
-[rashmibaheti@voyager ~]$ !822
+$ !822
 uname -a
 Linux voyager.deanza.edu 2.6.18-406.el5 #1 SMP Fri May 1 10:37:57 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
-[rashmibaheti@voyager ~]$ !!
+
+$ !!
 uname -a
 Linux voyager.deanza.edu 2.6.18-406.el5 #1 SMP Fri May 1 10:37:57 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
-[rashmibaheti@voyager ~]$ history 20
+
+$ history 20
   811  !
   812  $!
   813  $!
@@ -262,7 +269,8 @@ Linux voyager.deanza.edu 2.6.18-406.el5 #1 SMP Fri May 1 10:37:57 EDT 2015 x86_6
   828  uname -a
   829  history | tail
   830  history 20
-[rashmibaheti@voyager ~]$ !817
+
+$ !817
 head  /etc/services
 # /etc/services:
 # $Id: services,v 1.42 2006/02/23 13:09:23 pknirsch Exp $
@@ -275,12 +283,12 @@ head  /etc/services
 # Updated from RFC 1700, ``Assigned Numbers'' (October 1994).  Not all ports
 # are included, only the more common ones.
 
-[rashmibaheti@voyager ~]$ alias d='date'
-[rashmibaheti@voyager ~]$ d
+$ alias d='date'
+$ d
 Thu Jul 30 19:56:54 PDT 2015
 
-[rashmibaheti@voyager ~]$ alias ls='ls -l'
-[rashmibaheti@voyager ~]$ ls
+$ alias ls='ls -l'
+$ ls
 total 328
 -rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 23 18:26 #emacsPractice#
 -rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 23 18:31 #file1#
@@ -329,8 +337,8 @@ drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 16 19:30 two
 -rw-r--r-- 1 rashmibaheti unixStudent   11 Jul 28 18:22 x
 -rw-r--r-- 1 rashmibaheti unixStudent   16 Jul 28 18:23 y
 
-[rashmibaheti@voyager ~]$ unalias ls
-[rashmibaheti@voyager ~]$ ls
+$ unalias ls
+$ ls
 #emacsPractice#   album          first.bak        ls.out         two
 #file1#           aliasFile      garbage          name.sh        update
 #helloworld.txt#  cpTobak        helloWorld       new_file       west
@@ -345,19 +353,19 @@ Rashmi            first          hold4            softlink.txt
 Alias should be defined in the ~/.bashrc (bash) or ~/.tcshrc (tcsh) startup
 files so that they are available each time we log in.
 
-[rashmibaheti@voyager ~]$ function welcom ()
+$ function welcom ()
 > {
 > echo "Welcome to my computer"
 > }
-[rashmibaheti@voyager ~]$ welcom
+$ welcom
 Welcome to my computer
 
-[rashmibaheti@voyager ~]$ function long ()
+$ function long ()
 > {
 > date
 > ls -l
 > }
-[rashmibaheti@voyager ~]$ long
+$ long
 Thu Jul 30 20:23:46 PDT 2015
 total 328
 -rw-r--r-- 1 rashmibaheti unixStudent    0 Jul 23 18:26 #emacsPractice#
@@ -408,7 +416,3 @@ drwxr-xr-x 2 rashmibaheti unixStudent 4096 Jul 16 19:30 two
 -rw-r--r-- 1 rashmibaheti unixStudent   16 Jul 28 18:23 y
 
 A function can be defined in the ~/.bash_profile startup file so that it is available each time we log in
-
-
-
-

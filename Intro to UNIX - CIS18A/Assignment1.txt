@@ -1,0 +1,34 @@
+Voyager Terminal Output:
+
+$ cd
+$ pwd
+/home/student/rashmibaheti
+
+$ mkdir two
+$ ls
+Bye    My new file  album  hi      new_file  practice_copy  rashmi_new  west
+Hello  Rashmi       days   ls.out  practice  public_html    two         west.txt
+
+$ file two
+two: directory
+
+$ cd two
+$ pwd
+/home/student/rashmibaheti/two
+
+$ vim fox
+$ ls
+fox
+
+$ ls two/
+fox
+
+$ cd ..
+$ pwd
+/home/student/rashmibaheti
+
+$ ls two
+fox
+
+$ rmdir two
+rmdir: two: Directory not empty
