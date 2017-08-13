@@ -1,0 +1,96 @@
+9.1 Under what circumstances do page faults occur? Describe the actions taken by the operating system when a page fault occurs.
+A:
+Access to a page marked invalid causes a page fault. This can happen when a page is not yet loaded into memory or is swapped out to backing store.
+
+The paging hardware causes a trap to the OS when a page fault occurs. OS does following to service the page fault:
+
+1. It uses the process's page table to first determine whether the memory access was valid. If the memory access was invalid, OS terminates the process.
+
+2. If the access was valid but the page was not brought into memory, OS brings the page into memory.
+
+    a. If a free frame exists, the new page is placed into the free frame.
+
+    b. If there is no free frame, OS uses its page-replacement algorithm to select a victim frame. It then writes the victim frame to the disk and reads the desired page into newly freed frame. It then changes the page and frame tables accordingly.
+
+3. It then continues the user process from where the page fault occurred.
+
+9.4 Consider the following page-replacement algorithms. Rank these algorithms on a five-point scale from “bad” to “perfect”according to their page-fault rate. Separate those algorithms that suffer from Belady’s anomaly from those that do not.
+a. LRU replacement
+b. FIFO replacement
+c. Optimalreplacement
+d. Second-chance replacement 
+A:
+ Rank          Algorithm              Suffers from Belady's Anomaly
+  1                 Optimal                                    NO
+  2                   LRU                                      NO
+  3           Second-chance                           	       YES
+  4                   FIFO                                     YES
+
+
+9.8 Consider the following page reference string:
+1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6
+How many page faults would occur for the following replacement algorithms, assuming one, two , three, four, five, six, and seven frames? Remember that all frames are initially empty, so your first unique pages will cost one fault each.
+a. LRU replacement
+b. FIFO replacement
+c. Optimal replacement 
+Answer:
+a. LRU replacement:
+Number of Frames    			 Number of Page Faults
+
+              1                                    20
+
+              2                                    18
+
+              3                                    15
+
+              4                                    10
+
+              5                                    8
+
+              6                                    7
+
+              7                                    7
+
+
+b. FIFO replacement:
+Number of Frames    			 Number of Page Faults
+
+              1                                    20
+
+              2                                    18
+
+              3                                    15
+
+              4                                    14
+
+              5                                    10
+
+              6                                    10
+
+              7                                    7
+
+
+c. Optimal replacement:
+Number of Frames     			Number of Page Faults
+
+              1                                    20
+
+              2                                    15
+
+              3                                    11
+
+              4                                    8
+
+              5                                    7
+
+              6                                    7
+
+              7                                    7
+
+9.33 What is the cause of thrashing? How does the system detect thrashing? Once it detects thrashing, what can the system do to eliminate this problem?
+A:
+A process is said to be thrashing if it spends more time paging than executing. Thrashing can happen when the degree of multi-programming in the system is high and running processes are continuously stealing frames from each other. In such a situation, cpu utilization goes down as all processes are spending a lot of time paging. If OS uses the low cpu utilization as a signal to bring more processes into the system, the paging rate of processes increases to an extent where the processes are spending more time paging than executing i.e. the processes begin thrashing.
+
+System uses working set model to detect thrashing. Working set of a process contains the pages that are in active use by the process. Pages that were referenced in the past (delta) microseconds are said to be active. When the cumulative size of working sets of all running processes exceeds the available frames in the system, the system can be considered to be thrashing.
+
+When thrashing is detected using working set model, OS suspends 1 or more processes so that the the cumulative size of working sets of all running processes drops below the available frames in the system.

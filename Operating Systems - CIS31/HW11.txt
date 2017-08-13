@@ -1,0 +1,72 @@
+11.1 Consider a file currently consisting of 100 blocks.Assume that the file-control block (and the index block, in the case of indexed allocation) is already in memory. Calculate how many disk I/O operations are required for contiguous, linked, and indexed (single-level) allocation strategies, if, for one block, the following conditions hold. In the contiguous allocation case, assume that there is no room to grow at the beginning but there is room to grow at the end. Also assume that the block information to be added is stored in memory.
+
+a. The block is added at the beginning
+
+b. The block is added in the middle
+
+c. The block is added at the end
+
+d. The block is removed from the beginning
+
+e. The block is removed from the middle
+
+f. The block is removed from the end 
+A:
+The following computation does not take into account the I/O related to index block.
+
+
+          Operation:                                                  Contiguous                    Linked                            Indexed
+
+a. The block is added at the beginning -        201 (1+100100)                   1                                        1
+
+b. The block is added in the middle -             101 (1+50+50)                   52(1+50+1)                         1
+
+c. The block is added at the end -                    1   (1+0)                             3(1+1+1)                            1
+
+d. The block is removed from the beginning - 198 (99+99)                       1                                          0
+
+e. The block is removed from the middle -       98 (49+49)                       52(1+50+1)                         0
+
+f. The block is removed from the end -             0                                       101(100+1)                          0
+
+
+11.3 Why must the bit map for file allocation be kept on mass storage, rather than in main memory? 
+A:
+The main memory is a volatile memory. In case of power failure or system crash, the bit map for file allocation would be lost. To prevent such loss of this critical information, mass storage need to be used rather than main memory to store this data.
+
+11.11 Consider a system where free space is kept in a free-space list.
+
+a. Suppose that the pointer to the free-space list is lost. Can the system reconstruct the free-space list? Explain your answer.
+
+b. Consider a file system similar to the one used by UNIX with indexed allocation. How many diskI/O operations might be required to read the contents of a small local file at /a/b/c? Assume that none of the disk blocks is currently being cached.
+
+c. Suggest a scheme to ensure that the pointer is never lost as a result of memory failure.
+A:
+a. It is possible to reconstruct the free-space list, when the free space list pointer is lost due to some corruption or any other reason. In such a case, OS needs to traverse its entire directory structure starting from the root directory and construct the list of used blocks. After the traversal is complete, any blocks that are not in this list are free blocks. OS can then link them all in anyway it prefers and thus construct a new free-space list.
+
+b. There would be 5 disk I/O operations required to read the contents of a file /a/b/c. Here is how:
+
+1st I/O would be required to read the disk block root directory '/'
+
+2nd, 3rd and 4th I/O would be required to read the disk block of directories a, b and c.
+
+5th I/O would be required to read the data block of directory c.
+
+c. To ensure that the pointer is never lost as a result of memory failure, we can store pointer in the mass storage in multiple locations. A corruption in 1 block of the disk, will not be able to corrupt the pointer in all its locations.
+
+
+11.20 Consider the following backup scheme:
+
+• Day 1. Copy to a backup medium all files from the disk.
+
+• Day 2. Copy to another medium all files changed since day 1.
+
+• Day 3. Copy to another medium all files changed since day 1.
+
+This differs from the schedule given in Section 11.7.4 by having all subsequent backups copy all files modified since the first full backup. What are the benefits of this system over the one in Section 11.7.4? What are the drawbacks? Are restore operations made easier or more difficult? Explain your answer.
+A:
+Benefits:
+Restoring data from backup is easier with this scheme. To restore, we just need to read the original full backup and last day's incremental backup. Also since the amount of data read in this case is smaller than the amount of data read as per the backup scheme in 11.7.4, restore happens quicker in this case.
+
+Drawbacks:
+The amount o data that needs to be backed up everyday is much larger with this scheme as compared to the back-up scheme in 11.7.4. So we need more amount of backup media with this scheme.
