@@ -5,8 +5,8 @@ This repository contains the computer programming related coursework I did at <a
 3. Systems Programming
 
 These are the courses I took at De Anza College.  
-| Course | Grade |  
-| --- |:—:|  
+| Course | Grade |
+|--------|-------|
 | Advanced Java Programming | A+ |  
 | Writing Apps For Android in Java | A+ |  
 | Introduction to Java Programming | A+ |  
