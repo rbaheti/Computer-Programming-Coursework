@@ -3,8 +3,8 @@ This repository contains the computer programming related coursework I did at [D
 1. Programming in Java  
 2. Programming in C/C++  
 3. Systems Programming  
-  
-  
+<br>
+<br>
 I took following courses at De Anza College with cumulative GPA of 3.9/4.0.
 
 | Course           | Grade |
@@ -23,8 +23,8 @@ I took following courses at De Anza College with cumulative GPA of 3.9/4.0.
 | Intro To SQL | A |  
 | Introduction to Unix | A |  
 | Operating System Concepts | A+ |  
-  
-  
+<br>
+<br>
 Significant Course Projects:  
 1. [Car Configuration Web Application in Java](Advanced%20Java%20-%20CIS35B/Assignment6)  
 Built a software that allows users to configure a car and get its final price based on options chosen (e.g. color,
