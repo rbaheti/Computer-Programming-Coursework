@@ -23,8 +23,9 @@ I took following courses at De Anza College with cumulative GPA of 3.9/4.0.
 | Intro To SQL | A |  
 | Introduction to Unix | A |  
 | Operating System Concepts | A+ |  
-
-Significant Course Projects  
+  
+  
+Significant Course Projects:  
 1. [Car Configuration Web Application in Java](Advanced%20Java%20-%20CIS35B/Assignment6)  
 Built a software that allows users to configure a car and get its final price based on options chosen (e.g. color,
 transmission etc.). Provided a web-based UI to the software using Java Servlets and Apache Tomcat.  
