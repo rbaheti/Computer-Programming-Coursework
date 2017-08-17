@@ -39,6 +39,6 @@ to generate invoices at the cash register and to generate different kinds of rep
 4. [Bakery Website in HTML & CSS](Web%20Page%20Development%20-%20CIS89A/Final%20Project)  
 Built a multi-page website for a bakery shop. The website has pages for Menu, Pictures gallery, About Us,
 Contact Us etc. Link to the website: https://thimbleprojects.org/rashmibaheti/288682  
-5. [Android Apps in Java](Android%20Development%20-%20CS64A)  
+5. [Android Apps in Java](Android%20Development%20-%20CS64A)  
 Developed numerous apps such as image gallery app, apps that interact with a database, apps with multiple
 activities, dice rolling game app.  
