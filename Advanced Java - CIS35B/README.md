@@ -1,6 +1,6 @@
 Car Configuration Web Application in Java  
 
-This web application was built in steps and spanned 6 assignments, each building on top of the previous assignment. The complete web app built in [Assignment 6](Assignment6) allows users to choose a car model, configure the model and get its final price based on the options chosen (e.g. color, transmission etc.). I used Java Servlets and Apache Tomcat for serving the web pages of the web app.  The configuration available on a car model is read from text files under the [WEB-INF](Assignment6/WebContent/WEB-INF/) directory.
+This web application was built in steps and spanned 6 assignments, each building on top of the previous assignment. The complete web app built in [Assignment 6](Assignment6) allows users to choose a car model, configure the model and get its final price based on the options chosen (e.g. color, transmission etc.). I used Java Servlets and Apache Tomcat for serving the web pages of the web app.  The configuration available for a car model is read from text files under the [WEB-INF](Assignment6/WebContent/WEB-INF/) directory.
 <br>
 
 Following are the screenshots of the simple Web UI of the app.  
